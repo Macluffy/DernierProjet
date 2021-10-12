@@ -14,12 +14,11 @@
                         <div class="main-menu text-center">
                             <nav>
                                 <ul>
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="about-us.html">About us</a></li>
-                                    <li><a href="menu.html">classes</a></li>
-                                    <li><a href="reservation.html">gallery</a></li>
-                                    <li><a href="blog.html">blog</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="index">Home</a></li>
+                                    <li><a href="about">About us</a></li>
+                                    <li><a href="class">classes</a></li>
+                                    <li><a href="galleri">gallery</a></li>
+                                    <li><a href="contact">Contact</a></li>
                                 </ul>
                             </nav>
                         </div>
