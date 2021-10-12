@@ -21,6 +21,7 @@
     </head>
     <body>
         @include('partial/header')
+        @include('partial/areastart')
         @yield('content')
         @include('partial/map')
         @include('partial/footer')
@@ -67,5 +68,3 @@
         <script src="{{ asset('js/main.js') }} "></script>
     </body>
 </html>
-
-            

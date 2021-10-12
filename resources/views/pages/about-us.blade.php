@@ -1,8 +1,8 @@
-@extends('template/welcome')
+@extends('template/welcome2')
 
 @section('content')
     
-    @include('sectionAbout/areastart')
+    
     @include('sectionAbout/about')
     @include('sectionAbout/event')
     @include('sectionAbout/client')
