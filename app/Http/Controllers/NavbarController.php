@@ -91,7 +91,7 @@ class NavbarController extends Controller
 
         $navbar->save();
 
-       
+
         return redirect()->route('navbar.index')->with("message", "Datas has succesfully been changed !");
     }
 

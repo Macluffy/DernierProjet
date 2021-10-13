@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             NavbarSeeder::class,
             SliderSeeder::class,
+            TitreSeeder::class,
         ]);
     }
 }

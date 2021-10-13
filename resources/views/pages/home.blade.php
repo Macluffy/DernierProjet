@@ -1,7 +1,7 @@
 @extends('template/welcome')
 
 @section('content')
-    
+
     @include('sectionIndex/areastart')
     @include('sectionIndex/about')
     @include('sectionIndex/class')

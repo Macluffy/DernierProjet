@@ -68,11 +68,11 @@
        <span class="tooltip">Saved</span>
      </li>
      <li>
-       <a href="#">
+       <a href="/titre">
          <i class='bx bx-cog' ></i>
-         <span class="links_name">Setting</span>
+         <span class="links_name">Titre</span>
        </a>
-       <span class="tooltip">Setting</span>
+       <span class="tooltip">Titre</span>
      </li>
      <li class="profile">
       <a href="/">

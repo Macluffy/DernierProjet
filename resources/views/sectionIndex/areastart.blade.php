@@ -10,8 +10,8 @@
                             <div class="text-content-wrapper">
                                 <div class="text-content text-left">
                                     <h5>{{ $value->minititre }}</h5>
-                                    <h1>{{ $value->titrepartie1 }}<span>{{ $value->titrepartie2 }}</span>{{ $value->titrepartie3 }}</h1>
-                                    <p>{{ $value->paragraphe }}</p>
+                                        <h1>{{ $titre[0]->titre }}<span></span><h1>
+                                    <p>{{ $titre[0]->paragraphe }}</p>
                                     <a class="banner-btn" href="galleri" data-text="read more"><span>{{ $value->btnreadmore }}</span></a>
                                 </div>
                             </div>
@@ -21,7 +21,6 @@
             </div>
         </div> 
         @endforeach
-        
         
     </div>
 </div>

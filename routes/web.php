@@ -2,8 +2,10 @@
 
 use App\Http\Controllers\NavbarController;
 use App\Http\Controllers\SliderController;
+use App\Http\Controllers\TitreController;
 use App\Models\Navbar;
 use App\Models\Slider;
+use App\Models\Titre;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,7 +22,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     $nav = Navbar::all();
     $slider = Slider::all();
-    return view('pages/home', compact('nav','slider'));
+    $titre = Titre::all();
+    return view('pages/home', compact('nav','slider','titre'));
 });
 
 Route::get('/about', function () {
@@ -52,4 +55,6 @@ require __DIR__.'/auth.php';
 Route::resource('/navbar', NavbarController::class)->middleware(['auth']);
 
 Route::resource('/slider', SliderController::class)->middleware(['auth']);
+
+Route::resource('/titre', TitreController::class)->middleware(['auth']);
 
