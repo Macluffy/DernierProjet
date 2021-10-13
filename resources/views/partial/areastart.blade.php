@@ -9,7 +9,7 @@
                         <h2>GALLERY </h2>
                         <div class="banner-breadcrumb">
                             <ul>
-                                <li><a href="index">Home </a> <i class="zmdi zmdi-chevron-right"></i></li>
+                                <li><a href="/">Home </a> <i class="zmdi zmdi-chevron-right"></i></li>
                                 <li>Gallery</li>
                             </ul>
                         </div>
@@ -29,7 +29,7 @@
                         <h2>ABOUT US </h2>
                         <div class="banner-breadcrumb">
                             <ul>
-                                <li><a href="index">Home </a> <i class="zmdi zmdi-chevron-right"></i></li>
+                                <li><a href="/">Home </a> <i class="zmdi zmdi-chevron-right"></i></li>
                                 <li>About Us</li>
                             </ul>
                         </div>
@@ -49,7 +49,7 @@
                         <h2>CLASS </h2>
                         <div class="banner-breadcrumb">
                             <ul>
-                                <li><a href="index">Home </a> <i class="zmdi zmdi-chevron-right"></i></li>
+                                <li><a href="/">Home </a> <i class="zmdi zmdi-chevron-right"></i></li>
                                 <li>Class</li>
                             </ul>
                         </div>
@@ -69,7 +69,7 @@
                         <h2>CONTACT </h2>
                         <div class="banner-breadcrumb">
                             <ul>
-                                <li><a href="index">Home </a> <i class="zmdi zmdi-chevron-right"></i></li>
+                                <li><a href="/">Home </a> <i class="zmdi zmdi-chevron-right"></i></li>
                                 <li>Contact</li>
                             </ul>
                         </div>

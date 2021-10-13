@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\NavbarController;
+use App\Http\Controllers\SliderController;
+use App\Models\Navbar;
+use App\Models\Slider;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,24 +17,30 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/index', function () {
-    return view('pages/home');
+Route::get('/', function () {
+    $nav = Navbar::all();
+    $slider = Slider::all();
+    return view('pages/home', compact('nav','slider'));
 });
 
 Route::get('/about', function () {
-    return view('pages/about-us');
+    $nav = Navbar::all();
+    return view('pages/about-us', compact('nav'));
 });
 
 Route::get('/class', function () {
-    return view('pages/class');
+    $nav = Navbar::all();
+    return view('pages/class', compact('nav'));
 });
 
 Route::get('/galleri', function () {
-    return view('pages/gallery');
+    $nav = Navbar::all();
+    return view('pages/gallery', compact('nav'));
 });
 
 Route::get('/contact', function () {
-    return view('pages/contact');
+    $nav = Navbar::all();
+    return view('pages/contact', compact('nav'));
 });
 
 Route::get('/dashboard', function () {
@@ -38,3 +48,8 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
+
+Route::resource('/navbar', NavbarController::class)->middleware(['auth']);
+
+Route::resource('/slider', SliderController::class)->middleware(['auth']);
+
