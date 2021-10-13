@@ -2,7 +2,7 @@
 @section('content')
 <div >
     <div>
-        <h1 class="text-center" style="margin-bottom:40px">Backoffice || Edit Slider</h1>
+        <h1 class="text-center" style="margin-bottom:40px">Backoffice || Create Slider</h1>
     </div>
     @if ($errors->any())
 <div class="alert alert-danger" >
@@ -14,22 +14,22 @@
     
 </div>
 @endif
-    <form action="{{ route('slider.update',$slider->id) }}" style="margin-left:50px" method="post">
-    @method('put')
+    <form action="{{ route('slider.store') }}" style="margin-left:50px" method="post">
+    
     @csrf
         <div class="mb-3">
           <label  class="form-label">Image</label>
-          <input type="text" class="form-control" style="width: 25%" name="imagefond" value="{{ $slider->imagefond  }}" >
+          <input type="text" class="form-control" style="width: 25%" name="imagefond" value="{{ old('imagefond')  }}" >
           
         </div> 
         <div class="mb-3">
             <label  class="form-label">Mini Titre</label>
-            <input type="text" class="form-control" style="width: 25%" name="minititre" value="{{ $slider->minititre  }}">
+            <input type="text" class="form-control" style="width: 25%" name="minititre" value="{{  old('minititre')  }}">
             
           </div>
           <div class="mb-3">
             <label  class="form-label">Boutton read more</label>
-            <input type="text" class="form-control" style="width: 25%" name="btnreadmore" value="{{ $slider->btnreadmore  }}">
+            <input type="text" class="form-control" style="width: 25%" name="btnreadmore" value="{{  old('btnreadmore')  }}">
             
           </div>
           

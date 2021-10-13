@@ -2,7 +2,7 @@
 @section('content')
 <div >
     <div>
-        <h1 class="text-center" style="margin-bottom:40px">Backoffice || index Navbar</h1>
+        <h1 class="text-center" style="margin-bottom:40px">Backoffice || index Slider</h1>
     </div>
 
     <div class="container">
@@ -13,41 +13,40 @@
             
         @endif
     </div>
-    
-        <header class="top container" style="background-color: rgb(255, 247, 231);   ">
-            <div class="header-area ptb-18 header-sticky">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-2 col-xs-12">
-                            <div class="logo">
-                                <a href=""><img src="{{ $nav[0]->logo }}" alt="COFFEE" /></a>
-                            </div>
-                        </div>
-                        <div class="col-md-8 col-xs-12">
-                            <div class="content-wrapper">
-                                <!-- Main Menu Start -->
-                                <div class="main-menu text-center">
-                                    <nav>
-                                        <ul>
-                                            <li><a href="">{{ $nav[0]->link1 }}</a></li>
-                                            <li><a href="">{{ $nav[0]->link2 }}</a></li>
-                                            <li><a href="">{{ $nav[0]->link3 }}</a></li>
-                                            <li><a href="">{{ $nav[0]->link4 }}</a></li>
-                                            <li><a href="">{{ $nav[0]->link5 }}</a></li>
-                                        </ul>
-                                    </nav>
+    <div>
+        <a href="{{ route('slider.create') }}" class="btn btn-primary"> create</a>
+    </div>
+    @foreach ($slider as $value)
+    <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; width:100%; margin:30px;">
+        <div class="" style="background-image: url('{{ $value->imagefond }}'); background-size: cover; background-position: center; width:350px; height:350px">
+        <div class="slider-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 col-md-7 col-sm-12 col-md-12">
+                        <div class="text-content-wrapper">
+                            <div class="text-content text-left">
+                                <h5>{{ $value->minititre }}</h5>
+                                {{-- <h1>{{ $titre[0]->titre }}<span></span><h1>
+                                    <p>{{ $titre[0]->paragraphe }}</p> --}}
+                                    <a class="banner-btn" href="" data-text="read more"><span>{{ $value->btnreadmore }}</span></a>
                                 </div>
-                                <div class="mobile-menu hidden-lg hidden-md"></div>
-                                <!-- Main Menu End -->
                             </div>
                         </div>
-                        
                     </div>
                 </div>
             </div>
-        </header>
+        </div> 
+    </div>
+    
         <div style="display:flex; justify-content:center; width:100%; margin:30px;">
-            <a href="{{ route('navbar.edit',$nav[0]->id) }}" class="btn btn-success"> Edit</a>
+            <a href="{{ route('slider.show',$value->id) }}" class="btn btn-warning"> Show</a>
         </div>
+        @endforeach
+        
+        
+        
+    
+        
+        
     </div>
 @endsection

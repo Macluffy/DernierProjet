@@ -14,7 +14,8 @@ class SliderController extends Controller
      */
     public function index()
     {
-        return view('backslide.index');
+        $slider=Slider::all();
+        return view('backslide.index',compact('slider'));
     }
 
     /**
@@ -24,7 +25,8 @@ class SliderController extends Controller
      */
     public function create()
     {
-        //
+        $slider=Slider::all();
+        return view('backslide.create',compact('slider'));
     }
 
     /**
@@ -35,7 +37,24 @@ class SliderController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'imagefond' => ['required' => 'min:1', 'max:255' ],
+            'minititre' => ['required' => 'min:1', 'max:255'] ,
+            'btnreadmore' => ['required' => 'min:1', 'max:255'],
+            
+        ]);
+        
+        $slider = new Slider;
+        
+        $slider->imagefond = $request->imagefond;
+        $slider->minititre = $request->minititre;
+        $slider->btnreadmore = $request->btnreadmore;
+        
+
+        $slider->save();
+
+
+        return redirect()->route('slider.index')->with("message", "Datas has succesfully been changed !");
     }
 
     /**
@@ -46,7 +65,7 @@ class SliderController extends Controller
      */
     public function show(Slider $slider)
     {
-        //
+        return view('backslide.show',compact('slider'));
     }
 
     /**
@@ -57,7 +76,7 @@ class SliderController extends Controller
      */
     public function edit(Slider $slider)
     {
-        //
+        return view('backslide.edit',compact('slider'));
     }
 
     /**
@@ -69,7 +88,24 @@ class SliderController extends Controller
      */
     public function update(Request $request, Slider $slider)
     {
-        //
+        $request->validate([
+            'imagefond' => ['required' => 'min:1', 'max:255' ],
+            'minititre' => ['required' => 'min:1', 'max:255'] ,
+            'btnreadmore' => ['required' => 'min:1', 'max:255'],
+            
+        ]);
+        
+        
+        
+        $slider->imagefond = $request->imagefond;
+        $slider->minititre = $request->minititre;
+        $slider->btnreadmore = $request->btnreadmore;
+        
+
+        $slider->save();
+
+
+        return redirect()->route('slider.index')->with("message", "Datas has succesfully been changed !");
     }
 
     /**
@@ -80,6 +116,7 @@ class SliderController extends Controller
      */
     public function destroy(Slider $slider)
     {
-        //
+        $slider->delete();
+        return redirect()->route('slider.index');
     }
 }
