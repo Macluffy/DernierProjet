@@ -8,7 +8,7 @@
     
     
     <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; width:100%; margin:30px;">
-        <div class="" style="background-image: url('{{ $slider->imagefond }}'); background-size: cover; background-position: center; width:350px; height:350px">
+        <div class="" style="background-image: url('{{asset('img/slider/'.$slider->imagefond)}}'); background-size: cover; background-position: center; width:900px; height:350px">
             <div class="slider-content">
                 <div class="container">
                     <div class="row">
@@ -16,8 +16,8 @@
                             <div class="text-content-wrapper">
                                 <div class="text-content text-left">
                                     <h5>{{ $slider->minititre }}</h5>
-                                    {{-- <h1>{{ $titre[0]->titre }}<span></span><h1>
-                                    <p>{{ $titre[0]->paragraphe }}</p> --}}
+                                    <h1>{{ $text1 }}<span>{{ $text2 }}</span>{{ $text3 }}<h1>
+                                    <p>{{ $slider->paragraphe }}</p>
                                     <a class="banner-btn" href="" data-text="read more"><span>{{ $slider->btnreadmore }}</span></a>
                                 </div>
                             </div>
@@ -31,7 +31,7 @@
     <form action="{{route('slider.destroy',$slider->id)}} " method="post">
         @method('delete')
         <div style="display:flex; justify-content:center; width:100%; margin:30px;">
-            <button type="submit" class="mx-2 btn btn-danger">Delete</button>
+            <button type="submit" class=" btn btn-danger" style="margin-right: 10px;">Delete</button>
             <a href="{{ route('slider.edit',$slider->id) }}" class="btn btn-warning"> Edit</a>
         </div>
     </form>

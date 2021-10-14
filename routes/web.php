@@ -22,6 +22,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     $nav = Navbar::all();
     $slider = Slider::all();
+    // $titre = $slider[0]->titre;
+
+    // if(preg_match("/^(?P<avant>[^)(]*)?(?P<tout_par>\((?P<entre_par>[^)()]+)\))(?P<apres>[^)(]*)?$/"," $titre",$matches));
+    // $text1 = $matches["avant"]; // tout ce qu'il y a avant les parenthèses, optionel => 'Bordeaux '
+    // $matches["tout_par"]; // parenthèses + intérieur => '(33000)'
+    // $text2 = $matches["entre_par"]; // intérieur => '33000'
+    // $text3 = $matches["apres"];
+
     $titre = Titre::all();
     return view('pages/home', compact('nav','slider','titre'));
 });

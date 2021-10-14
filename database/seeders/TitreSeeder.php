@@ -17,13 +17,7 @@ class TitreSeeder extends Seeder
         
 
         DB::table("titres")->insert([
-            [
-                
-                "titre"=>"Keep Refresh & Strong Your Body ",
-                "paragraphe"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer auctor pharetra iss neque. Nullam cursus elit sit amet justo interdum facilisis id at tortor.",
-                
-                
-            ],
+            
             [
                 "titre"=>"Our Class",
                 "paragraphe"=>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum issss has been the industry's standard dummy text ever since the 1500s, when an unknown lorem",

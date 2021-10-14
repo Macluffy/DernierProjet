@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Slider;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class SliderController extends Controller
 {
@@ -14,7 +15,10 @@ class SliderController extends Controller
      */
     public function index()
     {
-        $slider=Slider::all();
+        
+    $slider=Slider::all();
+
+        
         return view('backslide.index',compact('slider'));
     }
 
@@ -39,6 +43,8 @@ class SliderController extends Controller
     {
         $request->validate([
             'imagefond' => ['required' => 'min:1', 'max:255' ],
+            'titre' => ['required' => 'min:1', 'max:255' ],
+            'paragraphe' => ['required' => 'min:1', 'max:255' ],
             'minititre' => ['required' => 'min:1', 'max:255'] ,
             'btnreadmore' => ['required' => 'min:1', 'max:255'],
             
@@ -46,12 +52,18 @@ class SliderController extends Controller
         
         $slider = new Slider;
         
-        $slider->imagefond = $request->imagefond;
+        
+        $slider->imagefond = $request->file('img')->hashName();
+        $slider->titre = $request->titre;
+        $slider->paragraphe = $request->paragraphe;
         $slider->minititre = $request->minititre;
         $slider->btnreadmore = $request->btnreadmore;
         
 
         $slider->save();
+
+        $request->file('img')->storePublicly("img/slider", "public");
+        
 
 
         return redirect()->route('slider.index')->with("message", "Datas has succesfully been changed !");
@@ -64,8 +76,15 @@ class SliderController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show(Slider $slider)
+    
     {
-        return view('backslide.show',compact('slider'));
+    $titre = $slider->titre;
+    if(preg_match("/^(?P<avant>[^)(]*)?(?P<tout_par>\((?P<entre_par>[^)()]+)\))(?P<apres>[^)(]*)?$/"," $titre",$matches));
+    $text1 = $matches["avant"]; // tout ce qu'il y a avant les parenthèses, optionel => 'Bordeaux '
+    $matches["tout_par"]; // parenthèses + intérieur => '(33000)'
+    $text2 = $matches["entre_par"]; // intérieur => '33000'
+    $text3 = $matches["apres"];
+        return view('backslide.show',compact('slider','text1','text2','text3'));
     }
 
     /**
@@ -90,19 +109,26 @@ class SliderController extends Controller
     {
         $request->validate([
             'imagefond' => ['required' => 'min:1', 'max:255' ],
+            'titre' => ['required' => 'min:1', 'max:255' ],
+            'paragraphe' => ['required' => 'min:1', 'max:255' ],
             'minititre' => ['required' => 'min:1', 'max:255'] ,
             'btnreadmore' => ['required' => 'min:1', 'max:255'],
             
         ]);
         
+        Storage::disk("public")->delete("/img/slider".$slider->imagefond);
         
         
-        $slider->imagefond = $request->imagefond;
+        $slider->imagefond = $request->file('img')->hashName();
+        $slider->titre = $request->titre;
+        $slider->paragraphe = $request->paragraphe;
         $slider->minititre = $request->minititre;
         $slider->btnreadmore = $request->btnreadmore;
         
-
+        $request->file('img')->storePublicly("img/slider", "public");
         $slider->save();
+
+        
 
 
         return redirect()->route('slider.index')->with("message", "Datas has succesfully been changed !");
@@ -116,6 +142,7 @@ class SliderController extends Controller
      */
     public function destroy(Slider $slider)
     {
+        Storage::disk("public")->delete("/img/slider".$slider->imagefond);
         $slider->delete();
         return redirect()->route('slider.index');
     }

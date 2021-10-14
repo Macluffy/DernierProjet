@@ -14,14 +14,24 @@
     
 </div>
 @endif
-    <form action="{{ route('slider.store') }}" style="margin-left:50px" method="post">
+    <form action="{{ route('slider.store') }}" style="margin-left:50px" method="post" enctype="multipart/form-data">
     
     @csrf
         <div class="mb-3">
           <label  class="form-label">Image</label>
-          <input type="text" class="form-control" style="width: 25%" name="imagefond" value="{{ old('imagefond')  }}" >
+          <input type="file" class="form-control" style="width: 25%" name="img" value="{{ old('imagefond')  }}" >
           
         </div> 
+        <div class="mb-3">
+          <label  class="form-label">Titre</label>
+          <input type="text" class="form-control" style="width: 25%" name="titre" value="{{ old('titre')  }}">
+          
+        </div>
+        <div class="mb-3">
+          <label  class="form-label">Paragraphe</label>
+          <input type="text" class="form-control" style="width: 25%" name="paragraphe" value="{{ old('paragraphe')  }}">
+          
+        </div>
         <div class="mb-3">
             <label  class="form-label">Mini Titre</label>
             <input type="text" class="form-control" style="width: 25%" name="minititre" value="{{  old('minititre')  }}">
