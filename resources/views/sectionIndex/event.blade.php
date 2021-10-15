@@ -3,10 +3,30 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-xs-12">
-                <div class="section-title text-center">
-                    <h2>awesome <span class="span">event</span></h2>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum issss has been the industry's standard dummy text ever since the 1500s, when an unknown lorem </p>
-                </div>
+                @php
+                $titre = $titre[4]->titre;
+        
+                if(preg_match("/^(?P<avant>[^)(]*)?(?P<tout_par>\((?P<entre_par>[^)()]+)\))(?P<apres>[^)(]*)?$/"," $titre", $matches))
+                    {
+                    $text1 = $matches["avant"]; 
+                    $text2 = $matches["entre_par"]; 
+                    $text3 = $matches["apres"];
+                    }
+
+            @endphp
+
+            @if(count($matches) >0  )
+                    <div class="section-title text-center">
+                        <h2>{{$text1}}<span class="span">{{$text2}} </span>{{$text3}}</h2>
+                        <p>{{$titre[4]->paragraphe}} </p>
+                    </div> 
+                @else
+                    <div class="section-title text-center">
+                        <h2>{{ $titre }} </h2>
+                        <p>{{$titre[4]->paragraphe}}</p>
+                    </div> 
+                
+            @endif
                 <div class="event-wrapper">
                     <div class="event-content text-center">
                         <h3>Yoga celebration in Handstand</h3>

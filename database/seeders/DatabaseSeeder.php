@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
             NavbarSeeder::class,
             SliderSeeder::class,
             TitreSeeder::class,
+            AboutSeeder::class,
         ]);
     }
 }

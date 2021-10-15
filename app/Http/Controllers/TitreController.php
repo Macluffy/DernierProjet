@@ -87,7 +87,7 @@ class TitreController extends Controller
         $titre->save();
 
 
-        return redirect()->route('navtitre.index')->with("message", "Datas has succesfully been changed !");
+        return redirect()->route('titre.index')->with("message", "Datas has succesfully been changed !");
     }
 
     /**

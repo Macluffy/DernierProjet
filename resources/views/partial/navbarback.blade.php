@@ -40,11 +40,11 @@
         <span class="tooltip">Slider</span>
       </li>
       <li>
-        <a href="#">
-          <i class='bx bx-pie-chart-alt-2' ></i>
-          <span class="links_name">Analytics</span>
+        <a href="{{ route('about.index') }}">
+          <i class='bx bx-list-ul'></i>
+          <span class="links_name">About</span>
         </a>
-        <span class="tooltip">Analytics</span>
+        <span class="tooltip">About</span>
       </li>
       <li>
         <a href="#">
