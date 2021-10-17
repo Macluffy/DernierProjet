@@ -50,20 +50,25 @@
                                 <td class="time">
                                     <p>8:00 AM</p>
                                 </td>
+                                @foreach ($slider as $value)
+                                @if ($value->heure == 8 && $value->jour == "saturday")
+                                <td class="purple">
+                                    <h4>{{$slider->titre}} </h4>
+                                    <p>pipi</p>
+                                    <p>8.00 Am-10.00Am</p>
+                                </td> 
+                                @endif
+                                @endforeach
+                                <td></td>
+                                <td></td>
                                 <td class="purple">
                                     <h4>yoga for climbers</h4>
                                     <p>Sathi Bhuiyan</p>
                                     <p>8.00 Am-10.00Am</p>
                                 </td>
                                 <td></td>
-                                <td></td>
                                 <td class="purple">
-                                    <h4>yoga for climbers</h4>
-                                    <p>Sathi Bhuiyan</p>
-                                    <p>8.00 Am-10.00Am</p>
-                                </td>
-                                <td></td>
-                                <td class="purple">
+                                    
                                     <h4>yoga for climbers</h4>
                                     <p>Sathi Bhuiyan</p>
                                     <p>8.00 Am-10.00Am</p>

@@ -47,6 +47,7 @@
                             </a>   
                         </div>
                     </div>
+                    
                     <div class="single-content">
                         <h3><a href="class.html">{{$value->titre}}</a></h3>
                         <ul>

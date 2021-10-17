@@ -8,10 +8,9 @@
         
         @php
         
-        if(1 === 1){
-            unset($slider[$i]);
-        }
-    
+        
+        unset($slider[$i]);
+
         @endphp
         
     @php
