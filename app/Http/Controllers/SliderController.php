@@ -41,6 +41,7 @@ class SliderController extends Controller
      */
     public function store(Request $request)
     {
+
         $request->validate([
             'imagefond' => ['required' => 'min:1', 'max:255' ],
             'titre' => ['required' => 'min:1', 'max:255' ],
@@ -49,18 +50,30 @@ class SliderController extends Controller
             'btnreadmore' => ['required' => 'min:1', 'max:255'],
             
         ]);
+        $sliders = Slider::all();
         
         $slider = new Slider;
-        
-        
         $slider->imagefond = $request->file('img')->hashName();
         $slider->titre = $request->titre;
         $slider->paragraphe = $request->paragraphe;
         $slider->minititre = $request->minititre;
         $slider->btnreadmore = $request->btnreadmore;
-        
 
+        $slider->order = $request->order;
+        
+        
         $slider->save();
+        
+        if($slider->order == true){
+
+            foreach ( $sliders as $value )
+            {
+                $value->order = false;
+                $value->save();
+            }
+            
+            
+        }
 
         $request->file('img')->storePublicly("img/slider", "public");
         
@@ -78,13 +91,9 @@ class SliderController extends Controller
     public function show(Slider $slider)
     
     {
-    $titre = $slider->titre;
-    if(preg_match("/^(?P<avant>[^)(]*)?(?P<tout_par>\((?P<entre_par>[^)()]+)\))(?P<apres>[^)(]*)?$/"," $titre",$matches));
-    $text1 = $matches["avant"]; // tout ce qu'il y a avant les parenthèses, optionel => 'Bordeaux '
-    $matches["tout_par"]; // parenthèses + intérieur => '(33000)'
-    $text2 = $matches["entre_par"]; // intérieur => '33000'
-    $text3 = $matches["apres"];
-        return view('backslide.show',compact('slider','text1','text2','text3'));
+    
+    
+        return view('backslide.show',compact('slider'));
     }
 
     /**

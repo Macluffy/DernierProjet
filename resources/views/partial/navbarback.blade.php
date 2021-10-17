@@ -47,11 +47,11 @@
         <span class="tooltip">About</span>
       </li>
       <li>
-        <a href="#">
-          <i class='bx bx-folder' ></i>
-          <span class="links_name">File Manager</span>
+        <a href="classe">
+          <i class='bx bxs-category'></i>
+          <span class="links_name">Classe</span>
         </a>
-        <span class="tooltip">Files</span>
+        <span class="tooltip">Classe</span>
       </li>
       <li>
         <a href="#">

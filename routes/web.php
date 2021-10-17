@@ -1,13 +1,16 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ClasseController;
 use App\Http\Controllers\NavbarController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\TitreController;
 use App\Models\About;
+use App\Models\Classe;
 use App\Models\Navbar;
 use App\Models\Slider;
 use App\Models\Titre;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,12 +27,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     $nav = Navbar::all();
     $slider = Slider::all();
+    $sli = DB::table('sliders')->where('order',true)->get();
     $titre = Titre::all();
     $about = About::all();
-    return view('pages/home', compact('nav','slider','titre','about'));
+    $class = Classe::all();
+    return view('pages/home', compact('nav','slider','titre','about','sli','class'));
 });
 
-Route::get('/about', function () {
+Route::get('/abouts', function () {
     $nav = Navbar::all();
     return view('pages/about-us', compact('nav'));
 });
@@ -63,3 +68,4 @@ Route::resource('/about', AboutController::class)->middleware(['auth']);
 
 Route::resource('/titre', TitreController::class)->middleware(['auth']);
 
+Route::resource('/classe', ClasseController::class)->middleware(['auth']);

@@ -20,6 +20,7 @@ class CreateSlidersTable extends Migration
             $table->string('paragraphe');
             $table->string('minititre');
             $table->string('btnreadmore');
+            $table->boolean('order');
             $table->timestamps();
         });
     }

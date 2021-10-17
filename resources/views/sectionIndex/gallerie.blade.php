@@ -5,9 +5,9 @@
             <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-xs-12">
                 <div class="test-content">
                     @php
-                $titre = $titre[3]->titre;
+                $titre1 = $titre[3]->titre;
         
-                if(preg_match("/^(?P<avant>[^)(]*)?(?P<tout_par>\((?P<entre_par>[^)()]+)\))(?P<apres>[^)(]*)?$/"," $titre", $matches))
+                if(preg_match("/^(?P<avant>[^)(]*)?(?P<tout_par>\((?P<entre_par>[^)()]+)\))(?P<apres>[^)(]*)?$/"," $titre1", $matches))
                     {
                     $text1 = $matches["avant"]; 
                     $text2 = $matches["entre_par"]; 
@@ -23,7 +23,7 @@
                     </div> 
                 @else
                     <div class="section-title text-center">
-                        <h2>{{ $titre }} </h2>
+                        <h2>{{ $titre1 }} </h2>
                         <p>{{$titre[3]->paragraphe}} </p>
                     </div> 
                 

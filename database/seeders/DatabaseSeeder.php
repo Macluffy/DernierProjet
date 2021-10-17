@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
             SliderSeeder::class,
             TitreSeeder::class,
             AboutSeeder::class,
+            ClasseSeeder::class,
         ]);
     }
 }

@@ -15,7 +15,7 @@
                             <nav>
                                 <ul>
                                     <li><a href="/">{{ $nav[0]->link1 }}</a></li>
-                                    <li><a href="about">{{ $nav[0]->link2 }}</a></li>
+                                    <li><a href="abouts">{{ $nav[0]->link2 }}</a></li>
                                     <li><a href="class">{{ $nav[0]->link3 }}</a></li>
                                     <li><a href="galleri">{{ $nav[0]->link4 }}</a></li>
                                     <li><a href="contact">{{ $nav[0]->link5 }}</a></li>
