@@ -14,12 +14,16 @@ class Classe extends Model
         'image',
         'titre',
         'nom',
-        'heure',
         'genre_id',
+        'horraire_id',
     ];
 
 
     public function genre(){
         return $this->belongsTo(Genre::class);
+    }
+
+    public function horraire(){
+        return $this->belongsTo(Horraire::class);
     }
 }

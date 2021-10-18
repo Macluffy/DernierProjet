@@ -19,23 +19,23 @@ class ClasseSeeder extends Seeder
                 "image"=>"1.jpg",
                 "titre"=>"yoga for climbers",
                 "nom"=>"Sathi Bhuiyan",
-                "heure"=>"10.00Am-05:00Pm",
                 "genre_id"=>1,
+                "horraire_id"=>1,
             ],
             [
                 "image"=>"2.jpg",
                 "titre"=>"yoga for climbers",
                 "nom"=>"Sathi Bhuiyan",
-                "heure"=>"10.00Am-05:00Pm",
                 "genre_id"=>2,
+                "horraire_id"=>2,
                 
             ],
             [
                 "image"=>"3.jpg",
                 "titre"=>"yoga for climbers",
                 "nom"=>"Sathi Bhuiyan",
-                "heure"=>"10.00Am-05:00Pm",
                 "genre_id"=>3,
+                "horraire_id"=>3,
             ],
             
         ]);

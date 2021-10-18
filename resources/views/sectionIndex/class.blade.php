@@ -36,7 +36,7 @@
             </div>
         </div>
         <div class="row"> 
-            @foreach ($class as $value)
+            @foreach ($classe as $value)
                 <div class="col-md-4 col-sm-6 col-xs-12">     
                 <div class="single-class">
                     <div class="single-img">
@@ -52,7 +52,7 @@
                         <h3><a href="class.html">{{$value->titre}}</a></h3>
                         <ul>
                             <li><i class="zmdi zmdi-face"></i>{{$value->nom}}</li>
-                            <li><i class="zmdi zmdi-alarm"></i>{{$value->heure}}</li>
+                            <li><i class="zmdi zmdi-alarm"></i>{{$value->horraire->heure}}</li>
                         </ul>
                     </div>
                 </div>

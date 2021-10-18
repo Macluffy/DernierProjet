@@ -20,7 +20,7 @@
                     <h3><a href="class.html">{{$classe->titre}}</a></h3>
                     <ul>
                         <li><i class="zmdi zmdi-face"></i>{{$classe->nom}}</li>
-                        <li><i class="zmdi zmdi-alarm"></i>{{$classe->heure}}</li>
+                        <li><i class="zmdi zmdi-alarm"></i>{{$classe->horraire->heure}}</li>
                     </ul>
                 </div>
             </div>

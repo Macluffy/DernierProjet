@@ -33,7 +33,7 @@
                         <h3><a href="class.html">{{$value->titre}}</a></h3>
                         <ul>
                             <li><i class="zmdi zmdi-face"></i>{{$value->nom}}</li>
-                            <li><i class="zmdi zmdi-alarm"></i>{{$value->heure}}</li>
+                            <li><i class="zmdi zmdi-alarm"></i>{{$value->horraire->heure}}</li>
                         </ul>
                     </div>
                 </div>

@@ -21,6 +21,7 @@ class DatabaseSeeder extends Seeder
             TitreSeeder::class,
             AboutSeeder::class,
             GenreSeeder::class,
+            HorraireSeeder::class,
             ClasseSeeder::class,
         ]);
     }

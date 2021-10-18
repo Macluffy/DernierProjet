@@ -18,9 +18,8 @@ class CreateClassesTable extends Migration
             $table->string('image');
             $table->string('titre');
             $table->string('nom');
-            $table->string('heure');
             $table->foreignId('genre_id')->constrained('genres','id');
-            $table->foreignId('heure_id')->constrained('heures','id');
+            $table->foreignId('horraire_id')->constrained('horraires','id');
             $table->timestamps();
         });
     }

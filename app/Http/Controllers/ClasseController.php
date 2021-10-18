@@ -45,7 +45,8 @@ class ClasseController extends Controller
             'image' => ['required' => 'min:1', 'max:255' ],
             'titre' => ['required' => 'min:1', 'max:255' ],
             'nom' => ['required' => 'min:1', 'max:255'] ,
-            'heure' => ['required' => 'min:1', 'max:255'],
+            'genre_id' => ['required' => 'min:1', 'max:255'],
+            'horraire_id' => ['required' => 'min:1', 'max:255'],
             
         ]);
         
@@ -54,7 +55,7 @@ class ClasseController extends Controller
         $classe->image = $request->file('img')->hashName();
         $classe->titre = $request->titre;
         $classe->nom = $request->nom;
-        $classe->heure = $request->heure;
+        $classe->horraire_id = $request->horraire_id;
         $classe->genre_id = $request->genre_id;
         
 
@@ -108,7 +109,8 @@ class ClasseController extends Controller
             'image' => ['required' => 'min:1', 'max:255' ],
             'titre' => ['required' => 'min:1', 'max:255' ],
             'nom' => ['required' => 'min:1', 'max:255'] ,
-            'heure' => ['required' => 'min:1', 'max:255'],
+            'genre_id' => ['required' => 'min:1', 'max:255'],
+            'horraire_id' => ['required' => 'min:1', 'max:255'],
             
         ]);
         
@@ -118,7 +120,7 @@ class ClasseController extends Controller
         $classe->image = $request->file('img')->hashName();
         $classe->titre = $request->titre;
         $classe->nom = $request->nom;
-        $classe->heure = $request->heure;
+        $classe->horraire_id = $request->horraire_id;
         $classe->genre_id = $request->genre_id;
         
 

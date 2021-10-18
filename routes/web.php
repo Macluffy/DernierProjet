@@ -30,8 +30,8 @@ Route::get('/', function () {
     $sli = DB::table('sliders')->where('order',true)->get();
     $titre = Titre::all();
     $about = About::all();
-    $class = Classe::all();
-    return view('pages/home', compact('nav','slider','titre','about','sli','class'));
+    $classe = Classe::all();
+    return view('pages/home', compact('nav','slider','titre','about','sli','classe'));
 });
 
 Route::get('/abouts', function () {
