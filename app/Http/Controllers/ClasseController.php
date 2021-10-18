@@ -55,6 +55,7 @@ class ClasseController extends Controller
         $classe->titre = $request->titre;
         $classe->nom = $request->nom;
         $classe->heure = $request->heure;
+        $classe->genre_id = $request->genre_id;
         
 
         
@@ -89,7 +90,8 @@ class ClasseController extends Controller
      */
     public function edit(Classe $classe)
     {
-        return view('backclass.edit',compact('classe'));
+        $classes = classe::all();
+        return view('backclass.edit',compact('classe','classes'));
     }
 
     /**
@@ -117,6 +119,7 @@ class ClasseController extends Controller
         $classe->titre = $request->titre;
         $classe->nom = $request->nom;
         $classe->heure = $request->heure;
+        $classe->genre_id = $request->genre_id;
         
 
         

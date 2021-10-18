@@ -20,13 +20,14 @@ class ClasseSeeder extends Seeder
                 "titre"=>"yoga for climbers",
                 "nom"=>"Sathi Bhuiyan",
                 "heure"=>"10.00Am-05:00Pm",
-                
+                "genre_id"=>1,
             ],
             [
                 "image"=>"2.jpg",
                 "titre"=>"yoga for climbers",
                 "nom"=>"Sathi Bhuiyan",
                 "heure"=>"10.00Am-05:00Pm",
+                "genre_id"=>2,
                 
             ],
             [
@@ -34,7 +35,7 @@ class ClasseSeeder extends Seeder
                 "titre"=>"yoga for climbers",
                 "nom"=>"Sathi Bhuiyan",
                 "heure"=>"10.00Am-05:00Pm",
-                
+                "genre_id"=>3,
             ],
             
         ]);

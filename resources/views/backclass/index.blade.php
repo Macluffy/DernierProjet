@@ -13,6 +13,9 @@
         
         @endif
     </div>
+    <div>
+        <a href="{{ route('classe.create') }}" class="btn btn-primary"> create</a>
+    </div>
     
         <div class="row" style="display:flex; flex-direction:column; align-items:center; justify-content:center; width:100%; margin:30px;">
             @foreach ($class as $value)

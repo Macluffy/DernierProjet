@@ -37,6 +37,25 @@
             <input type="text" class="form-control" style="width: 25%" name="heure" value="{{ $classe->heure  }}">
             
           </div>
+
+          <select class="form-select mb-3 " style="width: 25%" aria-label="Default select example" name="genre_id">
+            <option  selected>Choix du genre</option>
+            
+                <option value="{{1}} ">Homme</option>
+                <option value="{{2}} ">Femme</option>
+                <option value="{{3}} ">Mixte</option>
+            
+
+          </select>
+
+          <select class="form-select mb-3 " style="width: 25%" aria-label="Default select example" name="genre_id">
+            <option  selected>Choix du genre</option>
+            
+                <option value="{{1}} ">Homme</option>
+                <option value="{{2}} ">Femme</option>
+                <option value="{{3}} ">Mixte</option>
+            
+          </select>
           
           <div style="margin-top:30px; margin-left:120px">
             <button type="submit" class="btn btn-primary">Save</button>

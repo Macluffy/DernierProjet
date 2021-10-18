@@ -8,4 +8,18 @@ use Illuminate\Database\Eloquent\Model;
 class Classe extends Model
 {
     use HasFactory;
+
+
+    protected $fillable = [
+        'image',
+        'titre',
+        'nom',
+        'heure',
+        'genre_id',
+    ];
+
+
+    public function genre(){
+        return $this->belongsTo(Genre::class);
+    }
 }
