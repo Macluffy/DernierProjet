@@ -3,17 +3,19 @@
 
 <div class="slider-area">
     <div class="slider-wrapper">
-        {{$i = $sli[0]->id}}
-        {{$i -= 1}}
+        
         
         @php
+
         
+        $i = $sli[0]->id;
+        $i -= 1;
         
         unset($slider[$i]);
 
-        @endphp
         
-    @php
+        
+    
         $popo = $sli[0]->titre;
         
         if(preg_match("/^(?P<avant>[^)(]*)?(?P<tout_par>\((?P<entre_par>[^)()]+)\))(?P<apres>[^)(]*)?$/"," $popo", $matches)){
@@ -22,7 +24,7 @@
             $text3 = $matches["apres"];
         }
 
-            @endphp
+        @endphp
             
             
             

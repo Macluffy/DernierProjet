@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Classe;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 
 class ClasseController extends Controller
@@ -29,7 +30,8 @@ class ClasseController extends Controller
     public function create()
     {
         $classe=Classe::all();
-        return view('backclass.create',compact('classe'));
+        $classes= DB::table('classes')->where('order',true)->get();
+        return view('backclass.create',compact('classe','classes'));
     }
 
     /**
@@ -44,9 +46,9 @@ class ClasseController extends Controller
             
             'image' => ['required' => 'min:1', 'max:255' ],
             'titre' => ['required' => 'min:1', 'max:255' ],
-            'nom' => ['required' => 'min:1', 'max:255'] ,
             'genre_id' => ['required' => 'min:1', 'max:255'],
             'horraire_id' => ['required' => 'min:1', 'max:255'],
+            'quantiter' => ['required'],
             
         ]);
         
@@ -54,15 +56,18 @@ class ClasseController extends Controller
         $classe = new classe;
         $classe->image = $request->file('img')->hashName();
         $classe->titre = $request->titre;
-        $classe->nom = $request->nom;
+        $text = auth()->user();
+        $classe->nom = $text->name;
+        $classe->quantiter = $request->quantiter;
         $classe->horraire_id = $request->horraire_id;
         $classe->genre_id = $request->genre_id;
-        
+        $classe->jour_id = $request->jour_id;
+        $classe->order = $request->order;
 
-        
-        
+            
         
         $classe->save();
+        
 
         
         $request->file('img')->storePublicly("img/class", "public");
@@ -92,7 +97,8 @@ class ClasseController extends Controller
     public function edit(Classe $classe)
     {
         $classes = classe::all();
-        return view('backclass.edit',compact('classe','classes'));
+        $classes1 = DB::table('classes')->where('order',true)->get();
+        return view('backclass.edit',compact('classe','classes1'));
     }
 
     /**
@@ -108,21 +114,22 @@ class ClasseController extends Controller
             
             'image' => ['required' => 'min:1', 'max:255' ],
             'titre' => ['required' => 'min:1', 'max:255' ],
-            'nom' => ['required' => 'min:1', 'max:255'] ,
             'genre_id' => ['required' => 'min:1', 'max:255'],
             'horraire_id' => ['required' => 'min:1', 'max:255'],
-            
+            'quantiter' => ['required'],
+
         ]);
         
         Storage::disk("public")->delete("/img/class".$classe->image);
-        
-        
         $classe->image = $request->file('img')->hashName();
         $classe->titre = $request->titre;
-        $classe->nom = $request->nom;
+        $text = auth()->user();
+        $classe->nom = $text->name;
+        $classe->quantiter = $request->quantiter;
         $classe->horraire_id = $request->horraire_id;
         $classe->genre_id = $request->genre_id;
-        
+        $classe->jour_id = $request->jour_id;
+        $classe->order = $request->order;
 
         
         

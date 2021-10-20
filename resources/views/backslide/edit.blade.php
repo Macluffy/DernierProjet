@@ -42,6 +42,13 @@
             <input type="text" class="form-control" style="width: 25%" name="btnreadmore" value="{{ $slider->btnreadmore  }}">
             
           </div>
+
+          <div class="form-check">
+            <input class="form-check-input" name="order" type="checkbox" value={{1}} id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            first slider
+          </label>
+        </div>
           
           <div style="margin-top:30px; margin-left:120px">
             <button type="submit" class="btn btn-primary">Save</button>

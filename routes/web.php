@@ -26,12 +26,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $nav = Navbar::all();
+    $slider1 = Slider::all();
     $slider = Slider::all();
     $sli = DB::table('sliders')->where('order',true)->get();
     $titre = Titre::all();
     $about = About::all();
     $classe = Classe::all();
-    return view('pages/home', compact('nav','slider','titre','about','sli','classe'));
+    return view('pages/home', compact('nav','slider','titre','about','sli','classe','slider1'));
 });
 
 Route::get('/abouts', function () {

@@ -21,6 +21,9 @@ class ClasseSeeder extends Seeder
                 "nom"=>"Sathi Bhuiyan",
                 "genre_id"=>1,
                 "horraire_id"=>1,
+                "quantiter"=>15,
+                "jour_id"=>1,
+                "order"=>true,
             ],
             [
                 "image"=>"2.jpg",
@@ -28,7 +31,9 @@ class ClasseSeeder extends Seeder
                 "nom"=>"Sathi Bhuiyan",
                 "genre_id"=>2,
                 "horraire_id"=>2,
-                
+                "quantiter"=>15,
+                "jour_id"=>2,
+                "order"=>true,
             ],
             [
                 "image"=>"3.jpg",
@@ -36,6 +41,9 @@ class ClasseSeeder extends Seeder
                 "nom"=>"Sathi Bhuiyan",
                 "genre_id"=>3,
                 "horraire_id"=>3,
+                "quantiter"=>15,
+                "jour_id"=>3,
+                "order"=>true,
             ],
             
         ]);

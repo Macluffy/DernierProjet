@@ -47,7 +47,7 @@
         <span class="tooltip">About</span>
       </li>
       <li>
-        <a href="classe">
+        <a href="{{ route('classe.index') }}">
           <i class='bx bxs-category'></i>
           <span class="links_name">Classe</span>
         </a>

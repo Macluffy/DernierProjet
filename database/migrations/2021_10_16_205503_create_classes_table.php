@@ -18,8 +18,13 @@ class CreateClassesTable extends Migration
             $table->string('image');
             $table->string('titre');
             $table->string('nom');
+            $table->integer('quantiter');
             $table->foreignId('genre_id')->constrained('genres','id');
             $table->foreignId('horraire_id')->constrained('horraires','id');
+            $table->foreignId('jour_id')->constrained('jours','id');
+            $table->boolean('order')->nullable();
+            
+
             $table->timestamps();
         });
     }

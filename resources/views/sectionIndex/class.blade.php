@@ -18,7 +18,7 @@
                 @endphp
                 
 
-            @if(count($matches) >0  )^
+            @if(count($matches) >0  )
                     
                     <div class="section-title text-center">
                         <h2>{{$text1}}<span class="span">{{$text2}} </span>{{$text3}}</h2>
@@ -34,9 +34,14 @@
                     
             
             </div>
+            
         </div>
         <div class="row"> 
+            
             @foreach ($classe as $value)
+            @if ($value->order == true)
+                
+            
                 <div class="col-md-4 col-sm-6 col-xs-12">     
                 <div class="single-class">
                     <div class="single-img">
@@ -57,8 +62,9 @@
                     </div>
                 </div>
             </div>
+            @endif
             @endforeach
-            
+
         {{-- <div class="row">
             <div class="col-xs-12 text-center">
                 <a class="banner-btn mt-55" href="class.html" data-text="view all classes"><span>view all classes</span></a>

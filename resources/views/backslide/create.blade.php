@@ -44,17 +44,12 @@
           </div>
           <div class="form-check">
               <input class="form-check-input" name="order" type="checkbox" value={{1}} id="flexCheckDefault">
-              <input class="form-check-input" name="order" type="checkbox" value={{0}} id="flexCheckDefault">
             <label class="form-check-label" for="flexCheckDefault">
               first slider
             </label>
           </div>
-          
-          
-  
             
-            
-          </select>
+          
           
           <div style="margin-top:30px; margin-left:120px">
             <button type="submit" class="btn btn-primary">Save</button>

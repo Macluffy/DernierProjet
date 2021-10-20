@@ -50,6 +50,7 @@ class SliderController extends Controller
             'btnreadmore' => ['required' => 'min:1', 'max:255'],
             
         ]);
+
         $sliders = Slider::all();
         
         $slider = new Slider;
@@ -125,19 +126,35 @@ class SliderController extends Controller
             
         ]);
         
+        $sliders = Slider::all();
+
         Storage::disk("public")->delete("/img/slider".$slider->imagefond);
         
         
+
         $slider->imagefond = $request->file('img')->hashName();
         $slider->titre = $request->titre;
         $slider->paragraphe = $request->paragraphe;
         $slider->minititre = $request->minititre;
         $slider->btnreadmore = $request->btnreadmore;
         
-        $request->file('img')->storePublicly("img/slider", "public");
-        $slider->save();
+
 
         
+        $request->file('img')->storePublicly("img/slider", "public");
+        
+
+        if($slider->order == true){
+
+            foreach ( $sliders as $value )
+            {
+                $value->order = false;
+                $value->save();
+            }
+
+        }
+        $slider->order = $request->order;
+        $slider->save();
 
 
         return redirect()->route('slider.index')->with("message", "Datas has succesfully been changed !");
