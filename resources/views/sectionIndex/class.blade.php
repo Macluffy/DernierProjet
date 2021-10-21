@@ -40,11 +40,13 @@
             
             @foreach ($classe as $value)
             @if ($value->order == true)
-                
-            
-                <div class="col-md-4 col-sm-6 col-xs-12">     
-                <div class="single-class">
-                    <div class="single-img">
+                @if ($value->quantiter)
+
+                @endif
+
+                <div class="col-md-4 col-sm-6 col-xs-12 " >     
+                <div class="single-class" >
+                    <div class="single-img"  >
                         <a href="class.html"><img src="{{ asset('img/class/'.$value->image )}}" alt="class"></a>
                         <div class="gallery-icon">
                             <a class="image-popup" href="{{ asset('img/class/'.$value->image ) }}">
@@ -53,9 +55,9 @@
                         </div>
                     </div>
                     
-                    <div class="single-content">
-                        <h3><a href="class.html">{{$value->titre}}</a></h3>
-                        <ul>
+                    <div class="single-content" style="background-color:rgb(136, 255, 136) ">
+                        <h3  ><a href="class.html">{{$value->titre}}</a></h3>
+                        <ul  >
                             <li><i class="zmdi zmdi-face"></i>{{$value->nom}}</li>
                             <li><i class="zmdi zmdi-alarm"></i>{{$value->horraire->heure}}</li>
                         </ul>
@@ -63,6 +65,7 @@
                 </div>
             </div>
             @endif
+            
             @endforeach
 
         {{-- <div class="row">
