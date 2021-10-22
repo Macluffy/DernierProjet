@@ -19,7 +19,7 @@
     @csrf
         <div class="mb-3">
           <label  class="form-label">Image</label>
-          <input type="file" class="form-control" style="width: 25%" name="img" value="{{ $classe->image  }}" >
+          <ing name="img" value="{{ $classe->image  }}" >
           
         </div> 
         <div class="mb-3">

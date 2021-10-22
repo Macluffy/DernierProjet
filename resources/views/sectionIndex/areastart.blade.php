@@ -15,15 +15,16 @@
 
         
         
-    
         $popo = $sli[0]->titre;
+        
         
         if(preg_match("/^(?P<avant>[^)(]*)?(?P<tout_par>\((?P<entre_par>[^)()]+)\))(?P<apres>[^)(]*)?$/"," $popo", $matches)){
             $text1 = $matches["avant"]; 
             $text2 = $matches["entre_par"]; 
             $text3 = $matches["apres"];
+            
         }
-
+        
         @endphp
             
             
