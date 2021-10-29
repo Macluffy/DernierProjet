@@ -28,37 +28,37 @@
                 
             @endif
             </div>
-        </div>    
-        <div class="row">
+        </div> 
+        
+        @foreach ($schedule as $value)
+        <div class="row m5">
             <div class="col-xs-12">                             
                 <div class="scehedule-table table-responsive text-center">
                     <table>
                         <thead>
                             <tr>
-                                <th>Time</th>
-                                <th>saturday</th>
-                                <th>sunday</th>
-                                <th>monday</th>
-                                <th>tuesday</th>
-                                <th>wednesday</th>
-                                <th>thursday</th>
-                                <th>friday</th>
+                                <th>{{$value->time}} </th>
+                                <th> saturday </th>
+                                <th> sunday </th>
+                                <th> monday </th>
+                                <th> tuesday </th>
+                                <th> wednesday </th>
+                                <th> thursday </th>
+                                <th> friday </th>
+                                
                             </tr>
                         </thead>
                         <tbody class="pt-30">
                             <tr>
                                 <td class="time">
-                                    <p>8:00 AM</p>
+                                    <p>{{$value->h1}}</p>
                                 </td>
-                                @foreach ($slider as $value)
-                                @if ($value->heure == 8 && $value->jour == "saturday")
+                                
                                 <td class="purple">
-                                    <h4>{{$slider->titre}} </h4>
+                                    <h4>yoga for climbers</h4>
                                     <p>pipi</p>
                                     <p>8.00 Am-10.00Am</p>
                                 </td> 
-                                @endif
-                                @endforeach
                                 <td></td>
                                 <td></td>
                                 <td class="purple">
@@ -77,7 +77,7 @@
                             </tr>
                             <tr>
                                 <td class="time">
-                                    <p>12:00 AM</p>
+                                    <p>{{$value->h2}}</p>
                                 </td>
                                 <td></td>
                                 <td></td>
@@ -97,7 +97,7 @@
                             </tr>
                             <tr>
                                 <td class="time">
-                                    <p>3:00 PM</p>
+                                    <p>{{$value->h3}}</p>
                                 </td>
                                 <td></td>
                                 <td class="blue">
@@ -121,7 +121,7 @@
                             </tr>
                             <tr>
                                 <td class="time">
-                                    <p>6:00 PM</p>
+                                    <p>{{$value->h4}}</p>
                                 </td>
                                 <td class="pink">
                                     <h4>yoga for climbers</h4>
@@ -148,6 +148,22 @@
                 </div>
             </div>
         </div>
+        @endforeach 
+            <div style="margin:35px; ">
+                <h3>{{$schedule->links()}}</h3> 
+            </div>
     </div>
 </section>
 <!-- Schedule Area End -->
+
+{{-- <div style="margin:20px;">
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+    </nav>
+</div> --}}

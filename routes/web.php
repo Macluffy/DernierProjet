@@ -2,14 +2,25 @@
 
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ClasseController;
+use App\Http\Controllers\EventController;
+use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\InscriptionController;
 use App\Http\Controllers\NavbarController;
+use App\Http\Controllers\PricingController;
+use App\Http\Controllers\ScheduleController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\TitreController;
+use App\Http\Controllers\TrainerController;
 use App\Models\About;
 use App\Models\Classe;
+use App\Models\Event;
+use App\Models\Gallery;
 use App\Models\Navbar;
+use App\Models\Pricing;
+use App\Models\Schedule;
 use App\Models\Slider;
 use App\Models\Titre;
+use App\Models\Trainer;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
@@ -29,16 +40,20 @@ Route::get('/', function () {
     $slider1 = Slider::all();
     $slider = Slider::all();
     $titre = Titre::all();
+    $sli = DB::table('sliders')->where('order',true)->get();
     $about = About::all();
     $classe = Classe::all();
-    return view('pages/home', compact('nav','slider','titre','about','sli','classe','slider1'));
+    $galleri = Gallery::take(6)->inRandomOrder()->get();
+    $schedule = Schedule::paginate(1);
+    $trainer = Trainer::all();
+    $pricing = Pricing::all();
+    $event = DB::table('events')->where('order',true)->get();
+    $trainer1 = DB::table('trainers')->where('user_id',2)->get();
+    return view('pages/home', compact('pricing','nav','event','slider','titre','about','sli','trainer1','trainer','classe','slider1','galleri','schedule'));
 });
 
-Route::get('/inscription', function () {
-    $classe = Classe::all();
-    
-    return view('inscription', compact('classe'));
-});
+
+
 
 Route::get('/abouts', function () {
     $nav = Navbar::all();
@@ -75,3 +90,15 @@ Route::resource('/about', AboutController::class)->middleware(['auth']);
 Route::resource('/titre', TitreController::class)->middleware(['auth']);
 
 Route::resource('/classe', ClasseController::class)->middleware(['auth']);
+
+Route::resource('/schedule', ScheduleController::class)->middleware(['auth']);
+
+Route::resource('/gallery', GalleryController::class)->middleware(['auth']);
+
+Route::resource('/trainer', TrainerController::class)->middleware(['auth']);
+
+Route::resource('/event', EventController::class)->middleware(['auth']);
+
+Route::resource('/pricing', PricingController::class)->middleware(['auth']);
+
+Route::resource('/inscription', InscriptionController::class);

@@ -15,7 +15,7 @@
 
             @endphp
 
-            @if(count($matches) >0  )
+            @if(count($matches) >0)
                     <div class="section-title text-center">
                         <h2>{{$text1}}<span class="span">{{$text2}} </span>{{$text3}}</h2>
                         <p>{{$titre[5]->paragraphe}} </p>
@@ -43,7 +43,7 @@
                             <li>Access Clup Facilites</li>
                             <li>Out Door activites</li>
                         </ul>
-                        <a href="#">get started</a>
+                        <a href="/register">get started</a>
                     </div>
                 </div>
             </div>
@@ -60,7 +60,7 @@
                             <li>Access Clup Facilites</li>
                             <li>Out Door activites</li>
                         </ul>
-                        <a href="#">get started</a>
+                        <a href="/register2">get started</a>
                     </div>
                 </div>
             </div>
@@ -77,7 +77,7 @@
                             <li>Access Clup Facilites</li>
                             <li>Out Door activites</li>
                         </ul>
-                        <a href="#">get started</a>
+                        <a href="/register3">get started</a>
                     </div>
                 </div>
             </div>

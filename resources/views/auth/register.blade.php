@@ -5,7 +5,7 @@
                 <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
             </a>
         </x-slot>
-
+        <h1 style="width:100%; text-align:center;font-size:30px;font-weight:bolder;">Abonnement Silver</h1>
         <!-- Validation Errors -->
         <x-auth-validation-errors class="mb-4" :errors="$errors" />
 

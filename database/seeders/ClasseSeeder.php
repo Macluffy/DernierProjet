@@ -23,6 +23,7 @@ class ClasseSeeder extends Seeder
                 "horraire_id"=>1,
                 "quantiter"=>15,
                 "jour_id"=>1,
+                "date_id"=>1,
                 "order"=>true,
             ],
             [
@@ -33,6 +34,7 @@ class ClasseSeeder extends Seeder
                 "horraire_id"=>2,
                 "quantiter"=>15,
                 "jour_id"=>2,
+                "date_id"=>2,
                 "order"=>true,
             ],
             [
@@ -43,6 +45,7 @@ class ClasseSeeder extends Seeder
                 "horraire_id"=>3,
                 "quantiter"=>15,
                 "jour_id"=>3,
+                "date_id"=>3,
                 "order"=>true,
             ],
             

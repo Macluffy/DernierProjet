@@ -17,6 +17,7 @@ class Classe extends Model
         'genre_id',
         'horraire_id',
         'jour_id',
+        'date_id',
         
     ];
 
@@ -32,6 +33,9 @@ class Classe extends Model
     public function jour(){
         return $this->belongsTo(Jour::class);
     }
+    public function date(){
+        return $this->belongsTo(Date::class);
+    }
 
     public function users(){
         return $this->belongsToMany(User::class);
@@ -41,5 +45,8 @@ class Classe extends Model
         return $this->hasMany(Inscription::class);
     }
 
+    // public function inscription(){
+    //     return $this->belongsTo(Inscription::class);
+    // }
     
 }

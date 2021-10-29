@@ -27,45 +27,59 @@
                     </div> 
                 
             @endif
+            @php
+                $c = count($trainer)-1;
+                
+                $i = rand(0,$c);
+                $o = rand(0,$c);
+                while ($o == 1) 
+                    $o = rand(0,$c);
+                while ($i == $o || $i == 1) 
+                    $i = rand(0,$c);
+                $p = $trainer1[0]->id-1;
+                // while ($i == $o || $i == ($trainer1[0]->id+1)) 
+                
+            @endphp
+        
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="single-trainer text-center">
-                    <img src="{{ asset('img/trainer/trainer1.jpg') }}" alt="trainer">
+                    <img src="{{ asset('img/trainer/'.$trainer[$i]->image) }}" alt="trainer">
                     <div class="trainer-hover">
-                        <h3>John laisa do</h3>
+                        <h3>{{$trainer[$i]->titre}} </h3>
                         <ul>
-                            <li><a href=" https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>  
-                            <li><a href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="https://dribbble.com/"><i class="fa fa-dribbble"></i></a></li>
-                            <li><a href="https://www.pinterest.com/"><i class="fa fa-pinterest"></i></a></li>
+                            <li><a href="{{$trainer[$i]->lien1}}"><i class="{{$trainer[$i]->icon1}}"></i></a></li>  
+                            <li><a href="{{$trainer[$i]->lien2}}"><i class="{{$trainer[$i]->icon2}}"></i></a></li>
+                            <li><a href="{{$trainer[$i]->lien3}}"><i class="{{$trainer[$i]->icon3}}"></i></a></li>
+                            <li><a href="{{$trainer[$i]->lien4}}"><i class="{{$trainer[$i]->icon4}}"></i></a></li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="single-trainer text-center">
-                    <img src="{{ asset('img/trainer/trainer2.jpg') }}" alt="trainer">
+                    <img src="{{ asset('img/trainer/'.$trainer[$p]->image) }}" alt="trainer">
                     <div class="trainer-hover">
-                        <h3>John laisa do</h3>
+                        <h3>{{$trainer[$p]->titre}} </h3>
                         <ul>
-                            <li><a href=" https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>  
-                            <li><a href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="https://dribbble.com/"><i class="fa fa-dribbble"></i></a></li>
-                            <li><a href="https://www.pinterest.com/"><i class="fa fa-pinterest"></i></a></li>
+                            <li><a href="{{$trainer[$p]->lien1}}"><i class="{{$trainer[$p]->icon1}}"></i></a></li>  
+                            <li><a href="{{$trainer[$p]->lien2}}"><i class="{{$trainer[$p]->icon2}}"></i></a></li>
+                            <li><a href="{{$trainer[$p]->lien3}}"><i class="{{$trainer[$p]->icon3}}"></i></a></li>
+                            <li><a href="{{$trainer[$p]->lien4}}"><i class="{{$trainer[$p]->icon4}}"></i></a></li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 hidden-sm col-xs-12">
+            <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="single-trainer text-center">
-                    <img src="{{ asset('img/trainer/trainer3.jpg') }}" alt="trainer">
+                    <img src="{{ asset('img/trainer/'.$trainer[$o]->image) }}" alt="trainer">
                     <div class="trainer-hover">
-                        <h3>John laisa do</h3>
+                        <h3>{{$trainer[$o]->titre}} </h3>
                         <ul>
-                            <li><a href=" https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>  
-                            <li><a href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="https://dribbble.com/"><i class="fa fa-dribbble"></i></a></li>
-                            <li><a href="https://www.pinterest.com/"><i class="fa fa-pinterest"></i></a></li>
+                            <li><a href="{{$trainer[$o]->lien1}}"><i class="{{$trainer[$o]->icon1}}"></i></a></li>  
+                            <li><a href="{{$trainer[$o]->lien2}}"><i class="{{$trainer[$o]->icon2}}"></i></a></li>
+                            <li><a href="{{$trainer[$o]->lien3}}"><i class="{{$trainer[$o]->icon3}}"></i></a></li>
+                            <li><a href="{{$trainer[$o]->lien4}}"><i class="{{$trainer[$o]->icon4}}"></i></a></li>
                         </ul>
                     </div>
                 </div>

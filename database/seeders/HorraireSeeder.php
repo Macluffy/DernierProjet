@@ -16,17 +16,17 @@ class HorraireSeeder extends Seeder
     {
         DB::table("horraires")->insert([
             [
-                "heure"=>"8.00 Am-12.00Am",
+                "heure"=>'08:00:00',
             ],
             [
-                "heure"=>"12.00 Am-3.00Pm",
+                "heure"=>'12:00.00',
             ],
             [
-                "heure"=>"3.00 Pm-6.00Pm",
+                "heure"=>'15:00:00',
             ],
             [
-                "heure"=>"6.00 Pm-9.00Pm",
+                "heure"=>'18:00:00',
             ],
-        ]);
+        ]); 
     }
 }

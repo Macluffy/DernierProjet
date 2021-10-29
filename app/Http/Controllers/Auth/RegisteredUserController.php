@@ -44,6 +44,7 @@ class RegisteredUserController extends Controller
             'email' => $request->email,
             'password' => Hash::make($request->password),
             'role_id' => 1,
+            "abo"=>"silver"
         ]);
 
         event(new Registered($user));
@@ -52,4 +53,6 @@ class RegisteredUserController extends Controller
 
         return redirect(RouteServiceProvider::HOME);
     }
+
+    
 }

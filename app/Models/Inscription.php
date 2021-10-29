@@ -11,9 +11,12 @@ class Inscription extends Model
 
     protected $table="inscriptions";
     
-    protected $filable=["classe_id"];
+    protected $filable=["classe_id","nom"];
 
     public function classe(){
         return $this->belongsTo(Classe::class);
     }
+    // public function classes(){
+    //     return $this->hasMany(Classe::class);
+    // }
 }

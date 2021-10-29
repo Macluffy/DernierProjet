@@ -16,67 +16,67 @@ class DateSeeder extends Seeder
     {
         DB::table("dates")->insert([
             [
-                "calendrier"=>"23-10-21",
+                "calendrier"=>'2021-10-23',
             ],
             [
-                "calendrier"=>"24-10-21",
+                "calendrier"=>'2021-10-24',
             ],
             [
-                "calendrier"=>"25-10-21",
+                "calendrier"=>'2021-10-25',
             ],
             [
-                "calendrier"=>"26-10-21",
+                "calendrier"=>'2021-10-26',
             ],
             [
-                "calendrier"=>"27-10-21",
+                "calendrier"=>'2021-10-27',
             ],
             [
-                "calendrier"=>"28-10-21",
+                "calendrier"=>'2021-10-28',
             ],
             [
-                "calendrier"=>"29-10-21",
+                "calendrier"=>'2021-10-29',
             ],
             [
-                "calendrier"=>"30-10-21",
+                "calendrier"=>'2021-10-30',
             ],
             [
-                "calendrier"=>"31-10-21",
+                "calendrier"=>'2021-10-31',
             ],
             [
-                "calendrier"=>"01-11-21",
+                "calendrier"=>'2021-11-01',
             ],
             [
-                "calendrier"=>"02-11-21",
+                "calendrier"=>'2021-11-02',
             ],
             [
-                "calendrier"=>"03-11-21",
+                "calendrier"=>'2021-11-03',
             ],
             [
-                "calendrier"=>"04-11-21",
+                "calendrier"=>'2021-11-04',
             ],
             [
-                "calendrier"=>"05-11-21",
+                "calendrier"=>'2021-11-05',
             ],
             [
-                "calendrier"=>"06-11-21",
+                "calendrier"=>'2021-11-06',
             ],
             [
-                "calendrier"=>"07-11-21",
+                "calendrier"=>'2021-11-07',
             ],
             [
-                "calendrier"=>"08-11-21",
+                "calendrier"=>'2021-11-08',
             ],
             [
-                "calendrier"=>"09-11-21",
+                "calendrier"=>'2021-11-09',
             ],
             [
-                "calendrier"=>"10-11-21",
+                "calendrier"=>'2021-11-10',
             ],
             [
-                "calendrier"=>"11-11-21",
+                "calendrier"=>'2021-11-11',
             ],
             [
-                "calendrier"=>"12-11-21",
+                "calendrier"=>'2021-11-12',
             ],
         ]);
     }

@@ -13,7 +13,7 @@ class Jour extends Model
 
     protected $table="jours";
 
-    protected $fillable=["day"];
+    protected $fillable=["day","date_id"];
 
     public function classe(){
         return $this->hasMany(Classe::class);
@@ -21,6 +21,10 @@ class Jour extends Model
 
     public function date(){
         return $this->hasMany(Date::class);
+    }
+
+    public function schedule(){
+        return $this->belongsTo(Schedule::class);
     }
 
 }

@@ -20,4 +20,8 @@ class Date extends Model
     public function jour(){
         return $this->belongsTo(Jour::class);
     }
+
+    public function classes(){
+        return $this->hasMany(Classe::class);
+    }
 }

@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Http\Controllers\NavbarController;
 use App\Models\Coach;
+use App\Models\Inscription;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -28,12 +29,18 @@ class DatabaseSeeder extends Seeder
             DateSeeder::class,
             JourSeeder::class,
             ClasseSeeder::class,
-            
+            InscriptionSeeder::class,
+            GallerySeeder::class,
+            ScheduleSeeder::class,
+            UserSeeder::class,
+            TrainerSeeder::class,
+            EventSeeder::class,
+            pricingSeeder::class,
             
             
             
         ]);
-    \App\Models\User::factory(10)->create();
+    // \App\Models\User::factory(10)->create();
 
     $this->call([
             

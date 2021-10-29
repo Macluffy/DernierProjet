@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateInscriptionsTable extends Migration
+class CreateGalleriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,11 @@ class CreateInscriptionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('inscriptions', function (Blueprint $table) {
+        Schema::create('galleries', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('classe_id')->constrained('classes','id');
+            $table->string('img1');
+            $table->string('img2');
+            $table->string('icon');
             $table->timestamps();
         });
     }
@@ -27,6 +29,6 @@ class CreateInscriptionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('inscriptions');
+        Schema::dropIfExists('galleries');
     }
 }

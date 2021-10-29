@@ -29,10 +29,10 @@
             @endif
                 <div class="event-wrapper">
                     <div class="event-content text-center">
-                        <h3>Yoga celebration in Handstand</h3>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry'ssurvived </p>
-                        <h4>25 March 2016</h4>
-                        <h5>10AM - 12AM</h5>
+                        <h3>{{$event[0]->titre}} </h3>
+                        <p> {{$event[0]->paragraphe}}</p>
+                        <h4>{{$event[0]->date}}</h4>
+                        <h5>{{$event[0]->heure}}</h5>
                     </div> 
                 </div>
             </div>

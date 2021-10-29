@@ -43,7 +43,62 @@ class JourSeeder extends Seeder
                 "day"=>"vendredi",
                 "date_id"=> 7,
             ],
-            
+            [
+                "day"=>"samedi",
+                "date_id"=> 8,
+            ],
+            [
+                "day"=>"dimanche",
+                "date_id"=> 9,
+            ],
+            [
+                "day"=>"lundi",
+                "date_id"=> 10,
+            ],
+            [
+                "day"=>"mardi",
+                "date_id"=> 11,
+            ],
+            [
+                "day"=>"mercredi",
+                "date_id"=> 12,
+            ],
+            [
+                "day"=>"jeudi",
+                "date_id"=> 13,
+            ],
+            [
+                "day"=>"vendredi",
+                "date_id"=> 14,
+            ],
+            [
+                "day"=>"samedi",
+                "date_id"=> 15,
+            ],
+            [
+                "day"=>"dimanche",
+                "date_id"=> 16,
+            ],
+            [
+                "day"=>"lundi",
+                "date_id"=> 17,
+            ],
+            [
+                "day"=>"mardi",
+                "date_id"=> 18,
+            ],
+            [
+                "day"=>"mercredi",
+                "date_id"=> 19,
+            ],
+            [
+                "day"=>"jeudi",
+                "date_id"=> 20,
+            ],
+            [
+                "day"=>"vendredi",
+                "date_id"=> 21,
+            ],
         ]);
     }
 }

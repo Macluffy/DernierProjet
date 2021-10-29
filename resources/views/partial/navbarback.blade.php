@@ -54,18 +54,39 @@
         <span class="tooltip">Classe</span>
       </li>
       <li>
-        <a href="#">
+        <a href="{{ route('schedule.index') }}">
           <i class='bx bx-cart-alt' ></i>
-          <span class="links_name">Order</span>
+          <span class="links_name">Schedule</span>
         </a>
-        <span class="tooltip">Order</span>
+        <span class="tooltip">Schedule</span>
       </li>
       <li>
-        <a href="#">
-          <i class='bx bx-heart' ></i>
-          <span class="links_name">Saved</span>
+        <a href="{{ route('trainer.index') }}">
+          <i class='bx bx-cart-alt' ></i>
+          <span class="links_name">Trainer</span>
         </a>
-        <span class="tooltip">Saved</span>
+        <span class="tooltip">Trainer</span>
+      </li>
+      <li>
+        <a href="{{ route('gallery.index') }}">
+          <i class='bx bx-heart' ></i>
+          <span class="links_name">Galleries</span>
+        </a>
+        <span class="tooltip">Galleries</span>
+      </li>
+      <li>
+        <a href="{{ route('event.index') }}">
+          <i class='bx bx-heart' ></i>
+          <span class="links_name">Event</span>
+        </a>
+        <span class="tooltip">Event</span>
+      </li>
+      <li>
+        <a href="{{ route('pricing.index') }}">
+          <i class='bx bx-heart' ></i>
+          <span class="links_name">Pricing</span>
+        </a>
+        <span class="tooltip">Pricing</span>
       </li>
       <li>
         <a href="/titre">

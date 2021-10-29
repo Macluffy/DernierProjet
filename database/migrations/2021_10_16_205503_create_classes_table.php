@@ -23,6 +23,7 @@ class CreateClassesTable extends Migration
             $table->foreignId('genre_id')->constrained('genres','id');
             $table->foreignId('horraire_id')->constrained('horraires','id');
             $table->foreignId('jour_id')->constrained('jours','id');
+            $table->foreignId('date_id')->constrained('dates','id')->nullable();
             $table->boolean('order')->nullable();
             
 

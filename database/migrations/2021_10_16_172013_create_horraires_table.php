@@ -15,7 +15,7 @@ class CreateHorrairesTable extends Migration
     {
         Schema::create('horraires', function (Blueprint $table) {
             $table->id();
-            $table->string('heure');
+            $table->time('heure');
             $table->timestamps();
         });
     }

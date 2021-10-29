@@ -62,6 +62,7 @@ class ClasseController extends Controller
         $classe->horraire_id = $request->horraire_id;
         $classe->genre_id = $request->genre_id;
         $classe->jour_id = $request->jour_id;
+        $classe->date_id = $request->jour_id;
         $classe->order = $request->order;
 
             
@@ -87,6 +88,7 @@ class ClasseController extends Controller
     {
         return view('backclass.show',compact('classe'));
     }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -129,6 +131,7 @@ class ClasseController extends Controller
         $classe->horraire_id = $request->horraire_id;
         $classe->genre_id = $request->genre_id;
         $classe->jour_id = $request->jour_id;
+        $classe->date_id = $request->jour_id;
         $classe->order = $request->order;
 
         

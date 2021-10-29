@@ -13,58 +13,12 @@ class InscriptionSeeder extends Seeder
      * @return void
      */
     public function run()
-    {
-        DB::table("inscriptions")->insert([
-            [
-                
-                "classe_id"=>1,
-
-            ],
-            [
-                
-                "classe_id"=>2,
-
-            ],
-            [
-                
-                "classe_id"=>1,
-
-            ],
-            [
-                
-                "classe_id"=>1,
-
-            ],
-            [
-                
-                "classe_id"=>3,
-
-            ],
-            [
-                
-                "classe_id"=>2,
-
-            ],
-            [
-                
-                "classe_id"=>2,
-
-            ],
-            [
-                
-                "classe_id"=>3,
-
-            ],
-            [
-                
-                "classe_id"=>1,
-
-            ],
-            [
-                
-                "classe_id"=>1,
-
-            ],
-        ]);
+    { DB::table("inscriptions")->insert([
+        [
+            "classe_id"=>1,
+            "nom"=> "lol",
+        ],
+    ]);
+        
     }
 }

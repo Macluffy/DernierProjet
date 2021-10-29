@@ -52,19 +52,14 @@ class SliderController extends Controller
         ]);
 
         $sliders = Slider::all();
-        
         $slider = new Slider;
         $slider->imagefond = $request->file('img')->hashName();
         $slider->titre = $request->titre;
         $slider->paragraphe = $request->paragraphe;
         $slider->minititre = $request->minititre;
         $slider->btnreadmore = $request->btnreadmore;
-
         $slider->order = $request->order;
-        
-        
         $slider->save();
-        
         if($slider->order == true){
 
             foreach ( $sliders as $value )
@@ -129,8 +124,6 @@ class SliderController extends Controller
         $sliders = Slider::all();
 
         Storage::disk("public")->delete("/img/slider".$slider->imagefond);
-        
-        
 
         $slider->imagefond = $request->file('img')->hashName();
         $slider->titre = $request->titre;
