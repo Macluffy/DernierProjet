@@ -30,57 +30,26 @@
             </div>
         </div>
         <div class="row">
+            @foreach ($pricing as $value)
             <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="single-table text-center">
                     <div class="table-head">
-                        <h2>silver package</h2>
-                        <h1>$30<span>/month</span></h1>
+                        <h2>{{$value->pack}} </h2>
+                        <h1>{{$value->prix}}<span>{{$value->month}}</span></h1>
                     </div>
                     <div class="table-body">
                         <ul>
-                            <li>Free T-Shirt & swags</li>
-                            <li>Free of all message treatments</li>
-                            <li>Access Clup Facilites</li>
-                            <li>Out Door activites</li>
+                            <li>{{$value->li1}}</li>
+                            <li>{{$value->li2}}</li>
+                            <li>{{$value->li3}}</li>
+                            <li>{{$value->li4}}</li>
                         </ul>
-                        <a href="/register">get started</a>
+                        <a href="/register">{{$value->btn}}</a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="single-table text-center">
-                    <div class="table-head">
-                        <h2>gold package</h2>
-                        <h1>$50<span>/month</span></h1>
-                    </div>
-                    <div class="table-body">
-                        <ul>
-                            <li>Free T-Shirt & swags</li>
-                            <li>Free of all message treatments</li>
-                            <li>Access Clup Facilites</li>
-                            <li>Out Door activites</li>
-                        </ul>
-                        <a href="/register2">get started</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 hidden-sm col-xs-12">
-                <div class="single-table text-center">
-                    <div class="table-head">
-                        <h2>platinum package</h2>
-                        <h1>$70<span>/month</span></h1>
-                    </div>
-                    <div class="table-body">
-                        <ul>
-                            <li>Free T-Shirt & swags</li>
-                            <li>Free of all message treatments</li>
-                            <li>Access Clup Facilites</li>
-                            <li>Out Door activites</li>
-                        </ul>
-                        <a href="/register3">get started</a>
-                    </div>
-                </div>
-            </div>
+            @endforeach
+            
         </div>
     </div>
 </div>

@@ -2,7 +2,7 @@
 @section('content')
 <div >
     <div>
-        <h1 class="text-center" style="margin-bottom:40px">Backoffice || Create event</h1>
+        <h1 class="text-center" style="margin-bottom:40px">Backoffice || Create pricing</h1>
     </div>
     @if ($errors->any())
 <div class="alert alert-danger" >
@@ -14,36 +14,51 @@
     
 </div>
 @endif
-    <form action="{{ route('event.store') }}" style="margin-left:50px" method="post" enctype="multipart/form-data">
+    <form action="{{ route('pricing.store') }}" style="margin-left:50px" method="post" enctype="multipart/form-data">
     
     @csrf
         
         <div class="mb-3">
-          <label  class="form-label">Titre</label>
-          <input type="text" class="form-control" style="width: 25%" name="titre" value="{{ old('titre')  }}">
+          <label  class="form-label">Pack Name</label>
+          <input type="text" class="form-control" style="width: 25%" name="pack" value="{{ old('pack')  }}">
           
         </div>
         <div class="mb-3">
-          <label  class="form-label">Paragraphe</label>
-          <input type="text" class="form-control" style="width: 25%" name="paragraphe" value="{{ old('paragraphe')  }}">
+          <label  class="form-label">prix</label>
+          <input type="text" class="form-control" style="width: 25%" name="prix" value="{{ old('prix')  }}">
           
         </div>
         <div class="mb-3">
-            <label  class="form-label">Date</label>
-            <input type="text" class="form-control" style="width: 25%" name="date" value="{{  old('date')  }}">
+            <label  class="form-label">mois</label>
+            <input type="text" class="form-control" style="width: 25%" name="month" value="{{  old('month')  }}">
             
           </div>
           <div class="mb-3">
-            <label  class="form-label">Heure</label>
-            <input type="text" class="form-control" style="width: 25%" name="heure" value="{{  old('heure')  }}">
+            <label  class="form-label">description 1</label>
+            <input type="text" class="form-control" style="width: 25%" name="li1" value="{{  old('li1')  }}">
             
           </div>
-          <div class="form-check">
-              <input class="form-check-input" name="order" type="checkbox" value={{1}} id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">
-              first event
-            </label>
+          <div class="mb-3">
+            <label  class="form-label">description 2</label>
+            <input type="text" class="form-control" style="width: 25%" name="li2" value="{{  old('li2')  }}">
+            
           </div>
+          <div class="mb-3">
+            <label  class="form-label">description 3</label>
+            <input type="text" class="form-control" style="width: 25%" name="li3" value="{{  old('li3')  }}">
+            
+          </div>
+          <div class="mb-3">
+            <label  class="form-label">description 4</label>
+            <input type="text" class="form-control" style="width: 25%" name="li4" value="{{  old('li4')  }}">
+            
+          </div>
+          <div class="mb-3">
+            <label  class="form-label">boutton</label>
+            <input type="text" class="form-control" style="width: 25%" name="btn" value="{{  old('btn')  }}">
+            
+          </div>
+          
             
           
           

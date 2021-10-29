@@ -14,10 +14,10 @@ class PricingController extends Controller
      */
     public function index()
     {
-        $princing=Pricing::all();
+        $pricing=Pricing::all();
 
         
-        return view('backpricing.index',compact('princing'));
+        return view('backpricing.index',compact('pricing'));
     }
 
     /**
@@ -75,7 +75,7 @@ class PricingController extends Controller
      */
     public function show(Pricing $pricing)
     {
-        //
+        return view('backpricing.show',compact('pricing'));
     }
 
     /**
@@ -86,7 +86,7 @@ class PricingController extends Controller
      */
     public function edit(Pricing $pricing)
     {
-        //
+        return view('backpricing.edit',compact('pricing'));
     }
 
     /**
@@ -98,7 +98,30 @@ class PricingController extends Controller
      */
     public function update(Request $request, Pricing $pricing)
     {
-        //
+        $request->validate([
+            'pack' => ['required' => 'min:1', 'max:255' ],
+            'prix' => ['required' => 'min:1', 'max:255' ],
+            'month' => ['required' => 'min:1', 'max:255'] ,
+            'li1' => ['required' => 'min:1', 'max:255'],
+            'li2' => ['required' => 'min:1', 'max:255'],
+            'li3' => ['required' => 'min:1', 'max:255'],
+            'li4' => ['required' => 'min:1', 'max:255'],
+            'btn' => ['required' => 'min:1', 'max:255'] ,
+            
+        ]);
+
+        
+        
+        $pricing->pack = $request->pack;
+        $pricing->prix = $request->prix;
+        $pricing->month = $request->month;
+        $pricing->li1 = $request->li1;
+        $pricing->li2 = $request->li2;
+        $pricing->li3 = $request->li3;
+        $pricing->li4 = $request->li4;
+        $pricing->btn = $request->btn;
+        $pricing->save();
+        return redirect()->route('pricing.index')->with("message", "Datas has succesfully been changed !");
     }
 
     /**
@@ -109,6 +132,7 @@ class PricingController extends Controller
      */
     public function destroy(Pricing $pricing)
     {
-        //
+        $pricing->delete();
+        return redirect()->route('pricing.index');
     }
 }
