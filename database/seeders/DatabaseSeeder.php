@@ -35,7 +35,11 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             TrainerSeeder::class,
             EventSeeder::class,
-            pricingSeeder::class,
+            PricingSeeder::class,
+            ClientSeeder::class,
+            MapSeeder::class,
+            NewslaterSeeder::class,
+            FooterSeeder::class,
             
             
             

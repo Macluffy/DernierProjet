@@ -2,10 +2,14 @@
 
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ClasseController;
+use App\Http\Controllers\ClientController;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\FooterController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\InscriptionController;
+use App\Http\Controllers\MapController;
 use App\Http\Controllers\NavbarController;
+use App\Http\Controllers\NewslaterController;
 use App\Http\Controllers\PricingController;
 use App\Http\Controllers\ScheduleController;
 use App\Http\Controllers\SliderController;
@@ -13,14 +17,19 @@ use App\Http\Controllers\TitreController;
 use App\Http\Controllers\TrainerController;
 use App\Models\About;
 use App\Models\Classe;
+use App\Models\Client;
 use App\Models\Event;
+use App\Models\Footer;
 use App\Models\Gallery;
+use App\Models\Map;
 use App\Models\Navbar;
+use App\Models\Newslater;
 use App\Models\Pricing;
 use App\Models\Schedule;
 use App\Models\Slider;
 use App\Models\Titre;
 use App\Models\Trainer;
+use Database\Seeders\MapSeeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
@@ -44,12 +53,17 @@ Route::get('/', function () {
     $about = About::all();
     $classe = Classe::all();
     $galleri = Gallery::take(6)->inRandomOrder()->get();
-    $schedule = Schedule::paginate(1);
+    $schedule = Schedule::all();
+    // $schedule = Schedule::paginate(1);
     $trainer = Trainer::all();
     $pricing = Pricing::all();
     $event = DB::table('events')->where('order',true)->get();
     $trainer1 = DB::table('trainers')->where('user_id',2)->get();
-    return view('pages/home', compact('pricing','nav','event','slider','titre','about','sli','trainer1','trainer','classe','slider1','galleri','schedule'));
+    $client = Client::all();
+    $map = Map::all();
+    $newslater = Newslater::all();
+    $footer = Footer::all();
+    return view('pages/home', compact('footer','newslater','map','client','pricing','nav','event','slider','titre','about','sli','trainer1','trainer','classe','slider1','galleri','schedule'));
 });
 
 
@@ -101,4 +115,12 @@ Route::resource('/event', EventController::class)->middleware(['auth']);
 
 Route::resource('/pricing', PricingController::class)->middleware(['auth']);
 
-Route::resource('/inscription', InscriptionController::class);
+Route::resource('/inscription', InscriptionController::class)->middleware(['auth']);
+
+Route::resource('/client', ClientController::class)->middleware(['auth']);
+
+Route::resource('/map', MapController::class)->middleware(['auth']);
+
+Route::resource('/newslater', NewslaterController::class)->middleware(['auth']);
+
+Route::resource('/footer', FooterController::class)->middleware(['auth']);

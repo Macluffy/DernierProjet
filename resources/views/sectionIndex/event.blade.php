@@ -14,7 +14,7 @@
                     }
 
             @endphp
-
+            
             @if(count($matches) >0  )
                     <div class="section-title text-center">
                         <h2>{{$text1}}<span class="span">{{$text2}} </span>{{$text3}}</h2>

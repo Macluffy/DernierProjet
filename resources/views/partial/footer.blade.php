@@ -5,41 +5,41 @@
             <div class="row">  
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="single-footer-widget">
-                        <a href="index.html"><img src="{{ asset('img/logo/logo.png') }}" alt="handstand"></a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a convallis nulla. Ut </p>
+                        <a href="index.html"><img src="{{ asset('img/logo/'.$footer[0]->logo) }}" alt="handstand"></a>
+                        <p>{{$footer[0]->p1}} </p>
                         <ul>
-                            <li><i class="zmdi zmdi-email"></i> username@gmail.com</li>
-                            <li><i class="zmdi zmdi-phone"></i> (+660 256 24857)</li>
-                            <li><i class="zmdi zmdi-home"></i> Your Address Here</li>
+                            <li><i class="{{$footer[0]->icon1}}"></i> {{$footer[0]->p2}}</li>
+                            <li><i class="{{$footer[0]->icon2}}"></i> {{$footer[0]->p3}}</li>
+                            <li><i class="{{$footer[0]->icon3}}"></i> {{$footer[0]->p4}}</li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="single-footer-widget">
-                        <h3>Recent Tweets</h3>
+                        <h3>{{$footer[0]->titre1}}</h3>
                         <div class="single-twitt mb-10">
                             <div class="twitt-icon">
-                                <i class="zmdi zmdi-twitter"></i>
+                                <i class="{{$footer[0]->icon4}}"></i>
                             </div>
                             <div class="twitt-content">
-                                <p>@envato good News for today!! We got  2 psd templete weekly top selling quality template in technology category !!!</p>
-                           <a href="https://twitter.com/login/">https://twitter.com/login</a>
+                                <p>{{$footer[0]->p5}}</p>
+                           <a href="{{$footer[0]->link1}}">{{$footer[0]->contenu1}}</a>
                             </div>
                         </div>
                         <div class="single-twitt">
                             <div class="twitt-icon">
-                                <i class="zmdi zmdi-twitter"></i>
+                                <i class="{{$footer[0]->icon5}}"></i>
                             </div>
                             <div class="twitt-content">
-                                <p>@envato good News for today!! We got  2 psd templete weekly top selling quality template in technology category !!!</p>
-                           <a href="https://twitter.com/login/">https://twitter.com/login</a>
+                                <p>{{$footer[0]->p6}}</p>
+                           <a href="{{$footer[0]->link2}}">{{$footer[0]->contenu2}}</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 hidden-sm col-xs-12">
                     <div class="single-footer-widget">
-                        <h3>get in touch</h3>
+                        <h3>{{$footer[0]->titre2}}</h3>
                         <form id="subscribe-form" action="https://whizthemes.com/mail-php/other/mail.php">
                             <div class="row">
                                 <div class="col-sm-6">
@@ -50,7 +50,7 @@
                                 </div>
                                 <div class="col-sm-12">
                                     <textarea cols="30" rows="7" name="con_message" placeholder="subject"></textarea>
-                                    <button type="submit">submit</button>
+                                    <button type="submit">{{$footer[0]->btn}}</button>
                                     <p class="subscribe-message"></p>
                                 </div>
                             </div>
@@ -65,7 +65,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="footer-text text-center">
-                        <span>Copyright &copy; <a href="#">Hastech</a> 2017. All Rights Reserved.</span>
+                        <span>{{$footer[0]->span1}} &copy; <a href="#">{{$footer[0]->span2}}</a> {{$footer[0]->span3}}</span>
                     </div>
                 </div>
             </div>

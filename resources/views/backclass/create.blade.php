@@ -30,7 +30,7 @@
         
         <div class="mb-3">
             <label  class="form-label">Capaciter</label>
-            <input type="number" max="20" class="form-control" style="width: 25%" name="quantiter" value="{{ old('quantiter') }}">
+            <input type="number" min="10" max="20" class="form-control" style="width: 25%" name="quantiter" value="{{ old('quantiter') }}">
             
         </div>
         

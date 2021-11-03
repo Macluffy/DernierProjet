@@ -29,7 +29,7 @@
         </div>
         <div class="mb-3">
           <label  class="form-label">Capaciter</label>
-          <input type="number" max="20" class="form-control" style="width: 25%" name="quantiter" value="{{ $classe->quantiter }}">
+          <input type="number" min="min" max="20" class="form-control" style="width: 25%" name="quantiter" value="{{ $classe->quantiter }}">
           
       </div>
         

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Navbar;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class NavbarController extends Controller
 {
@@ -80,14 +81,14 @@ class NavbarController extends Controller
             'link5' => ['required' => 'min:1', 'max:255']
         ]);
         
-
-        $navbar->logo = $request->logo;
+        Storage::disk("public")->delete("/img/logo/".$navbar->logo);
+        $navbar->logo = $request->file('logo')->hashName();
         $navbar->link1 = $request->link1;
         $navbar->link2 = $request->link2;
         $navbar->link3 = $request->link3;
         $navbar->link4 = $request->link4;
         $navbar->link5 = $request->link5;
-        
+        $request->file('logo')->storePublicly("img/logo", "public");
 
         $navbar->save();
 

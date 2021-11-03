@@ -14,12 +14,12 @@
     
 </div>
 @endif
-    <form action="{{ route('navbar.update',$navbar->id) }}" style="margin-left:50px" method="post">
+    <form action="{{ route('navbar.update',$navbar->id) }}" style="margin-left:50px" method="post" enctype="multipart/form-data" >
     @method('put')
     @csrf
         <div class="mb-3">
           <label  class="form-label">Logo</label>
-          <input type="text" class="form-control" style="width: 25%" name="logo" value="{{ $navbar->logo  }}" >
+          <input type="file" class="form-control" style="width: 25%" name="logo" value="{{ $navbar->logo  }}" >
           
         </div> 
         <div class="mb-3">

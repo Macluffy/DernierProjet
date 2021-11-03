@@ -89,6 +89,34 @@
         <span class="tooltip">Pricing</span>
       </li>
       <li>
+        <a href="{{ route('client.index') }}">
+          <i class='bx bx-heart' ></i>
+          <span class="links_name">Client</span>
+        </a>
+        <span class="tooltip">Client</span>
+      </li>
+      <li>
+        <a href="{{ route('map.index') }}">
+          <i class='bx bx-heart' ></i>
+          <span class="links_name">map</span>
+        </a>
+        <span class="tooltip">map</span>
+      </li>
+      <li>
+        <a href="{{ route('newslater.index') }}">
+          <i class='bx bx-heart' ></i>
+          <span class="links_name">Newslater</span>
+        </a>
+        <span class="tooltip">Newslater</span>
+      </li>
+      <li>
+        <a href="{{ route('footer.index') }}">
+          <i class='bx bx-heart' ></i>
+          <span class="links_name">Footer</span>
+        </a>
+        <span class="tooltip">Footer</span>
+      </li>
+      <li>
         <a href="/titre">
           <i class='bx bx-cog' ></i>
           <span class="links_name">Titre</span>

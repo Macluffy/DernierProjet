@@ -30,25 +30,61 @@
             </div>
         </div>
         <div class="row">
-            @foreach ($pricing as $value)
+            
             <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="single-table text-center">
                     <div class="table-head">
-                        <h2>{{$value->pack}} </h2>
-                        <h1>{{$value->prix}}<span>{{$value->month}}</span></h1>
+                        <h2>{{$pricing[0]->pack}} </h2>
+                        <h1>{{$pricing[0]->prix}}<span>{{$pricing[0]->month}}</span></h1>
                     </div>
                     <div class="table-body">
                         <ul>
-                            <li>{{$value->li1}}</li>
-                            <li>{{$value->li2}}</li>
-                            <li>{{$value->li3}}</li>
-                            <li>{{$value->li4}}</li>
+                            <li>{{$pricing[0]->li1}}</li>
+                            <li>{{$pricing[0]->li2}}</li>
+                            <li>{{$pricing[0]->li3}}</li>
+                            <li>{{$pricing[0]->li4}}</li>
                         </ul>
-                        <a href="/register">{{$value->btn}}</a>
+                        <a href="/register">{{$pricing[0]->btn}}</a>
                     </div>
                 </div>
             </div>
-            @endforeach
+
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="single-table text-center">
+                    <div class="table-head">
+                        <h2>{{$pricing[1]->pack}} </h2>
+                        <h1>{{$pricing[1]->prix}}<span>{{$pricing[1]->month}}</span></h1>
+                    </div>
+                    <div class="table-body">
+                        <ul>
+                            <li>{{$pricing[1]->li1}}</li>
+                            <li>{{$pricing[1]->li2}}</li>
+                            <li>{{$pricing[1]->li3}}</li>
+                            <li>{{$pricing[1]->li4}}</li>
+                        </ul>
+                        <a href="/register2">{{$pricing[1]->btn}}</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="single-table text-center">
+                    <div class="table-head">
+                        <h2>{{$pricing[2]->pack}} </h2>
+                        <h1>{{$pricing[2]->prix}}<span>{{$pricing[2]->month}}</span></h1>
+                    </div>
+                    <div class="table-body">
+                        <ul>
+                            <li>{{$pricing[2]->li1}}</li>
+                            <li>{{$pricing[2]->li2}}</li>
+                            <li>{{$pricing[2]->li3}}</li>
+                            <li>{{$pricing[2]->li4}}</li>
+                        </ul>
+                        <a href="/register3">{{$pricing[2]->btn}}</a>
+                    </div>
+                </div>
+            </div>
+            
             
         </div>
     </div>
