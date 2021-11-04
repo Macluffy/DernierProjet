@@ -41,6 +41,12 @@ class Classe extends Model
         return $this->belongsToMany(User::class);
     }
 
+    public function tags(){
+        return $this->belongsToMany(Tag::class);
+    }
+
+
+
     public function inscriptions(){
         return $this->hasMany(Inscription::class);
     }

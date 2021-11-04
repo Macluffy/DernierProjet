@@ -40,6 +40,8 @@ class DatabaseSeeder extends Seeder
             MapSeeder::class,
             NewslaterSeeder::class,
             FooterSeeder::class,
+            TagSeeder::class,
+            Classe_tagSeeder::class,
             
             
             

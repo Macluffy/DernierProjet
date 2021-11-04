@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Classe;
+use App\Models\ClasseTag;
+use App\Models\Tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
@@ -28,10 +30,11 @@ class ClasseController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
+    {   
+        $tag = Tag::all();
         $classe=Classe::all();
         $classes= DB::table('classes')->where('order',true)->get();
-        return view('backclass.create',compact('classe','classes'));
+        return view('backclass.create',compact('tag','classe','classes'));
     }
 
     /**
@@ -51,7 +54,7 @@ class ClasseController extends Controller
             'quantiter' => ['required'],
             
         ]);
-        
+        dd($request->tag_id);
         
         $classe = new classe;
         $classe->image = $request->file('img')->hashName();
@@ -64,13 +67,9 @@ class ClasseController extends Controller
         $classe->jour_id = $request->jour_id;
         $classe->date_id = $request->jour_id;
         $classe->order = $request->order;
-
-            
-        
         $classe->save();
-        
-
-        
+        $classe->tags()->attach($request->tag_id);
+                    
         $request->file('img')->storePublicly("img/class", "public");
         
 

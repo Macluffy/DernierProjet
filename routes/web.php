@@ -124,3 +124,6 @@ Route::resource('/map', MapController::class)->middleware(['auth']);
 Route::resource('/newslater', NewslaterController::class)->middleware(['auth']);
 
 Route::resource('/footer', FooterController::class)->middleware(['auth']);
+
+
+Route::post("/send-mail", [EmailController::class, "sendMail"])->name('sendMail');

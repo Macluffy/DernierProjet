@@ -33,7 +33,30 @@
             <input type="number" min="10" max="20" class="form-control" style="width: 25%" name="quantiter" value="{{ old('quantiter') }}">
             
         </div>
+
+        {{-- <select name="lestags[]" id="tags" multiple>
+            @foreach ($tag as $data)
+                <option value="{{ $data->id }}">{{ $data->tag }}</option>
+            @endforeach
+        </select> --}}
+
+
+        <select class="select" multiple name="tag_id">
+            @foreach ($tag as $value)
+                    <option value="{{ $value->id}} ">{{ $value->name }} </option>
+                @endforeach
+          </select>
+          <label class="form-label select-label">Example label</label>
+
+        {{-- <p>Hold CTRL to choose multiple</p>
         
+        <select class="form-select mb-3 " style="width: 25%" aria-label="Default select example" id="tags" multiple name="tag_id">
+                @foreach ($tag as $value)
+                    <option value="{{ $value->id}} ">{{ $value->name }} </option>
+                @endforeach
+                  
+
+        </select> --}}
         
         <select class="form-select mb-3 " style="width: 25%" aria-label="Default select example" name="horraire_id">
             <option  selected>Horraire</option>

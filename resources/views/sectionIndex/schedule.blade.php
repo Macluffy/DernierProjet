@@ -37,7 +37,7 @@
                 </div>
             </div> 
 
-            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div id="carouselExampleIndicators" class="carousel carousel-dark slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                   <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                   <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -67,102 +67,110 @@
                                                 <td class="time">
                                                     <p>{{$schedule[0]->h1}}</p>
                                                 </td>
-                                                <td class="purple">
+                                                <td>
                                                 @foreach ($classe as $classes)
                                                 
                                                 @if ($classes->date->calendrier == "2021-10-23" && $classes->horraire->heure == "08:00:00")
+                                                <td class="purple">
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
-                                                
-                                                
-                                                    @endif
-                                                    
-                                                    @endforeach
-                                                
                                                 </td>
-                                                
-                                                <td class="purple">
+                                                @endif
+                                                    
+                                                @endforeach
+                                                 </td>   
+                                                 
+                                                    
+                                               
+                                                <td>
                                                 @foreach ($classe as $classes)
                                                 
                                                 @if ($classes->date->calendrier == "2021-10-24" && $classes->horraire->heure == "08:00:00")
+                                                <td class="purple">
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
-                                                    @endif
-                                                    
-                                                    @endforeach
+                                                </td>
+                                                @endif
+                                                
+                                                @endforeach
                                                 </td>
                                                 
                                                 
                                                 
                                                 
+                                                <td>
+                                                @foreach ($classe as $classes)
                                                 
+                                                @if ($classes->date->calendrier == "2021-10-25" && $classes->horraire->heure == "08:00:00")
                                                 <td class="purple">
-                                                    @foreach ($classe as $classes)
-                                                    
-                                                    @if ($classes->date->calendrier == "2021-10-25" && $classes->horraire->heure == "08:00:00")
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
-                                                    @endif
-                                                    
-                                                    @endforeach
+                                                </td>
+                                                @endif
+                                                
+                                                @endforeach
                                                 </td>
                                                 
                                                 
+                                                <td>
+                                                @foreach ($classe as $classes)
                                                 
+                                                @if ($classes->date->calendrier == "2021-10-26" && $classes->horraire->heure == "08:00:00")
                                                 <td class="purple">
-                                                    @foreach ($classe as $classes)
-                                                    
-                                                    @if ($classes->date->calendrier == "2021-10-26" && $classes->horraire->heure == "08:00:00")
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
-                                                    @endif
-                                                    
-                                                    @endforeach
+                                                </td>
+                                                @endif
+                                                
+                                                @endforeach
                                                 </td>
                                                 
                                                 
+                                                <td>
+                                                @foreach ($classe as $classes)
                                                 
+                                                @if ($classes->date->calendrier == "2021-10-27" && $classes->horraire->heure == "08:00:00")
                                                 <td class="purple">
-                                                    @foreach ($classe as $classes)
-                                                    
-                                                    @if ($classes->date->calendrier == "2021-10-27" && $classes->horraire->heure == "08:00:00")
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
-                                                    @endif
-                                                    
-                                                    @endforeach
+                                                </td>
+                                                @endif
+                                                
+                                                @endforeach
                                                 </td>
                                                 
                                                 
+                                                <td>
+                                                @foreach ($classe as $classes)
                                                 
+                                                @if ($classes->date->calendrier == "2021-10-28" && $classes->horraire->heure == "08:00:00")
                                                 <td class="purple">
-                                                    @foreach ($classe as $classes)
-                                                    
-                                                    @if ($classes->date->calendrier == "2021-10-28" && $classes->horraire->heure == "08:00:00")
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
-                                                    @endif
-                                                    
-                                                    @endforeach
+                                                </td>
+                                                @endif
+                                                
+                                                @endforeach
                                                 </td>
                                                 
+                                                <td>
+                                                @foreach ($classe as $classes)
                                                 
+                                                @if ($classes->date->calendrier == "2021-10-29" && $classes->horraire->heure == "08:00:00")
                                                 <td class="purple">
-                                                    @foreach ($classe as $classes)
-                                                    
-                                                    @if ($classes->date->calendrier == "2021-10-29" && $classes->horraire->heure == "08:00:00")
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
-                                                    @endif
-                                                    
-                                                    @endforeach
+                                                </td>
+                                                @endif
+                                                
+                                                @endforeach
                                                 </td>
                                                 
                                                 
@@ -173,96 +181,103 @@
                                                     <p>{{$schedule[0]->h2}}</p>
                                                 </td>
                                                 
+                                                <td>
+                                                @foreach ($classe as $classes)
                                                 
+                                                @if ($classes->date->calendrier == "2021-10-23" && $classes->horraire->heure == "12:00:00")
                                                 <td class="olive">
-                                                    @foreach ($classe as $classes)
-                                                    
-                                                    @if ($classes->date->calendrier == "2021-10-23" && $classes->horraire->heure == "12:00:00")
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
-                                                    @endif
-                                                    
-                                                    @endforeach
+                                                </td>
+                                                @endif
+                                                
+                                                @endforeach
+                                                </td>
+                                                
+                                                <td>
+                                                @foreach ($classe as $classes)
+                                                
+                                                @if ($classes->date->calendrier == "2021-10-24" && $classes->horraire->heure == "12:00:00")
+                                                <td class="olive">
+                                                    <h4>{{$classes->titre}} </h4>
+                                                    <p>{{$classes->nom}}</p>
+                                                    <p>{{$classes->horraire->heure}}</p>
+                                                </td>
+                                                @endif
+                                                
+                                                @endforeach
                                                 </td>
                                                 
                                                 
+                                                <td>
+                                                @foreach ($classe as $classes)
+                                                
+                                                @if ($classes->date->calendrier == "2021-10-25" && $classes->horraire->heure == "12:00:00")
                                                 <td class="olive">
-                                                    @foreach ($classe as $classes)
-                                                    
-                                                    @if ($classes->date->calendrier == "2021-10-24" && $classes->horraire->heure == "12:00:00")
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
-                                                    @endif
-                                                    
-                                                    @endforeach
+                                                </td>
+                                                @endif
+                                                
+                                                @endforeach
                                                 </td>
                                                 
+                                                <td>
+                                                @foreach ($classe as $classes)
                                                 
-                                                
+                                                @if ($classes->date->calendrier == "2021-10-26" && $classes->horraire->heure == "12:00:00")
                                                 <td class="olive">
-                                                    @foreach ($classe as $classes)
-                                                    
-                                                    @if ($classes->date->calendrier == "2021-10-25" && $classes->horraire->heure == "12:00:00")
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
-                                                    @endif
-                                                    
-                                                    @endforeach
+                                                </td>
+                                                @endif
+                                                
+                                                @endforeach
                                                 </td>
                                                 
+                                                <td>
+                                                @foreach ($classe as $classes)
                                                 
+                                                @if ($classes->date->calendrier == "2021-10-27" && $classes->horraire->heure == "12:00:00")
                                                 <td class="olive">
-                                                    @foreach ($classe as $classes)
-                                                    
-                                                    @if ($classes->date->calendrier == "2021-10-26" && $classes->horraire->heure == "12:00:00")
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
-                                                    @endif
-                                                    
-                                                    @endforeach
+                                                </td>
+                                                @endif
+                                                
+                                                @endforeach
                                                 </td>
                                                 
+                                                <td>
+                                                @foreach ($classe as $classes)
                                                 
+                                                @if ($classes->date->calendrier == "2021-10-28" && $classes->horraire->heure == "12:00:00")
                                                 <td class="olive">
-                                                    @foreach ($classe as $classes)
-                                                    
-                                                    @if ($classes->date->calendrier == "2021-10-27" && $classes->horraire->heure == "12:00:00")
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
-                                                    @endif
-                                                    
-                                                    @endforeach
+                                                </td>
+                                                @endif
+                                                
+                                                @endforeach
                                                 </td>
                                                 
+                                                <td>
+                                                @foreach ($classe as $classes)
                                                 
+                                                @if ($classes->date->calendrier == "2021-10-29" && $classes->horraire->heure == "12:00:00")
                                                 <td class="olive">
-                                                    @foreach ($classe as $classes)
-                                                    
-                                                    @if ($classes->date->calendrier == "2021-10-28" && $classes->horraire->heure == "12:00:00")
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
-                                                    @endif
-                                                    
-                                                    @endforeach
                                                 </td>
+                                                @endif
                                                 
-                                                
-                                                <td class="olive">
-                                                    @foreach ($classe as $classes)
-                                                    
-                                                    @if ($classes->date->calendrier == "2021-10-29" && $classes->horraire->heure == "12:00:00")
-                                                    <h4>{{$classes->titre}} </h4>
-                                                    <p>{{$classes->nom}}</p>
-                                                    <p>{{$classes->horraire->heure}}</p>
-                                                    @endif
-                                                    
-                                                    @endforeach
+                                                @endforeach
                                                 </td>
                                                 
                                                 
@@ -274,95 +289,102 @@
                                                 <td class="time">
                                                     <p>{{$schedule[0]->h3}}</p>
                                                 </td>
+                                                <td>
+                                                @foreach ($classe as $classes)
                                                 
+                                                @if ($classes->date->calendrier == "2021-10-23" && $classes->horraire->heure == "15:00:00")
                                                 <td class="blue">
-                                                    @foreach ($classe as $classes)
-                                                    
-                                                    @if ($classes->date->calendrier == "2021-10-23" && $classes->horraire->heure == "15:00:00")
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
-                                                    @endif
-                                                    
-                                                    @endforeach
+                                                </td>
+                                                @endif
+                                                
+                                                @endforeach
                                                 </td>
                                                 
+                                                <td>
+                                                @foreach ($classe as $classes)
                                                 
+                                                @if ($classes->date->calendrier == "2021-10-24" && $classes->horraire->heure == "15:00:00")
                                                 <td class="blue">
-                                                    @foreach ($classe as $classes)
-                                                    
-                                                    @if ($classes->date->calendrier == "2021-10-24" && $classes->horraire->heure == "15:00:00")
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
-                                                    @endif
-                                                    
-                                                    @endforeach
+                                                </td>
+                                                @endif
+                                                
+                                                @endforeach
                                                 </td>
                                                 
+                                                <td>
+                                                @foreach ($classe as $classes)
                                                 
+                                                @if ($classes->date->calendrier == "2021-10-25" && $classes->horraire->heure == "15:00:00")
                                                 <td class="blue">
-                                                    @foreach ($classe as $classes)
-                                                    
-                                                    @if ($classes->date->calendrier == "2021-10-25" && $classes->horraire->heure == "15:00:00")
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
-                                                    @endif
-                                                    
-                                                    @endforeach
+                                                </td>
+                                                @endif
+                                                
+                                                @endforeach
                                                 </td>
                                                 
+                                                <td>
+                                                @foreach ($classe as $classes)
                                                 
+                                                @if ($classes->date->calendrier == "2021-10-26" && $classes->horraire->heure == "15:00:00")
                                                 <td class="blue">
-                                                    @foreach ($classe as $classes)
-                                                    
-                                                    @if ($classes->date->calendrier == "2021-10-26" && $classes->horraire->heure == "15:00:00")
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
-                                                    @endif
-                                                    
-                                                    @endforeach
+                                                </td>
+                                                @endif
+                                                
+                                                @endforeach
                                                 </td>
                                                 
+                                                <td>
+                                                @foreach ($classe as $classes)
                                                 
+                                                @if ($classes->date->calendrier == "2021-10-27" && $classes->horraire->heure == "15:00:00")
                                                 <td class="blue">
-                                                    @foreach ($classe as $classes)
-                                                    
-                                                    @if ($classes->date->calendrier == "2021-10-27" && $classes->horraire->heure == "15:00:00")
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
-                                                    @endif
-                                                    
-                                                    @endforeach
+                                                </td>
+                                                @endif
+                                                
+                                                @endforeach
                                                 </td>
                                                 
+                                                <td>
+                                                @foreach ($classe as $classes)
                                                 
+                                                @if ($classes->date->calendrier == "2021-10-28" && $classes->horraire->heure == "15:00:00")
                                                 <td class="blue">
-                                                    @foreach ($classe as $classes)
-                                                    
-                                                    @if ($classes->date->calendrier == "2021-10-28" && $classes->horraire->heure == "15:00:00")
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
-                                                    @endif
-                                                    
-                                                    @endforeach
+                                                </td>
+                                                @endif
+                                                
+                                                @endforeach
                                                 </td>
                                                 
+                                                <td>
+                                                @foreach ($classe as $classes)
                                                 
+                                                @if ($classes->date->calendrier == "2021-10-29" && $classes->horraire->heure == "15:00:00")
                                                 <td class="blue">
-                                                    @foreach ($classe as $classes)
-                                                    
-                                                    @if ($classes->date->calendrier == "2021-10-29" && $classes->horraire->heure == "15:00:00")
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
-                                                    @endif
-                                                    
-                                                    @endforeach
+                                                </td>
+                                                @endif
+                                                
+                                                @endforeach
                                                 </td>
                                                 
                                                 
@@ -376,94 +398,102 @@
                                                 <td class="time">
                                                     <p>{{$schedule[0]->h4}}</p>
                                                 </td>
+                                                <td>
+                                                @foreach ($classe as $classes)
+                                                
+                                                @if ($classes->date->calendrier == "2021-10-23" && $classes->horraire->heure == "18:00:00")
                                                 <td class="pink">
-                                                    @foreach ($classe as $classes)
-                                                    
-                                                    @if ($classes->date->calendrier == "2021-10-23" && $classes->horraire->heure == "18:00:00")
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
-                                                    @endif
-                                                    
-                                                    @endforeach
+                                                </td>
+                                                @endif
+                                                
+                                                @endforeach
                                                 </td>
                                                 
+                                                <td>
+                                                @foreach ($classe as $classes)
                                                 
+                                                @if ($classes->date->calendrier == "2021-10-24" && $classes->horraire->heure == "18:00:00")
                                                 <td class="pink">
-                                                    @foreach ($classe as $classes)
-                                                    
-                                                    @if ($classes->date->calendrier == "2021-10-24" && $classes->horraire->heure == "18:00:00")
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
-                                                    @endif
-                                                    
-                                                    @endforeach
+                                                </td>
+                                                @endif
+                                                
+                                                @endforeach
                                                 </td>
                                                 
+                                                <td>
+                                                @foreach ($classe as $classes)
                                                 
+                                                @if ($classes->date->calendrier == "2021-10-25" && $classes->horraire->heure == "18:00:00")
                                                 <td class="pink">
-                                                    @foreach ($classe as $classes)
-                                                    
-                                                    @if ($classes->date->calendrier == "2021-10-25" && $classes->horraire->heure == "18:00:00")
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
-                                                    @endif
-                                                    
-                                                    @endforeach
+                                                </td>
+                                                @endif
+                                                
+                                                @endforeach
                                                 </td>
                                                 
+                                                <td>
+                                                @foreach ($classe as $classes)
                                                 
+                                                @if ($classes->date->calendrier == "2021-10-26" && $classes->horraire->heure == "18:00:00")
                                                 <td class="pink">
-                                                    @foreach ($classe as $classes)
-                                                    
-                                                    @if ($classes->date->calendrier == "2021-10-26" && $classes->horraire->heure == "18:00:00")
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
-                                                    @endif
-                                                    
-                                                    @endforeach
+                                                </td>
+                                                @endif
+                                                
+                                                @endforeach
                                                 </td>
                                                 
+                                                <td> 
+                                                @foreach ($classe as $classes)
                                                 
+                                                @if ($classes->date->calendrier == "2021-10-27" && $classes->horraire->heure == "18:00:00")
                                                 <td class="pink">
-                                                    @foreach ($classe as $classes)
-                                                    
-                                                    @if ($classes->date->calendrier == "2021-10-27" && $classes->horraire->heure == "18:00:00")
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
-                                                    @endif
-                                                    
-                                                    @endforeach
+                                                </td>
+                                                @endif
+                                                
+                                                @endforeach
                                                 </td>
                                                 
+                                                <td>
+                                                @foreach ($classe as $classes)
                                                 
+                                                @if ($classes->date->calendrier == "2021-10-28" && $classes->horraire->heure == "18:00:00")
                                                 <td class="pink">
-                                                    @foreach ($classe as $classes)
-                                                    
-                                                    @if ($classes->date->calendrier == "2021-10-28" && $classes->horraire->heure == "18:00:00")
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
-                                                    @endif
-                                                    
-                                                    @endforeach
+                                                </td>
+                                                @endif
+                                                
+                                                @endforeach
                                                 </td>
                                                 
+                                                <td>
+                                                @foreach ($classe as $classes)
                                                 
+                                                @if ($classes->date->calendrier == "2021-10-29" && $classes->horraire->heure == "18:00:00")
                                                 <td class="pink">
-                                                    @foreach ($classe as $classes)
-                                                    
-                                                    @if ($classes->date->calendrier == "2021-10-29" && $classes->horraire->heure == "18:00:00")
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
-                                                    @endif
-                                                    
-                                                    @endforeach
+                                                </td>
+                                                @endif
+                                                
+                                                @endforeach
                                                 </td>
                                                 
                                             </tr>
@@ -496,98 +526,107 @@
                                                 <td class="time">
                                                     <p>{{$schedule[0]->h1}}</p>
                                                 </td>
+                                                <td>
+                                                @foreach ($classe as $classes)
+                                                
+                                                @if ($classes->date->calendrier == "2021-10-30" && $classes->horraire->heure == "08:00:00")
                                                 <td class="purple">
-                                                    @foreach ($classe as $classes)
-                                                    
-                                                    @if ($classes->date->calendrier == "2021-10-30" && $classes->horraire->heure == "08:00:00")
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
-                                                    @endif
-                                                    
-                                                    @endforeach
+                                                </td>
+                                                @endif
+                                                
+                                                @endforeach
                                                 </td>
                                                 
+                                                <td>
+                                                @foreach ($classe as $classes)
                                                 
+                                                @if ($classes->date->calendrier == "2021-10-31" && $classes->horraire->heure == "08:00:00")
                                                 <td class="purple">
-                                                    @foreach ($classe as $classes)
-                                                    
-                                                    @if ($classes->date->calendrier == "2021-10-31" && $classes->horraire->heure == "08:00:00")
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
-                                                    @endif
-                                                    
-                                                    @endforeach
                                                 </td>
+                                                @endif
+                                                
+                                                @endforeach
+                                                </td> 
                                                 
                                                 
                                                 
+                                                <td>
+                                                @foreach ($classe as $classes)
+                                                
+                                                @if ($classes->date->calendrier == "2021-11-01" && $classes->horraire->heure == "08:00:00")
                                                 <td class="purple">
-                                                    @foreach ($classe as $classes)
-                                                    
-                                                    @if ($classes->date->calendrier == "2021-11-01" && $classes->horraire->heure == "08:00:00")
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
-                                                    @endif
-                                                    
-                                                    @endforeach
                                                 </td>
+                                                @endif
+                                                
+                                                @endforeach
+                                                </td> 
                                                 
                                                 
+                                                <td>
+                                                @foreach ($classe as $classes)
                                                 
+                                                @if ($classes->date->calendrier == "2021-11-02" && $classes->horraire->heure == "08:00:00")
                                                 <td class="purple">
-                                                    @foreach ($classe as $classes)
-                                                    
-                                                    @if ($classes->date->calendrier == "2021-11-02" && $classes->horraire->heure == "08:00:00")
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
-                                                    @endif
-                                                    
-                                                    @endforeach
                                                 </td>
+                                                @endif
+                                                
+                                                @endforeach
+                                                </td> 
                                                 
                                                 
+                                                <td>
+                                                @foreach ($classe as $classes)
                                                 
+                                                @if ($classes->date->calendrier == "2021-11-03" && $classes->horraire->heure == "08:00:00")
                                                 <td class="purple">
-                                                    @foreach ($classe as $classes)
-                                                    
-                                                    @if ($classes->date->calendrier == "2021-11-03" && $classes->horraire->heure == "08:00:00")
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
-                                                    @endif
-                                                    
-                                                    @endforeach
                                                 </td>
+                                                @endif
+                                                
+                                                @endforeach
+                                                </td> 
                                                 
                                                 
+                                                <td>
+                                                @foreach ($classe as $classes)
                                                 
+                                                @if ($classes->date->calendrier == "2021-11-04" && $classes->horraire->heure == "08:00:00")
                                                 <td class="purple">
-                                                    @foreach ($classe as $classes)
-                                                    
-                                                    @if ($classes->date->calendrier == "2021-11-04" && $classes->horraire->heure == "08:00:00")
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
-                                                    @endif
-                                                    
-                                                    @endforeach
                                                 </td>
+                                                @endif
                                                 
+                                                @endforeach
+                                                </td> 
                                                 
+                                                <td>
+                                                @foreach ($classe as $classes)
+                                                
+                                                @if ($classes->date->calendrier == "2021-11-05" && $classes->horraire->heure == "08:00:00")
                                                 <td class="purple">
-                                                    @foreach ($classe as $classes)
-                                                    
-                                                    @if ($classes->date->calendrier == "2021-11-05" && $classes->horraire->heure == "08:00:00")
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
-                                                    @endif
-                                                    
-                                                    @endforeach
+                                                </td>
+                                                @endif
+                                                
+                                                @endforeach
                                                 </td>
                                                 
                                                 
@@ -598,96 +637,103 @@
                                                     <p>{{$schedule[0]->h2}}</p>
                                                 </td>
                                                 
+                                                <td>
+                                                @foreach ($classe as $classes)
                                                 
+                                                @if ($classes->date->calendrier == "2021-10-30" && $classes->horraire->heure == "12:00:00")
                                                 <td class="olive">
-                                                    @foreach ($classe as $classes)
-                                                    
-                                                    @if ($classes->date->calendrier == "2021-10-30" && $classes->horraire->heure == "12:00:00")
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
-                                                    @endif
-                                                    
-                                                    @endforeach
+                                                </td>
+                                                @endif
+                                                
+                                                @endforeach
+                                                </td>
+                                                
+                                                <td>
+                                                @foreach ($classe as $classes)
+                                                
+                                                @if ($classes->date->calendrier == "2021-10-31" && $classes->horraire->heure == "12:00:00")
+                                                <td class="olive">
+                                                    <h4>{{$classes->titre}} </h4>
+                                                    <p>{{$classes->nom}}</p>
+                                                    <p>{{$classes->horraire->heure}}</p>
+                                                </td>
+                                                @endif
+                                                
+                                                @endforeach
                                                 </td>
                                                 
                                                 
+                                                <td>
+                                                @foreach ($classe as $classes)
+                                                
+                                                @if ($classes->date->calendrier == "2021-11-01" && $classes->horraire->heure == "12:00:00")
                                                 <td class="olive">
-                                                    @foreach ($classe as $classes)
-                                                    
-                                                    @if ($classes->date->calendrier == "2021-10-31" && $classes->horraire->heure == "12:00:00")
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
-                                                    @endif
-                                                    
-                                                    @endforeach
+                                                </td>
+                                                @endif
+                                                
+                                                @endforeach
                                                 </td>
                                                 
+                                                <td>
+                                                @foreach ($classe as $classes)
                                                 
-                                                
+                                                @if ($classes->date->calendrier == "2021-11-02" && $classes->horraire->heure == "12:00:00")
                                                 <td class="olive">
-                                                    @foreach ($classe as $classes)
-                                                    
-                                                    @if ($classes->date->calendrier == "2021-11-01" && $classes->horraire->heure == "12:00:00")
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
-                                                    @endif
-                                                    
-                                                    @endforeach
+                                                </td>
+                                                @endif
+                                                
+                                                @endforeach
                                                 </td>
                                                 
+                                                <td>
+                                                @foreach ($classe as $classes)
                                                 
+                                                @if ($classes->date->calendrier == "2021-11-03" && $classes->horraire->heure == "12:00:00")
                                                 <td class="olive">
-                                                    @foreach ($classe as $classes)
-                                                    
-                                                    @if ($classes->date->calendrier == "2021-11-02" && $classes->horraire->heure == "12:00:00")
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
-                                                    @endif
-                                                    
-                                                    @endforeach
+                                                </td>
+                                                @endif
+                                                
+                                                @endforeach
                                                 </td>
                                                 
+                                                <td>
+                                                @foreach ($classe as $classes)
                                                 
+                                                @if ($classes->date->calendrier == "2021-11-04" && $classes->horraire->heure == "12:00:00")
                                                 <td class="olive">
-                                                    @foreach ($classe as $classes)
-                                                    
-                                                    @if ($classes->date->calendrier == "2021-11-03" && $classes->horraire->heure == "12:00:00")
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
-                                                    @endif
-                                                    
-                                                    @endforeach
+                                                </td>
+                                                @endif
+                                                
+                                                @endforeach
                                                 </td>
                                                 
+                                                <td>
+                                                @foreach ($classe as $classes)
                                                 
+                                                @if ($classes->date->calendrier == "2021-11-05" && $classes->horraire->heure == "12:00:00")
                                                 <td class="olive">
-                                                    @foreach ($classe as $classes)
-                                                    
-                                                    @if ($classes->date->calendrier == "2021-11-04" && $classes->horraire->heure == "12:00:00")
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
-                                                    @endif
-                                                    
-                                                    @endforeach
                                                 </td>
+                                                @endif
                                                 
-                                                
-                                                <td class="olive">
-                                                    @foreach ($classe as $classes)
-                                                    
-                                                    @if ($classes->date->calendrier == "2021-11-05" && $classes->horraire->heure == "12:00:00")
-                                                    <h4>{{$classes->titre}} </h4>
-                                                    <p>{{$classes->nom}}</p>
-                                                    <p>{{$classes->horraire->heure}}</p>
-                                                    @endif
-                                                    
-                                                    @endforeach
+                                                @endforeach
                                                 </td>
                                                 
                                                 
@@ -699,95 +745,102 @@
                                                 <td class="time">
                                                     <p>{{$schedule[0]->h3}}</p>
                                                 </td>
+                                                <td>
+                                                @foreach ($classe as $classes)
                                                 
+                                                @if ($classes->date->calendrier == "2021-10-30" && $classes->horraire->heure == "15:00:00")
                                                 <td class="blue">
-                                                    @foreach ($classe as $classes)
-                                                    
-                                                    @if ($classes->date->calendrier == "2021-10-30" && $classes->horraire->heure == "15:00:00")
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
-                                                    @endif
-                                                    
-                                                    @endforeach
+                                                </td>
+                                                @endif
+                                                
+                                                @endforeach
                                                 </td>
                                                 
+                                                <td>
+                                                @foreach ($classe as $classes)
                                                 
+                                                @if ($classes->date->calendrier == "2021-10-31" && $classes->horraire->heure == "15:00:00")
                                                 <td class="blue">
-                                                    @foreach ($classe as $classes)
-                                                    
-                                                    @if ($classes->date->calendrier == "2021-10-31" && $classes->horraire->heure == "15:00:00")
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
-                                                    @endif
-                                                    
-                                                    @endforeach
+                                                </td>
+                                                @endif
+                                                
+                                                @endforeach
                                                 </td>
                                                 
+                                                <td>
+                                                @foreach ($classe as $classes)
                                                 
+                                                @if ($classes->date->calendrier == "2021-11-01" && $classes->horraire->heure == "15:00:00")
                                                 <td class="blue">
-                                                    @foreach ($classe as $classes)
-                                                    
-                                                    @if ($classes->date->calendrier == "2021-11-01" && $classes->horraire->heure == "15:00:00")
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
-                                                    @endif
-                                                    
-                                                    @endforeach
+                                                </td>
+                                                @endif
+                                                
+                                                @endforeach
                                                 </td>
                                                 
+                                                <td>
+                                                @foreach ($classe as $classes)
                                                 
+                                                @if ($classes->date->calendrier == "2021-11-02" && $classes->horraire->heure == "15:00:00")
                                                 <td class="blue">
-                                                    @foreach ($classe as $classes)
-                                                    
-                                                    @if ($classes->date->calendrier == "2021-11-02" && $classes->horraire->heure == "15:00:00")
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
-                                                    @endif
-                                                    
-                                                    @endforeach
+                                                </td>
+                                                @endif
+                                                
+                                                @endforeach
                                                 </td>
                                                 
+                                                <td>
+                                                @foreach ($classe as $classes)
                                                 
+                                                @if ($classes->date->calendrier == "2021-11-03" && $classes->horraire->heure == "15:00:00")
                                                 <td class="blue">
-                                                    @foreach ($classe as $classes)
-                                                    
-                                                    @if ($classes->date->calendrier == "2021-11-03" && $classes->horraire->heure == "15:00:00")
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
-                                                    @endif
-                                                    
-                                                    @endforeach
+                                                </td>
+                                                @endif
+                                                
+                                                @endforeach
                                                 </td>
                                                 
+                                                <td>
+                                                @foreach ($classe as $classes)
                                                 
+                                                @if ($classes->date->calendrier == "2021-11-04" && $classes->horraire->heure == "15:00:00")
                                                 <td class="blue">
-                                                    @foreach ($classe as $classes)
-                                                    
-                                                    @if ($classes->date->calendrier == "2021-11-04" && $classes->horraire->heure == "15:00:00")
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
-                                                    @endif
-                                                    
-                                                    @endforeach
+                                                </td>
+                                                @endif
+                                                
+                                                @endforeach
                                                 </td>
                                                 
+                                                <td>
+                                                @foreach ($classe as $classes)
                                                 
+                                                @if ($classes->date->calendrier == "2021-11-05" && $classes->horraire->heure == "15:00:00")
                                                 <td class="blue">
-                                                    @foreach ($classe as $classes)
-                                                    
-                                                    @if ($classes->date->calendrier == "2021-11-05" && $classes->horraire->heure == "15:00:00")
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
-                                                    @endif
-                                                    
-                                                    @endforeach
+                                                </td>
+                                                @endif
+                                                
+                                                @endforeach
                                                 </td>
                                                 
                                                 
@@ -801,94 +854,102 @@
                                                 <td class="time">
                                                     <p>{{$schedule[0]->h4}}</p>
                                                 </td>
+                                                <td>
+                                                @foreach ($classe as $classes)
+                                                
+                                                @if ($classes->date->calendrier == "2021-10-30" && $classes->horraire->heure == "18:00:00")
                                                 <td class="pink">
-                                                    @foreach ($classe as $classes)
-                                                    
-                                                    @if ($classes->date->calendrier == "2021-10-30" && $classes->horraire->heure == "18:00:00")
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
-                                                    @endif
-                                                    
-                                                    @endforeach
+                                                </td>
+                                                @endif
+                                                
+                                                @endforeach
                                                 </td>
                                                 
+                                                <td>
+                                                @foreach ($classe as $classes)
                                                 
+                                                @if ($classes->date->calendrier == "2021-10-31" && $classes->horraire->heure == "18:00:00")
                                                 <td class="pink">
-                                                    @foreach ($classe as $classes)
-                                                    
-                                                    @if ($classes->date->calendrier == "2021-10-31" && $classes->horraire->heure == "18:00:00")
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
-                                                    @endif
-                                                    
-                                                    @endforeach
+                                                </td>
+                                                @endif
+                                                
+                                                @endforeach
                                                 </td>
                                                 
+                                                <td>
+                                                @foreach ($classe as $classes)
                                                 
+                                                @if ($classes->date->calendrier == "2021-11-01" && $classes->horraire->heure == "18:00:00")
                                                 <td class="pink">
-                                                    @foreach ($classe as $classes)
-                                                    
-                                                    @if ($classes->date->calendrier == "2021-11-01" && $classes->horraire->heure == "18:00:00")
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
-                                                    @endif
-                                                    
-                                                    @endforeach
+                                                </td>
+                                                @endif
+                                                
+                                                @endforeach
                                                 </td>
                                                 
+                                                <td>
+                                                @foreach ($classe as $classes)
                                                 
+                                                @if ($classes->date->calendrier == "2021-11-02" && $classes->horraire->heure == "18:00:00")
                                                 <td class="pink">
-                                                    @foreach ($classe as $classes)
-                                                    
-                                                    @if ($classes->date->calendrier == "2021-11-02" && $classes->horraire->heure == "18:00:00")
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
-                                                    @endif
-                                                    
-                                                    @endforeach
+                                                </td>
+                                                @endif
+                                                
+                                                @endforeach
                                                 </td>
                                                 
+                                                <td>
+                                                @foreach ($classe as $classes)
                                                 
+                                                @if ($classes->date->calendrier == "2021-11-03" && $classes->horraire->heure == "18:00:00")
                                                 <td class="pink">
-                                                    @foreach ($classe as $classes)
-                                                    
-                                                    @if ($classes->date->calendrier == "2021-11-03" && $classes->horraire->heure == "18:00:00")
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
-                                                    @endif
-                                                    
-                                                    @endforeach
+                                                </td>
+                                                @endif
+                                                
+                                                @endforeach
                                                 </td>
                                                 
+                                                <td>
+                                                @foreach ($classe as $classes)
                                                 
+                                                @if ($classes->date->calendrier == "2021-11-04" && $classes->horraire->heure == "18:00:00")
                                                 <td class="pink">
-                                                    @foreach ($classe as $classes)
-                                                    
-                                                    @if ($classes->date->calendrier == "2021-11-04" && $classes->horraire->heure == "18:00:00")
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
-                                                    @endif
-                                                    
-                                                    @endforeach
+                                                </td>
+                                                @endif
+                                                
+                                                @endforeach
                                                 </td>
                                                 
+                                                <td>
+                                                @foreach ($classe as $classes)
                                                 
+                                                @if ($classes->date->calendrier == "2021-11-05" && $classes->horraire->heure == "18:00:00")
                                                 <td class="pink">
-                                                    @foreach ($classe as $classes)
-                                                    
-                                                    @if ($classes->date->calendrier == "2021-11-05" && $classes->horraire->heure == "18:00:00")
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
-                                                    @endif
-                                                    
-                                                    @endforeach
+                                                </td>
+                                                @endif
+                                                
+                                                @endforeach
                                                 </td>
                                                 
                                             </tr>
@@ -920,40 +981,44 @@
                                                 <td class="time">
                                                     <p>{{$schedule[0]->h1}}</p>
                                                 </td>
-                                                <td class="purple">
+                                                <td >
                                                     @foreach ($classe as $classes)
                                                     
                                                     @if ($classes->date->calendrier == "2021-11-06" && $classes->horraire->heure == "08:00:00")
+                                                    <td class="purple"  >
+                                                    <h4 class="m-0 p-0">{{$classes->titre}} </h4>
+                                                    <p class="m-0 p-0">{{$classes->nom}}</p>
+                                                    <p class="m-0 p-0">{{$classes->horraire->heure}}</p>
+                                                    </td>
+                                                    @endif
+                                                    
+                                                    @endforeach
+                                                </td>
+                                                
+                                                <td>
+                                                @foreach ($classe as $classes)
+                                                
+                                                @if ($classes->date->calendrier == "2021-11-07" && $classes->horraire->heure == "08:00:00")
+                                                <td class="purple">
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
+                                                </td>
                                                     @endif
                                                     
                                                     @endforeach
                                                 </td>
                                                 
                                                 
-                                                <td class="purple">
-                                                    @foreach ($classe as $classes)
-                                                    
-                                                    @if ($classes->date->calendrier == "2021-11-07" && $classes->horraire->heure == "08:00:00")
-                                                    <h4>{{$classes->titre}} </h4>
-                                                    <p>{{$classes->nom}}</p>
-                                                    <p>{{$classes->horraire->heure}}</p>
-                                                    @endif
-                                                    
-                                                    @endforeach
-                                                </td>
-                                                
-                                                
-                                                
-                                                <td class="purple">
+                                                <td>
                                                     @foreach ($classe as $classes)
                                                     
                                                     @if ($classes->date->calendrier == "2021-11-08" && $classes->horraire->heure == "08:00:00")
+                                                    <td class="purple">
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
+                                                    </td>
                                                     @endif
                                                     
                                                     @endforeach
@@ -961,13 +1026,15 @@
                                                 
                                                 
                                                 
-                                                <td class="purple">
+                                                <td >
                                                     @foreach ($classe as $classes)
                                                     
                                                     @if ($classes->date->calendrier == "2021-11-09" && $classes->horraire->heure == "08:00:00")
+                                                    <td class="purple">
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
+                                                    </td>
                                                     @endif
                                                     
                                                     @endforeach
@@ -975,13 +1042,15 @@
                                                 
                                                 
                                                 
-                                                <td class="purple">
+                                                <td>
                                                     @foreach ($classe as $classes)
                                                     
                                                     @if ($classes->date->calendrier == "2021-11-10" && $classes->horraire->heure == "08:00:00")
+                                                    <td class="purple">
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
+                                                    </td>
                                                     @endif
                                                     
                                                     @endforeach
@@ -989,26 +1058,30 @@
                                                 
                                                 
                                                 
-                                                <td class="purple">
+                                                <td >
                                                     @foreach ($classe as $classes)
                                                     
                                                     @if ($classes->date->calendrier == "2021-11-11" && $classes->horraire->heure == "08:00:00")
-                                                    <h4>{{$classes->titre}} </h4>
+                                                    <td class="purple">
+                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
-                                                    <p>{{$classes->horraire->heure}}</p>
+                                                    <p>{{$classes->horraire->heure}}</p>   
+                                                    </td>
+                                                    
                                                     @endif
                                                     
                                                     @endforeach
                                                 </td>
                                                 
                                                 
-                                                <td class="purple">
+                                                <td>
                                                     @foreach ($classe as $classes)
-                                                    
                                                     @if ($classes->date->calendrier == "2021-11-12" && $classes->horraire->heure == "08:00:00")
+                                                    <td class="purple">
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
+                                                    </td>
                                                     @endif
                                                     
                                                     @endforeach
@@ -1023,26 +1096,30 @@
                                                 </td>
                                                 
                                                 
-                                                <td class="olive">
+                                                <td >
                                                     @foreach ($classe as $classes)
                                                     
                                                     @if ($classes->date->calendrier == "2021-11-06" && $classes->horraire->heure == "12:00:00")
+                                                    <td class="olive">
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
+                                                    </td>
                                                     @endif
                                                     
                                                     @endforeach
                                                 </td>
                                                 
                                                 
-                                                <td class="olive">
+                                                <td >
                                                     @foreach ($classe as $classes)
                                                     
                                                     @if ($classes->date->calendrier == "2021-11-07" && $classes->horraire->heure == "12:00:00")
+                                                    <td class="olive">
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
+                                                    </td>
                                                     @endif
                                                     
                                                     @endforeach
@@ -1050,65 +1127,75 @@
                                                 
                                                 
                                                 
-                                                <td class="olive">
+                                                <td >
                                                     @foreach ($classe as $classes)
                                                     
                                                     @if ($classes->date->calendrier == "2021-11-08" && $classes->horraire->heure == "12:00:00")
+                                                    <td class="olive">
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
+                                                    </td>
                                                     @endif
                                                     
                                                     @endforeach
                                                 </td>
                                                 
                                                 
-                                                <td class="olive">
+                                                <td >
                                                     @foreach ($classe as $classes)
                                                     
                                                     @if ($classes->date->calendrier == "2021-11-09" && $classes->horraire->heure == "12:00:00")
+                                                    <td class="olive">
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
+                                                    </td>
                                                     @endif
                                                     
                                                     @endforeach
                                                 </td>
                                                 
                                                 
-                                                <td class="olive">
+                                                <td >
                                                     @foreach ($classe as $classes)
                                                     
                                                     @if ($classes->date->calendrier == "2021-11-10" && $classes->horraire->heure == "12:00:00")
+                                                    <td class="olive">
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
+                                                    </td>
                                                     @endif
                                                     
                                                     @endforeach
                                                 </td>
                                                 
                                                 
-                                                <td class="olive">
+                                                <td >
                                                     @foreach ($classe as $classes)
                                                     
                                                     @if ($classes->date->calendrier == "2021-11-11" && $classes->horraire->heure == "12:00:00")
+                                                    <td class="olive">
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
+                                                    </td>
                                                     @endif
                                                     
                                                     @endforeach
                                                 </td>
                                                 
                                                 
-                                                <td class="olive">
+                                                <td >
                                                     @foreach ($classe as $classes)
                                                     
                                                     @if ($classes->date->calendrier == "2021-11-12" && $classes->horraire->heure == "12:00:00")
+                                                    <td class="olive">
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
+                                                    </td>
                                                     @endif
                                                     
                                                     @endforeach
@@ -1124,91 +1211,105 @@
                                                     <p>{{$schedule[0]->h3}}</p>
                                                 </td>
                                                 
-                                                <td class="blue">
+                                                <td>
                                                     @foreach ($classe as $classes)
                                                     
                                                     @if ($classes->date->calendrier == "2021-11-06" && $classes->horraire->heure == "15:00:00")
+                                                    <td class="blue">
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
+                                                    </td>
                                                     @endif
                                                     
                                                     @endforeach
                                                 </td>
                                                 
                                                 
-                                                <td class="blue">
+                                                <td>
                                                     @foreach ($classe as $classes)
                                                     
                                                     @if ($classes->date->calendrier == "2021-11-07" && $classes->horraire->heure == "15:00:00")
+                                                    <td class="blue">
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
+                                                    </td>
                                                     @endif
                                                     
                                                     @endforeach
                                                 </td>
                                                 
                                                 
-                                                <td class="blue">
+                                                <td >
                                                     @foreach ($classe as $classes)
                                                     
                                                     @if ($classes->date->calendrier == "2021-11-08" && $classes->horraire->heure == "15:00:00")
+                                                    <td class="blue">
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
+                                                    </td>
                                                     @endif
                                                     
                                                     @endforeach
                                                 </td>
                                                 
                                                 
-                                                <td class="blue">
+                                                <td >
                                                     @foreach ($classe as $classes)
                                                     
                                                     @if ($classes->date->calendrier == "2021-11-09" && $classes->horraire->heure == "15:00:00")
+                                                    <td class="blue">
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
+                                                    </td>
                                                     @endif
                                                     
                                                     @endforeach
                                                 </td>
                                                 
                                                 
-                                                <td class="blue">
+                                                <td>
                                                     @foreach ($classe as $classes)
                                                     
                                                     @if ($classes->date->calendrier == "2021-11-10" && $classes->horraire->heure == "15:00:00")
+                                                    <td class="blue">
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
+                                                    </td>
                                                     @endif
                                                     
                                                     @endforeach
                                                 </td>
                                                 
                                                 
-                                                <td class="blue">
+                                                <td >
                                                     @foreach ($classe as $classes)
                                                     
                                                     @if ($classes->date->calendrier == "2021-11-11" && $classes->horraire->heure == "15:00:00")
+                                                    <td class="blue">
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
+                                                    </td>
                                                     @endif
                                                     
                                                     @endforeach
                                                 </td>
                                                 
                                                 
-                                                <td class="blue">
+                                                <td >
                                                     @foreach ($classe as $classes)
                                                     
                                                     @if ($classes->date->calendrier == "2021-11-12" && $classes->horraire->heure == "15:00:00")
+                                                    <td class="blue">
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
+                                                    </td>
                                                     @endif
                                                     
                                                     @endforeach
@@ -1225,91 +1326,105 @@
                                                 <td class="time">
                                                     <p>{{$schedule[0]->h4}}</p>
                                                 </td>
-                                                <td class="pink">
+                                                <td >
                                                     @foreach ($classe as $classes)
                                                     
                                                     @if ($classes->date->calendrier == "2021-11-06" && $classes->horraire->heure == "18:00:00")
+                                                    <td class="pink">
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
+                                                    </td>
                                                     @endif
                                                     
                                                     @endforeach
                                                 </td>
                                                 
                                                 
-                                                <td class="pink">
+                                                <td >
                                                     @foreach ($classe as $classes)
                                                     
                                                     @if ($classes->date->calendrier == "2021-11-07" && $classes->horraire->heure == "18:00:00")
+                                                    <td class="pink">
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
+                                                    </td>
                                                     @endif
                                                     
                                                     @endforeach
                                                 </td>
                                                 
                                                 
-                                                <td class="pink">
+                                                <td >
                                                     @foreach ($classe as $classes)
                                                     
                                                     @if ($classes->date->calendrier == "2021-11-08" && $classes->horraire->heure == "18:00:00")
+                                                    <td class="pink">
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
+                                                    </td>
                                                     @endif
                                                     
                                                     @endforeach
                                                 </td>
                                                 
                                                 
-                                                <td class="pink">
+                                                <td >
                                                     @foreach ($classe as $classes)
                                                     
                                                     @if ($classes->date->calendrier == "2021-11-09" && $classes->horraire->heure == "18:00:00")
+                                                    <td class="pink">
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
+                                                    </td>
                                                     @endif
                                                     
                                                     @endforeach
                                                 </td>
                                                 
                                                 
-                                                <td class="pink">
+                                                <td >
                                                     @foreach ($classe as $classes)
                                                     
                                                     @if ($classes->date->calendrier == "2021-11-10" && $classes->horraire->heure == "18:00:00")
+                                                    <td class="pink">
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
+                                                    </td>
                                                     @endif
                                                     
                                                     @endforeach
                                                 </td>
                                                 
                                                 
-                                                <td class="pink">
+                                                <td >
                                                     @foreach ($classe as $classes)
                                                     
                                                     @if ($classes->date->calendrier == "2021-11-11" && $classes->horraire->heure == "18:00:00")
+                                                    <td class="pink">
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
+                                                    </td>
                                                     @endif
                                                     
                                                     @endforeach
                                                 </td>
                                                 
                                                 
-                                                <td class="pink">
+                                                <td >
                                                     @foreach ($classe as $classes)
                                                     
                                                     @if ($classes->date->calendrier == "2021-11-12" && $classes->horraire->heure == "18:00:00")
+                                                    <td class="pink">
                                                     <h4>{{$classes->titre}} </h4>
                                                     <p>{{$classes->nom}}</p>
                                                     <p>{{$classes->horraire->heure}}</p>
+                                                    </td>
                                                     @endif
                                                     
                                                     @endforeach
@@ -1329,11 +1444,11 @@
 
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
+                        <span >Previous</span>
                     </button>
                     <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
+                        <span class="">Next</span>
                     </button>
                 </div>
                 
