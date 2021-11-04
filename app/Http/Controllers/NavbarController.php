@@ -81,7 +81,7 @@ class NavbarController extends Controller
             'link5' => ['required' => 'min:1', 'max:255']
         ]);
         
-        Storage::disk("public")->delete("/img/logo/".$navbar->logo);
+        Storage::disk("public")->delete("img/logo/".$navbar->logo);
         $navbar->logo = $request->file('logo')->hashName();
         $navbar->link1 = $request->link1;
         $navbar->link2 = $request->link2;

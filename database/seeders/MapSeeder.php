@@ -16,10 +16,10 @@ class MapSeeder extends Seeder
     {
         DB::table('maps')->insert([
             [   
-            "voie"=>"admin",
-            "nom"=>"admin",
-            "numero"=>"admin",
-            "ville"=>"admin",    
+            "voie"=>"rue",
+            "nom"=>"pavillon",
+            "numero"=>"46",
+            "ville"=>"schaerbeek",    
             ],
             
             
