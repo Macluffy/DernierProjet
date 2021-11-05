@@ -120,7 +120,8 @@ class EventController extends Controller
         $event->paragraphe = $request->paragraphe;
         $event->date = $request->date;
         $event->heure = $request->heure;
-
+        $event->order = $request->order;
+        
         if($event->order == true){
 
             foreach ( $events as $value )
@@ -130,7 +131,7 @@ class EventController extends Controller
             }
 
         }
-        $event->order = $request->order;
+        
         $event->save();
 
 

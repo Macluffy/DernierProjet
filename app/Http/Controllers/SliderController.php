@@ -130,7 +130,7 @@ class SliderController extends Controller
         $slider->paragraphe = $request->paragraphe;
         $slider->minititre = $request->minititre;
         $slider->btnreadmore = $request->btnreadmore;
-        
+        $slider->order = $request->order;
 
 
         
@@ -146,7 +146,7 @@ class SliderController extends Controller
             }
 
         }
-        $slider->order = $request->order;
+        
         $slider->save();
 
 

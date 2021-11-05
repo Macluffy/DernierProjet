@@ -17,7 +17,7 @@
         <a href="{{ route('gallery.create') }}" class="btn btn-primary"> create</a>
     </div>
     
-    <div class="row" style="display:flex; flex-direction:column; align-items:center; justify-content:center; width:100%; margin:30px;">
+    <div  style="display:flex; flex-direction:column; align-items:center; justify-content:center; width:100%; margin:30px;">
         @foreach ($gallery as $value)
         
             <div class="portfolio-img single-img">

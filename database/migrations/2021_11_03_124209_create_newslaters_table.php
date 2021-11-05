@@ -19,6 +19,7 @@ class CreateNewslatersTable extends Migration
             $table->string('btn');
             
             
+            
             $table->timestamps();
         });
     }

@@ -2,12 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\Email;
+use App\Models\Adressemail;
 use App\Models\Classe;
 use App\Models\ClasseTag;
 use App\Models\Tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
+use mysqli;
 
 class ClasseController extends Controller
 {
@@ -52,9 +56,7 @@ class ClasseController extends Controller
             'genre_id' => ['required' => 'min:1', 'max:255'],
             'horraire_id' => ['required' => 'min:1', 'max:255'],
             'quantiter' => ['required'],
-            
         ]);
-        dd($request->tag_id);
         
         $classe = new classe;
         $classe->image = $request->file('img')->hashName();
@@ -69,12 +71,30 @@ class ClasseController extends Controller
         $classe->order = $request->order;
         $classe->save();
         $classe->tags()->attach($request->tag_id);
-                    
-        $request->file('img')->storePublicly("img/class", "public");
-        
 
+        $email = Adressemail::All();
+        foreach ($email as $value) {
+            Mail::to($value->nom)->send(new Email("le cour $classe->titre à été creer"));
+        }
+        
+        
+        $request->file('img')->storePublicly("img/class", "public");
 
         return redirect()->route('classe.index')->with("message", "Datas has succesfully been changed !");
+
+        // Mail::to("ahriga.a@hotmail.com")->send(new Email("Le cour $classe->titre a été creer"));
+
+        // function sendMail(Request $request,$message) {
+
+        //     $contenuMail = [
+        //         "message"=> $message,
+        //         "email"=>$request->email
+        //     ];
+    
+        //     Mail::to($contenuMail['email'])->send(new Email($contenuMail['message']));
+    
+        //     return "message envoyé";
+        // }
     }
 
     /**
@@ -132,6 +152,8 @@ class ClasseController extends Controller
         $classe->jour_id = $request->jour_id;
         $classe->date_id = $request->jour_id;
         $classe->order = $request->order;
+
+        
 
         
         

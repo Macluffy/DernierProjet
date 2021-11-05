@@ -31,6 +31,20 @@
 /*  1. About Area
 /*----------------------------------------*/
 /*.game-bg{position: relative; background: #fff; box-shadow: 0 0 4px 4px #ECECEC; height: 345px}*/
+.greg{
+  margin: 0;
+  padding: 0;
+  
+  color: white;
+  
+}
+
+.greg1{
+  margin: 5px;
+  color: white;
+  
+}
+
 .about-video{
     position: relative; 
     text-align: center; 
@@ -298,7 +312,7 @@ td.pink{background: #FF91B8}
 }
 .trainer-hover ul li{
     display: inline-block;
-    border: 1;2px solid #fff;
+    border: 1 2px solid #fff;
     border-radius: 50%;
     height: 30px;
     width: 30px;

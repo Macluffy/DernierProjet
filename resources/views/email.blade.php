@@ -9,29 +9,9 @@
 </head>
 <body>
     
-    <h3>voici le mail :</h3>
     <ul>
-        <li style="color:red; background-color: blue;">{{$contenuMail['name']}} </li>
-        <li>{{$contenuMail['email']}} </li>
-        <li>{{$contenuMail['phone']}} </li>
-        <li>{{$contenuMail['message']}} </li>
+        <p>hello</p>
     </ul>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     <script href="{{asset('js/app.js')}}">

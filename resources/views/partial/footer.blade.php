@@ -10,7 +10,7 @@
                         <ul>
                             <li><i class="{{$footer[0]->icon1}}"></i> {{$footer[0]->p2}}</li>
                             <li><i class="{{$footer[0]->icon2}}"></i> {{$footer[0]->p3}}</li>
-                            <li><i class="{{$footer[0]->icon3}}"></i> {{$footer[0]->p4}}</li>
+                            <li><i class="{{$footer[0]->icon3}}"></i> {{$map[0]->voie}} {{$map[0]->nom}} {{$map[0]->numero}} {{$map[0]->ville}}</li>
                         </ul>
                     </div>
                 </div>
@@ -40,18 +40,20 @@
                 <div class="col-md-4 hidden-sm col-xs-12">
                     <div class="single-footer-widget">
                         <h3>{{$footer[0]->titre2}}</h3>
-                        <form id="subscribe-form" action="https://whizthemes.com/mail-php/other/mail.php">
+                        <form id="subscribe-form" action="{{route('messagerie.store')}} " method="post">
+                            @csrf
+
                             <div class="row">
                                 <div class="col-sm-6">
-                                    <input type="text" placeholder="Name" name="con_name">
+                                    <input type="text" placeholder="Name" name="name">
                                 </div>
                                 <div class="col-sm-6">
-                                    <input type="text" placeholder="Email" name="con_email">
+                                    <input type="text" placeholder="Email" name="email">
                                 </div>
                                 <div class="col-sm-12">
-                                    <textarea cols="30" rows="7" name="con_message" placeholder="subject"></textarea>
+                                    <textarea cols="30" rows="7" name="msg" placeholder="subject"></textarea>
                                     <button type="submit">{{$footer[0]->btn}}</button>
-                                    <p class="subscribe-message"></p>
+                                    
                                 </div>
                             </div>
                         </form>

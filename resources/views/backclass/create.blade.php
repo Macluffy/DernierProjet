@@ -39,24 +39,20 @@
                 <option value="{{ $data->id }}">{{ $data->tag }}</option>
             @endforeach
         </select> --}}
-
-
-        <select class="select" multiple name="tag_id">
-            @foreach ($tag as $value)
-                    <option value="{{ $value->id}} ">{{ $value->name }} </option>
-                @endforeach
-          </select>
-          <label class="form-label select-label">Example label</label>
-
-        {{-- <p>Hold CTRL to choose multiple</p>
+        
+        
+        
+        
+        
+        
         
         <select class="form-select mb-3 " style="width: 25%" aria-label="Default select example" id="tags" multiple name="tag_id">
-                @foreach ($tag as $value)
-                    <option value="{{ $value->id}} ">{{ $value->name }} </option>
-                @endforeach
-                  
-
-        </select> --}}
+            @foreach ($tag as $value)
+            <option value="{{ $value->id}} ">{{ $value->name }} </option>
+            @endforeach
+            
+            
+        </select>
         
         <select class="form-select mb-3 " style="width: 25%" aria-label="Default select example" name="horraire_id">
             <option  selected>Horraire</option>

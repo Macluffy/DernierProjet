@@ -6,6 +6,95 @@
             </a>
         </x-slot>
         <h1 style="width:100%; text-align:center;font-size:30px;font-weight:bolder;">Abonnement Platinium</h1>
+        <div class="d-flex align-items-center">
+
+            <div class="container d-flex justify-content-center mt-5 mb-5">
+                <div class="row g-3">
+                    <div class="col-md-6"> <span>Payment Method</span>
+                        <div class="card">
+                            <div class="accordion" id="accordionExample">
+                                <div class="card">
+                                    <div class="card-header p-0" id="headingTwo">
+                                        <h2 class="mb-0"> <button
+                                                class="btn btn-light btn-block text-left collapsed p-3 rounded-0 border-bottom-custom"
+                                                type="button" data-toggle="collapse" data-target="#collapseTwo"
+                                                aria-expanded="false" aria-controls="collapseTwo">
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <span>Bancontact</span> <img src="{{ asset('img/payement/bctc.png') }}"
+                                                        width="30"> </div>
+                                            </button> </h2>
+                                    </div>
+                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                        data-parent="#accordionExample">
+                                        <div class="card-body"> <input type="text" class="form-control"
+                                                placeholder="Bancontact "> </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header p-0">
+                                        <h2 class="mb-0"> <button
+                                                class="btn btn-light btn-block text-left p-3 rounded-0"
+                                                data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                                                aria-controls="collapseOne">
+                                                <div class="d-flex align-items-center justify-content-between"> <span>Credit
+                                                        card</span>
+                                                    <div class="icons">
+                                                        
+                                                    <img
+                                                            src="{{ asset('img/payement/paypale.webp') }}" width="30"> <img
+                                                            src="{{ asset('img/payement/visa.png') }}" width="30"> <img
+                                                            src="{{ asset('img/payement/stripe.png') }}" width="30"> <img
+                                                            src="{{ asset('img/payement/mastercard.png') }}" width="30"> </div>
+                                                </div>
+                                            </button> </h2>
+                                    </div>
+                                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                        data-parent="#accordionExample">
+                                        <div class="card-body payment-card-body"> <span
+                                                class="font-weight-normal card-text">Card Number</span>
+                                            <div class="input"> <i class="fa fa-credit-card"></i> <input
+                                                    type="text" class="form-control" placeholder="0000 0000 0000 0000">
+                                            </div>
+                                            <div class="row mt-3 mb-3">
+                                                <div class="col-md-6"> <span
+                                                        class="font-weight-normal card-text">Expiry Date</span>
+                                                    <div class="input"> <i class="fa fa-calendar"></i> <input
+                                                            type="text" class="form-control" placeholder="MM/YY"> </div>
+                                                </div>
+                                                <div class="col-md-6"> <span
+                                                        class="font-weight-normal card-text">CVC/CVV</span>
+                                                    <div class="input"> <i class="fa fa-lock"></i> <input
+                                                            type="text" class="form-control" placeholder="000"> </div>
+                                                </div>
+                                            </div> <span class="text-muted certificate-text"><i class="fa fa-lock"></i>
+                                                Your transaction is secured with ssl certificate</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+    
+                    <div class="col-md-6"> <span>Summary</span>
+                        <div class="card">
+                            <div class="d-flex justify-content-between p-5">
+                                <div class="d-flex flex-column"> <span>Abonnement Platinium<i
+                                            class="fa fa-caret-down"></i></span></div>
+                                <div class="mt-3"> <sup class="super-price">$70</sup> <span
+                                        class="super-month">/Month</span> </div>
+                            </div>
+                            <hr class="mt-0 line">
+                            <div class="p-3 d-flex justify-content-between">
+                                <div class="d-flex flex-column"> <span>Total price you pay (US Dollars)</span>
+                                    <small>$70</small> </div> <span>$70</span>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- Validation Errors -->
         <x-auth-validation-errors class="mb-4" :errors="$errors" />
 

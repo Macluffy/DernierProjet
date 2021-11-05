@@ -53,75 +53,76 @@
         </a>
         <span class="tooltip">Classe</span>
       </li>
-      <li>
-        <a href="{{ route('schedule.index') }}">
-          <i class='bx bx-cart-alt' ></i>
-          <span class="links_name">Schedule</span>
-        </a>
-        <span class="tooltip">Schedule</span>
-      </li>
+
       <li>
         <a href="{{ route('trainer.index') }}">
-          <i class='bx bx-cart-alt' ></i>
+          <i class='bx bx-network-chart' ></i>
           <span class="links_name">Trainer</span>
         </a>
         <span class="tooltip">Trainer</span>
       </li>
       <li>
         <a href="{{ route('gallery.index') }}">
-          <i class='bx bx-heart' ></i>
+          <i class='bx bx-photo-album' ></i>
           <span class="links_name">Galleries</span>
         </a>
         <span class="tooltip">Galleries</span>
       </li>
       <li>
         <a href="{{ route('event.index') }}">
-          <i class='bx bx-heart' ></i>
+          <i class='bx bxs-calendar-event' ></i>
           <span class="links_name">Event</span>
         </a>
         <span class="tooltip">Event</span>
       </li>
       <li>
         <a href="{{ route('pricing.index') }}">
-          <i class='bx bx-heart' ></i>
+          <i class='bx bx-euro' ></i>
           <span class="links_name">Pricing</span>
         </a>
         <span class="tooltip">Pricing</span>
       </li>
       <li>
         <a href="{{ route('client.index') }}">
-          <i class='bx bx-heart' ></i>
+          <i class='bx bx-transfer-alt' ></i>
           <span class="links_name">Client</span>
         </a>
         <span class="tooltip">Client</span>
       </li>
       <li>
         <a href="{{ route('map.index') }}">
-          <i class='bx bx-heart' ></i>
+          <i class='bx bx-map' ></i>
           <span class="links_name">map</span>
         </a>
         <span class="tooltip">map</span>
       </li>
       <li>
         <a href="{{ route('newslater.index') }}">
-          <i class='bx bx-heart' ></i>
+          <i class='bx bx-message-dots' ></i>
           <span class="links_name">Newslater</span>
         </a>
         <span class="tooltip">Newslater</span>
       </li>
       <li>
         <a href="{{ route('footer.index') }}">
-          <i class='bx bx-heart' ></i>
+          <i class='bx bx-link' ></i>
           <span class="links_name">Footer</span>
         </a>
         <span class="tooltip">Footer</span>
       </li>
       <li>
         <a href="/titre">
-          <i class='bx bx-cog' ></i>
+          <i class='bx bx-rename' ></i>
           <span class="links_name">Titre</span>
         </a>
         <span class="tooltip">Titre</span>
+      </li>
+      <li>
+        <a href="{{ route('messagerie.index') }}">
+          <i class='bx bx-mail-send'></i>
+          <span class="links_name">Messagerie</span>
+        </a>
+        <span class="tooltip">Messagerie</span>
       </li>
       <li class="profile">
         <a href="/">

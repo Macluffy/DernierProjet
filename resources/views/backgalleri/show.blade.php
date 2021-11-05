@@ -7,7 +7,7 @@
     
     
     
-    <div class="row" style="display:flex; flex-direction:column; align-items:center; justify-content:center; width:100%; margin:30px;">
+    <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; width:100%; margin:30px;">
         <div class="portfolio-img single-img">
             <img src="{{ asset('img/portfolio/'.$gallery->img1) }}" alt="project">
             <div class="gallery-icon">

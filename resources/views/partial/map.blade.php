@@ -19,10 +19,12 @@
                     <div class="newsletter-content section-title text-center">
                         <h2>{{$newslater[0]->titre}}</h2> 
                         <div class="newsletter-form">
-                            <form action="{{route("sendMail")}}"  method="post"  id="mc-form" class="mc-form fix">
+                            <form action="{{ route('adressemail.store')}}"  method="post"  >
                                 @csrf
-                                <input id="mc-email" type="email" name="email" placeholder="Enter Your E-mail ID">
-                                <button id="mc-submit" type="submit" class="default-btn" data-text="submit"><span>{{$newslater[0]->btn}}</span></button> 
+                                
+                                    <input id="mc-email" type="email" name="nom" placeholder="Enter Your E-mail ID">
+                                    <button id="mc-submit" type="submit" class="default-btn" data-text="submit"><span>{{$newslater[0]->btn}}</span></button> 
+
                             </form>
                             <!-- mailchimp-alerts Start -->
                             <div class="mailchimp-alerts">
@@ -39,3 +41,17 @@
     </div>
 </section>
 <!-- Newsletter Area End -->
+
+{{-- <form action="{{ route('adressemail.store')}}"  method="post"  >
+
+    @csrf
+    
+    <div class="mb-3">
+        
+        <input type="text" class="form-control" style="width: 25%" name="nom" >
+        
+    </div>
+    <div style="margin-top:30px; margin-left:120px">
+        <button type="submit" class="btn btn-primary">Save</button>
+    </div>
+</form> --}}
