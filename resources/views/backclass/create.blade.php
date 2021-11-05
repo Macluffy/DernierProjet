@@ -42,14 +42,20 @@
         
         
         
+        <label class="my-3 fw-bold" for="tag">Tag: </label>
+                        <select id="mon-select" class="selectpicker" name="[tag_id]" multiple data-live-search="true">
+                            @foreach ($tag as $tag)
+                                <option value={{$tag->id}}> {{$tag->name}}</option>
+                            @endforeach
+                        </select>
+                        <br>
         
         
         
-        
-        <select class="form-select mb-3 " style="width: 25%" aria-label="Default select example" id="tags" multiple name="tag_id">
+        {{-- <select class="form-select mb-3 " style="width: 25%" aria-label="Default select example" id="tags" multiple name="tag_id">
             @foreach ($tag as $value)
             <option value="{{ $value->id}} ">{{ $value->name }} </option>
-            @endforeach
+            @endforeach --}}
             
             
         </select>

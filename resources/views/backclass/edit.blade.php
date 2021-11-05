@@ -32,6 +32,14 @@
           <input type="number" min="min" max="20" class="form-control" style="width: 25%" name="quantiter" value="{{ $classe->quantiter }}">
           
       </div>
+
+      <label class="my-3 fw-bold" for="tag">Tag: </label>
+      <select id="mon-select" class="selectpicker" name="[tag_id]" multiple data-live-search="true">
+          @foreach ($tag as $tag)
+              <option value={{$tag->id}}> {{$tag->name}}</option>
+          @endforeach
+      </select>
+      <br>
         
           <select class="form-select mb-3 " style="width: 25%" aria-label="Default select example" name="horraire_id">
             <option  selected>Horraire</option>

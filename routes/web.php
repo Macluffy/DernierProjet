@@ -160,6 +160,11 @@ Route::get('/contact', function () {
     return view('pages/contact', compact('footer','newslater','map','client','pricing','nav','event','slider','titre','about','sli','trainer1','trainer','classe','slider1','galleri','schedule'));
 });
 
+Route::get('/amail', function () {
+    
+    return view('amail', compact(''));
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');

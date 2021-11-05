@@ -25,7 +25,7 @@ class CreateTrainersTable extends Migration
             $table->string('lien3');
             $table->string('icon4');
             $table->string('lien4');
-            $table->foreignId('user_id')->constrained('users','id');
+            $table->foreignId('user_id')->constrained('users','id')->onDelete('cascade')->onUpdate('cascade');;
             $table->timestamps();
         });
     }

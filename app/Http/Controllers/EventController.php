@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\Amail;
+use App\Mail\Email;
+use App\Models\Adressemail;
 use App\Models\Event;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class EventController extends Controller
 {
@@ -66,6 +70,13 @@ class EventController extends Controller
             }
             
             
+        }
+        $contenuMail = ["titre" =>$request->titre];
+
+
+        $email = Adressemail::All();
+        foreach ($email as $value) {
+            Mail::to($value->nom)->send(new Email($contenuMail));
         }
 
         

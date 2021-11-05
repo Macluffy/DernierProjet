@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\Amail;
 use App\Mail\Email;
 use App\Models\Adressemail;
 use App\Models\Classe;
@@ -57,6 +58,10 @@ class ClasseController extends Controller
             'horraire_id' => ['required' => 'min:1', 'max:255'],
             'quantiter' => ['required'],
         ]);
+        // $tab = [];
+        // foreach ($$request->tag_id as $tag ) {
+        //     array_push($tab,intval($tag));
+        // }
         
         $classe = new classe;
         $classe->image = $request->file('img')->hashName();
@@ -71,10 +76,12 @@ class ClasseController extends Controller
         $classe->order = $request->order;
         $classe->save();
         $classe->tags()->attach($request->tag_id);
+        $contenuMail = ["titre" =>$request->titre];
+
 
         $email = Adressemail::All();
         foreach ($email as $value) {
-            Mail::to($value->nom)->send(new Email("le cour $classe->titre à été creer"));
+            Mail::to($value->nom)->send(new Amail($contenuMail));
         }
         
         
@@ -117,9 +124,10 @@ class ClasseController extends Controller
      */
     public function edit(Classe $classe)
     {
+        $tag = Tag::all();
         $classes = classe::all();
         $classes1 = DB::table('classes')->where('order',true)->get();
-        return view('backclass.edit',compact('classe','classes1'));
+        return view('backclass.edit',compact('tag','classe','classes1'));
     }
 
     /**
@@ -152,12 +160,8 @@ class ClasseController extends Controller
         $classe->jour_id = $request->jour_id;
         $classe->date_id = $request->jour_id;
         $classe->order = $request->order;
-
-        
-
-        
-        
-        
+        $classe->tags()->sync($request->tag_id);
+   
         $classe->save();
 
         

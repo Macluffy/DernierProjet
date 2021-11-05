@@ -10,7 +10,7 @@
 <body>
     
     <ul>
-        <p>l'event' {{ $contenuMail['titre'] }} à été creer</p>
+        <p>le cour {{ $contenuMail['titre'] }} à été creer</p>
     </ul>
 
 

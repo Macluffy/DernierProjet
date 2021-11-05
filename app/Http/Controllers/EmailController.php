@@ -8,8 +8,5 @@ use Illuminate\Support\Facades\Mail;
 
 class EmailController extends Controller
 {
-    public function sendMail(Request $request,$message) {
-
-
-    }
+    
 }

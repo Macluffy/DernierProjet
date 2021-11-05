@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\Bmail;
+use App\Mail\Email;
 use App\Models\adressemail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class AdressemailController extends Controller
 {
@@ -39,6 +42,8 @@ class AdressemailController extends Controller
         $adress = new Adressemail;
         $adress->nom = $request->nom;
         $adress->save();
+        Mail::to($adress->nom)->send(new Bmail(''));
+
 
         return redirect()->route('/home');
     }

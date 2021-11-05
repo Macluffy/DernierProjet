@@ -20,10 +20,10 @@ class CreateClassesTable extends Migration
             $table->string('titre');
             $table->string('nom');
             $table->integer('quantiter');
-            $table->foreignId('genre_id')->constrained('genres','id');
-            $table->foreignId('horraire_id')->constrained('horraires','id');
-            $table->foreignId('jour_id')->constrained('jours','id');
-            $table->foreignId('date_id')->constrained('dates','id')->nullable();
+            $table->foreignId('genre_id')->constrained('genres','id')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreignId('horraire_id')->constrained('horraires','id')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreignId('jour_id')->constrained('jours','id')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreignId('date_id')->constrained('dates','id')->onDelete('cascade')->onUpdate('cascade')->nullable();
             $table->boolean('order')->nullable();
             
 

@@ -49,7 +49,7 @@
                 
             </div>
             <div class="d-felx justify-content-center m-4">
-                {{$galleri->links()}}
+                {{$galleri->links('paginate')}}
                 </div>
         </div>
     </div>

@@ -10,7 +10,7 @@
 <body>
     
     <ul>
-        <p>l'event' {{ $contenuMail['titre'] }} à été creer</p>
+        <p>vous etes inscrit a la newlatter</p>
     </ul>
 
 
