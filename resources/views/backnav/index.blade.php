@@ -20,7 +20,7 @@
                     <div class="row">
                         <div class="col-md-2 col-xs-12">
                             <div class="logo">
-                                <a href=""><img src="{{ $nav[0]->logo }}" alt="COFFEE" /></a>
+                                <a href=""><img src="'img/logo/'.{{ $nav[0]->logo }}" alt="COFFEE" /></a>
                             </div>
                         </div>
                         <div class="col-md-8 col-xs-12">

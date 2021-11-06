@@ -80,15 +80,17 @@ class NavbarController extends Controller
             'link4' => ['required' => 'min:1', 'max:255'] ,
             'link5' => ['required' => 'min:1', 'max:255']
         ]);
-        
-        Storage::disk("public")->delete("img/logo/".$navbar->logo);
-        $navbar->logo = $request->file('logo')->hashName();
+        if ($request->file('logo') != null) {
+            Storage::disk("public")->delete("img/logo/".$navbar->logo);
+            $navbar->logo = $request->file('logo')->hashName();
+            $request->file('logo')->storePublicly("img/logo", "public");
+            
+        };
         $navbar->link1 = $request->link1;
         $navbar->link2 = $request->link2;
         $navbar->link3 = $request->link3;
         $navbar->link4 = $request->link4;
         $navbar->link5 = $request->link5;
-        $request->file('logo')->storePublicly("img/logo", "public");
 
         $navbar->save();
 

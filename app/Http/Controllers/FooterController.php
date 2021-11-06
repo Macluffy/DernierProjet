@@ -101,8 +101,12 @@ class FooterController extends Controller
             'span3' => ['required' => 'min:1', 'max:255'],
         ]);
 
-        Storage::disk("public")->delete("/img/logo/".$footer->logo);
-        $footer->logo = $request->file('logo')->hashName();
+        if ($request->file('logo') != null) {
+            Storage::disk("public")->delete("/img/logo/".$footer->logo);
+            $footer->logo = $request->file('logo')->hashName();
+            $request->file('logo')->storePublicly("img/logo", "public");
+            
+        };
         $footer->p1 = $request->p1;
         $footer->icon1 = $request->icon1;
         $footer->p2 = $request->p2;
@@ -124,7 +128,6 @@ class FooterController extends Controller
         $footer->span1 = $request->span1;
         $footer->span2 = $request->span2;
         $footer->span3 = $request->span3;
-        $request->file('logo')->storePublicly("img/logo", "public");
         
 
         

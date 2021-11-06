@@ -102,13 +102,15 @@ class ClientController extends Controller
             
         ]);
 
-        
-        Storage::disk("public")->delete("/img/icon/".$client->image);
-        $client->image = $request->file('image')->hashName();
+        if ($request->file('image') != null) {
+            Storage::disk("public")->delete("/img/icon/".$client->image);
+            $client->image = $request->file('image')->hashName();
+            $request->file('image')->storePublicly("img/icon", "public");
+            
+        };
         $client->icon = $request->icon;
         $client->paragraphe = $request->paragraphe;
         $client->titre = $request->titre;
-        $request->file('image')->storePublicly("img/icon", "public");
         $client->save();
 
 

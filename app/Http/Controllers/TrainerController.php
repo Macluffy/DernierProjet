@@ -124,11 +124,14 @@ class TrainerController extends Controller
             
         ]);
 
+        if ($request->file('img') != null) {
+            Storage::disk("public")->delete("/img/trainer/".$trainer->image);
+            $trainer->image = $request->file('img')->hashName();
+            $request->file('img')->storePublicly("img/trainer/", "public");
+            
+        };
         
         
-        
-        Storage::disk("public")->delete("/img/trainer/".$trainer->image);
-        $trainer->image = $request->file('img')->hashName();
         $trainer->titre = $request->titre;
         $trainer->icon1 = $request->icon1;
         $trainer->lien1 = $request->lien1;
@@ -139,7 +142,6 @@ class TrainerController extends Controller
         $trainer->icon4 = $request->icon4;
         $trainer->lien4 = $request->lien4;
         $trainer->user_id = $request->user_id;
-        $request->file('img')->storePublicly("img/trainer/", "public");
         $trainer->save();
         
         

@@ -101,16 +101,23 @@ class GalleryController extends Controller
             
         ]);
 
+        if ($request->file('img1') != null) {
+            Storage::disk("public")->delete("/img/portfolio/".$gallery->img1);
+            $gallery->img1 = $request->file('img1')->hashName();
+            $request->file('img1')->storePublicly("img/portfolio/", "public");
+        };
+        if ($request->file('img2') != null) {
+            Storage::disk("public")->delete("/img/portfolio/".$gallery->img2);
+            $gallery->img2 = $request->file('img2')->hashName();
+            $request->file('img2')->storePublicly("img/portfolio/", "public");
+            
+        };
         
         
         
-        Storage::disk("public")->delete("/img/portfolio/".$gallery->img1);
-        Storage::disk("public")->delete("/img/portfolio/".$gallery->img2);
-        $gallery->img1 = $request->file('img1')->hashName();
-        $gallery->img2 = $request->file('img2')->hashName();
+        
         $gallery->icon = $request->icon;
-        $request->file('img1')->storePublicly("img/portfolio/", "public");
-        $request->file('img2')->storePublicly("img/portfolio/", "public");
+        
         $gallery->save();
         return redirect()->route('gallery.index')->with("message", "Datas has succesfully been changed !");
     }

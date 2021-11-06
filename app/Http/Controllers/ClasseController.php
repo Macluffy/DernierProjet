@@ -148,9 +148,13 @@ class ClasseController extends Controller
             'quantiter' => ['required'],
 
         ]);
-        
-        Storage::disk("public")->delete("/img/class".$classe->image);
-        $classe->image = $request->file('img')->hashName();
+        if ($request->file('img') != null) {
+            Storage::disk("public")->delete("/img/class".$classe->image);
+            $classe->image = $request->file('img')->hashName();
+            $request->file('img')->storePublicly("img/class", "public");
+            
+        };
+
         $classe->titre = $request->titre;
         $text = auth()->user();
         $classe->nom = $text->name;
@@ -161,11 +165,9 @@ class ClasseController extends Controller
         $classe->date_id = $request->jour_id;
         $classe->order = $request->order;
         $classe->tags()->sync($request->tag_id);
-   
         $classe->save();
 
         
-        $request->file('img')->storePublicly("img/class", "public");
         
 
 

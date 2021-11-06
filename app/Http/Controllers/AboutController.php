@@ -83,17 +83,19 @@ class AboutController extends Controller
             
         ]);
         
-        Storage::disk("public")->delete("/img/about".$about->image);
         
         
-        $about->image = $request->file('img')->hashName();
+        if ($request->file('img') != null) {
+            Storage::disk("public")->delete("/img/about".$about->image);
+            $about->image = $request->file('img')->hashName();
+            $request->file('img')->storePublicly("img/about", "public");
+        };
         $about->titre = $request->titre;
         $about->paragraphe1 = $request->paragraphe1;
         $about->paragraphe2 = $request->paragraphe2;
         $about->btn = $request->btn;
         $about->video = $request->video;
         
-        $request->file('img')->storePublicly("img/about", "public");
         $about->save();
 
         return redirect()->route('about.index')->with("message", "Datas has succesfully been changed !");
