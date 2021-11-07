@@ -124,6 +124,13 @@
         </a>
         <span class="tooltip">Messagerie</span>
       </li>
+      <li>
+        <a href="{{ route('/userindex') }}">
+          <i class='bx bx-user'></i>
+          <span class="links_name">user</span>
+        </a>
+        <span class="tooltip">user</span>
+      </li>
       <li class="profile">
         <a href="/">
           <i class='bx bx-log-out' ></i>

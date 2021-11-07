@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AdressemailController;
+use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\ClasseController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\EmailController;
@@ -208,3 +209,27 @@ Route::resource('/messagerie', MessagerieController::class)->middleware(['auth']
 
 
 Route::post("/send-mail", [EmailController::class, "sendMail"])->name('sendMail');
+
+
+Route::get('/userindex', [RegisteredUserController::class, 'index'])
+                ->middleware(['auth'])
+                ->name('/userindex');
+
+Route::get('/user/{id}/show', [RegisteredUserController::class, 'show'])
+                ->middleware(['auth'])
+                ->name('/usershow');
+
+
+
+Route::get('/user/{id}/edit', [RegisteredUserController::class, 'edit'])
+                ->middleware(['auth'])
+                ->name('/useredit');
+
+
+Route::put('/user/{id}/update', [RegisteredUserController::class, 'update'])
+                ->middleware(['auth'])
+                ->name('/userupdate');
+
+Route::get('/userdestroy', [RegisteredUserController::class, 'destroy'])
+                ->middleware(['auth'])
+                ->name('/userdestroy');
