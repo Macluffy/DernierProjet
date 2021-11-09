@@ -18,6 +18,7 @@ class EventController extends Controller
      */
     public function index()
     {
+        $this->authorize("Enter1", Classe::class);
         $event=Event::all();
 
         
@@ -31,6 +32,7 @@ class EventController extends Controller
      */
     public function create()
     {
+        $this->authorize("Enter1", Classe::class);
         $event=Event::all();
 
         
@@ -45,6 +47,7 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
+        
         $request->validate([
             'titre' => ['required' => 'min:1', 'max:255' ],
             'paragraphe' => ['required' => 'min:1', 'max:255' ],
@@ -93,6 +96,7 @@ class EventController extends Controller
      */
     public function show(Event $event)
     {
+        $this->authorize("Enter1", $event);
         return view('backevent.show',compact('event'));
     }
 
@@ -104,6 +108,7 @@ class EventController extends Controller
      */
     public function edit(Event $event)
     {
+        $this->authorize("Enter1", $event);
         return view('backevent.edit',compact('event'));
     }
 

@@ -14,13 +14,13 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
 		<!-- All css here -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }} ">
+        <link rel="stylesheet" href="{{ asset('css/tailwind.css') }}">
         <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }} ">
         <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }} ">
         <link rel="stylesheet" href="{{ asset('css/shortcode/shortcodes.css') }} ">
         <link rel="stylesheet" href="{{ asset('css/slick.css') }} ">
         <link rel="stylesheet" href="{{ asset('css/style.css') }} ">
         <link rel="stylesheet" href="{{ asset('css/responsive.css') }} ">
-        {{-- <link rel="stylesheet" href="{{ asset('css/tailwind.css') }}"> --}}
         <script src="{{ asset('js/vendor/modernizr-2.8.3.min.js') }} "></script>
     </head>
     <body>

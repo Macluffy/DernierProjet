@@ -16,6 +16,8 @@ class TrainerController extends Controller
      */
     public function index()
     {
+        $this->authorize("Enter1", Trainer::class);
+
         $trainer=Trainer::all();
 
         
@@ -29,6 +31,8 @@ class TrainerController extends Controller
      */
     public function create()
     {
+        $this->authorize("Enter1", Trainer::class);
+
         $trainer=Trainer::all();
         $user = DB::table('users')->where('role_id',3)->get();
 
@@ -86,6 +90,8 @@ class TrainerController extends Controller
      */
     public function show(Trainer $trainer)
     {
+        $this->authorize("Enter1", $trainer);
+
         return view('backtrainer.show',compact('trainer'));
     }
 
@@ -97,6 +103,8 @@ class TrainerController extends Controller
      */
     public function edit(Trainer $trainer)
     {
+        $this->authorize("Enter1", $trainer);
+
         $user = DB::table('users')->where('role_id',3)->get();
         return view('backtrainer.edit',compact('trainer','user'));
     }
@@ -161,6 +169,8 @@ class TrainerController extends Controller
      */
     public function destroy(Trainer $trainer)
     {
+        $this->authorize("Enter1", $trainer);
+
         Storage::disk("public")->delete("/img/trainer/".$trainer->image);
         $trainer->delete();
         return redirect()->route('trainer.index');

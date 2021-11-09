@@ -14,6 +14,8 @@ class MessagerieController extends Controller
      */
     public function index()
     {
+        $this->authorize("Enter1", Messagerie::class);
+
         $messagerie= Messagerie::all();
         return view('backmessagerie.index',compact('messagerie'));
     }
@@ -36,6 +38,7 @@ class MessagerieController extends Controller
      */
     public function store(Request $request)
     {
+
         $messagerie = new Messagerie;
         $messagerie->name = $request->name;
         $messagerie->email = $request->email;
@@ -54,7 +57,8 @@ class MessagerieController extends Controller
      */
     public function show(Messagerie $messagerie)
     {
-        
+                $this->authorize("Enter1", $messagerie);
+
         return view('backmessagerie.show',compact('messagerie'));
     }
 
@@ -66,7 +70,9 @@ class MessagerieController extends Controller
      */
     public function edit(Messagerie $messagerie)
     {
-        //
+
+
+    
     }
 
     /**
@@ -78,7 +84,23 @@ class MessagerieController extends Controller
      */
     public function update(Request $request, Messagerie $messagerie)
     {
-        //
+        $this->authorize("Enter1", $messagerie);
+        if ($request->name != null) {
+            $messagerie->name = $request->name;
+        };
+        
+        if ($request->email  != null) {
+            $messagerie->email  = $request->email ;
+        };
+
+        if ($request->msg  != null) {
+            $messagerie->msg  = $request->msg ;
+        };
+
+        $messagerie->couleur = 'true';
+        $messagerie->save();
+        return redirect()->back();
+
     }
 
     /**
@@ -89,6 +111,7 @@ class MessagerieController extends Controller
      */
     public function destroy(Messagerie $messagerie)
     {
+        $this->authorize("Enter1", $messagerie);
         $messagerie->delete();
         return redirect()->route('messagerie.index');
     }

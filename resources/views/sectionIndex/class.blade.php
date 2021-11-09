@@ -66,11 +66,11 @@
             @endphp
             
             
-            @if ($value->order == true && $b < 3 && $b > 1)
+            @if ($value->filtre == "accepter" && $value->order == true && $b < 3 && $b > 1)
             <div class="col-md-4 col-sm-6 col-xs-12 " >
                 <div class="single-class" >
                     <div class="single-img"  >
-                        <a href="class.html"><img src="{{ asset('img/class/'.$value->image )}}" alt="class"></a>
+                        <a href="class.html"><img src="{{ asset('img/class/'.$value->image )}}"  style="width: 370px; height:207px" alt="class"></a>
                         <div class="gallery-icon">
                             <a class="image-popup" href="{{ asset('img/class/'.$value->image ) }}">
                                 <i class="zmdi zmdi-zoom-in"></i>
@@ -79,7 +79,7 @@
                     </div>
                     
                     <div class="single-content" style="background-color:rgb(235, 150, 81) ">
-                        <h3  ><a href="{{route('inscription.show',$value->id)}}">{{$value->titre}}</a></h3>
+                        <h3  ><a href="{{route('/inscriptionshow',$value->id)}}">{{$value->titre}}</a></h3>
                         <ul  >
                             <li><i class="zmdi zmdi-face"></i>{{$value->nom}}</li>
                             <li><i class="zmdi zmdi-alarm"></i>{{$value->horraire->heure}}</li>
@@ -88,13 +88,13 @@
                 </div>
             </div>
             
-            @elseif ($value->order == true && $dateactuel == $datecour && $timernow >= $timerclass)
+            @elseif ($value->filtre == "accepter" && $value->order == true && $dateactuel == $datecour && $timernow >= $timerclass)
 
 
                 <div class="col-md-4 col-sm-6 col-xs-12 hidden" >     
                 <div class="single-class" >
                     <div class="single-img"  >
-                        <a href="class.html"><img src="{{ asset('img/class/'.$value->image )}}" alt="class"></a>
+                        <a href="class.html"><img src="{{ asset('img/class/'.$value->image )}}"  style="width: 370px; height:207px"  alt="class"></a>
                         <div class="gallery-icon">
                             <a class="image-popup" href="{{ asset('img/class/'.$value->image ) }}">
                                 <i class="zmdi zmdi-zoom-in"></i>
@@ -103,7 +103,7 @@
                     </div>
                     
                     <div class="single-content" style="background-color:rgb(250, 59, 59) ">
-                        <h3  ><a href="{{route('inscription.show',$value->id)}}">{{$value->titre}}</a></h3>
+                        <h3  ><a href="{{route('/inscriptionshow',$value->id)}}">{{$value->titre}}</a></h3>
                         <ul  >
                             <li><i class="zmdi zmdi-face"></i>{{$value->nom}}</li>
                             <li><i class="zmdi zmdi-alarm"></i>{{$value->horraire->heure}}</li>
@@ -112,13 +112,13 @@
                 </div>
             </div>
                 
-            @elseif ($value->order == true && $dateactuel >= $datecour )
+            @elseif ($value->filtre == "accepter" && $value->order == true && $dateactuel >= $datecour )
 
 
                 <div class="col-md-4 col-sm-6 col-xs-12 hidden " >     
                 <div class="single-class" >
                     <div class="single-img"  >
-                        <a href="class.html"><img src="{{ asset('img/class/'.$value->image )}}" alt="class"></a>
+                        <a href="class.html"><img src="{{ asset('img/class/'.$value->image )}}"  style="width: 370px; height:207px"  alt="class"></a>
                         <div class="gallery-icon">
                             <a class="image-popup" href="{{ asset('img/class/'.$value->image ) }}">
                                 <i class="zmdi zmdi-zoom-in"></i>
@@ -127,7 +127,7 @@
                     </div>
                     
                     <div class="single-content" style="background-color:rgb(250, 59, 59) ">
-                        <h3  ><a href="{{route('inscription.show',$value->id)}}">{{$value->titre}}</a></h3>
+                        <h3  ><a href="{{route('/inscriptionshow',$value->id)}}">{{$value->titre}}</a></h3>
                         <ul  >
                             <li><i class="zmdi zmdi-face"></i>{{$value->nom}}</li>
                             <li><i class="zmdi zmdi-alarm"></i>{{$value->horraire->heure}}</li>
@@ -136,13 +136,13 @@
                 </div>
             </div>
 
-            @elseif ($value->order == true && $b == 0)
+            @elseif ($value->filtre == "accepter" && $value->order == true && $b == 0)
 
 
                 <div class="col-md-4 col-sm-6 col-xs-12 hidden" >     
                 <div class="single-class" >
                     <div class="single-img"  >
-                        <a href="class.html"><img src="{{ asset('img/class/'.$value->image )}}" alt="class"></a>
+                        <a href="class.html"><img src="{{ asset('img/class/'.$value->image )}}"   style="width: 370px; height:207px"  alt="class"></a>
                         <div class="gallery-icon">
                             <a class="image-popup" href="{{ asset('img/class/'.$value->image ) }}">
                                 <i class="zmdi zmdi-zoom-in"></i>
@@ -151,7 +151,7 @@
                     </div>
                     
                     <div class="single-content" style="background-color:rgb(250, 59, 59) ">
-                        <h3  ><a href="{{route('inscription.show',$value->id)}}">{{$value->titre}}</a></h3>
+                        <h3  ><a href="{{route('/inscriptionshow',$value->id)}}">{{$value->titre}}</a></h3>
                         <ul  >
                             <li><i class="zmdi zmdi-face"></i>{{$value->nom}}</li>
                             <li><i class="zmdi zmdi-alarm"></i>{{$value->horraire->heure}}</li>
@@ -160,13 +160,13 @@
                 </div>
             </div>
 
-            @elseif ($value->order == true )
+            @elseif ($value->filtre == "accepter" && $value->order == true )
 
 
                 <div class="col-md-4 col-sm-6 col-xs-12 " >     
                 <div class="single-class" >
                     <div class="single-img"  >
-                        <a href="class.html"><img src="{{ asset('img/class/'.$value->image )}}" alt="class"></a>
+                        <a href="class.html"><img src="{{ asset('img/class/'.$value->image )}}"  style="width: 370px; height:207px"   alt="class"></a>
                         <div class="gallery-icon">
                             <a class="image-popup" href="{{ asset('img/class/'.$value->image ) }}">
                                 <i class="zmdi zmdi-zoom-in"></i>
@@ -175,7 +175,7 @@
                     </div>
                     
                     <div class="single-content" style="background-color:rgb(136, 255, 136) ">
-                        <h3  ><a href="{{route('inscription.show',$value->id)}}">{{$value->titre}}</a></h3>
+                        <h3  ><a href="{{route('/inscriptionshow',$value->id)}}">{{$value->titre}}</a></h3>
                         <ul  >
                             <li><i class="zmdi zmdi-face"></i>{{$value->nom}}</li>
                             <li><i class="zmdi zmdi-alarm"></i>{{$value->horraire->heure}}</li>

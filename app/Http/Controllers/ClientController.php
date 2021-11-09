@@ -15,6 +15,7 @@ class ClientController extends Controller
      */
     public function index()
     {
+        $this->authorize("Enter1", Classe::class);
         $client=Client::all();
 
         
@@ -28,6 +29,7 @@ class ClientController extends Controller
      */
     public function create()
     {
+        $this->authorize("Enter1", Classe::class);
         $client=Client::all();
 
         
@@ -71,6 +73,7 @@ class ClientController extends Controller
      */
     public function show(Client $client)
     {
+        $this->authorize("Enter1", $client);
         return view('backclient.show',compact('client'));
     }
 
@@ -82,6 +85,7 @@ class ClientController extends Controller
      */
     public function edit(Client $client)
     {
+        $this->authorize("Enter1", $client);
         return view('backclient.edit',compact('client'));
     }
 
@@ -125,6 +129,7 @@ class ClientController extends Controller
      */
     public function destroy(Client $client)
     {
+        $this->authorize("Enter1", $client);
         Storage::disk("public")->delete("/img/icon/".$client->image);
         $client->delete();
         return redirect()->route('client.index');

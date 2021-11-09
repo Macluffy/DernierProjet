@@ -25,8 +25,7 @@ class CreateClassesTable extends Migration
             $table->foreignId('jour_id')->constrained('jours','id')->onDelete('cascade')->onUpdate('cascade');
             $table->foreignId('date_id')->constrained('dates','id')->onDelete('cascade')->onUpdate('cascade')->nullable();
             $table->boolean('order')->nullable();
-            
-
+            $table->string('filtre')->nullable();
             $table->timestamps();
         });
     }

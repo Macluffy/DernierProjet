@@ -14,6 +14,8 @@ class NewslaterController extends Controller
      */
     public function index()
     {
+        $this->authorize("Enter1", newslater::class);
+
         $newslater=newslater::all();
 
         
@@ -60,6 +62,8 @@ class NewslaterController extends Controller
      */
     public function edit(newslater $newslater)
     {
+        $this->authorize("Enter1", $newslater);
+
         $newslater=Newslater::all();
 
         

@@ -26,18 +26,41 @@
     </thead>
     <tbody>
         @foreach ($messagerie as $value)
-            
-        <tr>
+        @if ($value->couleur == 'true')
+            <tr style="background-color:gray">
+
             <th scope="row">{{$value->id}} </th>
             <td>{{$value->name}}</td>
             <td>{{$value->email}}</td>
             <td>{{$value->msg}}</td>
-            <td><a href="{{ route('messagerie.show', $value->id) }}" class="btn btn-warning"> Show</a></td>
+            <form action="{{ route('messagerie.update', $value->id) }}" method="post">
+
+                @method('put')
+                @csrf
+
+                <td><button  class="btn btn-success" type="submit">Vue</button><a href="{{ route('messagerie.show', $value->id) }}" type="submit"  class="btn btn-warning bout"> Show</a></td>
+            </form>
         </tr>
+        @else
+        <tr>
+
+            <th scope="row">{{$value->id}} </th>
+            <td>{{$value->name}}</td>
+            <td>{{$value->email}}</td>
+            <td>{{$value->msg}}</td>
+            <form action="{{ route('messagerie.update',$value->id) }}" method="post">
+                @method('put')
+                @csrf
+                <td><button  class="btn btn-success" type="submit">Vue</button><a href="{{ route('messagerie.show', $value->id) }}" type="submit"  class="btn btn-warning"> Show</a></td>
+            </form>
+        </tr>
+        @endif
+
         @endforeach
 
     </tbody>
 </table>
+
     
     
     

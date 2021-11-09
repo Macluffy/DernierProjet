@@ -15,6 +15,8 @@ class NavbarController extends Controller
      */
     public function index()
     {
+        $this->authorize("Enter1", Navbar::class);
+
         $nav= Navbar::all();
         return view('backnav.index',compact('nav'));
     }
@@ -59,6 +61,7 @@ class NavbarController extends Controller
      */
     public function edit(Navbar $navbar)
     {
+        $this->authorize("Enter1", $navbar);
         return view('backnav.edit',compact('navbar'));
     }
 

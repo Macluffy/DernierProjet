@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Classe;
 use App\Models\Inscription;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -52,12 +53,28 @@ class InscriptionController extends Controller
      * @param  \App\Models\Inscription  $inscription
      * @return \Illuminate\Http\Response
      */
-    public function show(Classe $classe)
+    public function show()
     {
-        $classes = Classe::all();
+        
+        
+    }
+
+    public function show1(Classe $id)
+    {
+        $classes = $id;
+        
         $inscription = Inscription::all();
         
         return view('inscription',compact('classes','inscription'));
+    }
+    public function show2()
+    {
+
+        $user = User::all();
+        
+        $inscription = Inscription::all();
+        
+        return view('backprofile.index',compact('user','inscription'));
     }
 
     /**

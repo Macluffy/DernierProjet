@@ -23,9 +23,10 @@ class ClasseController extends Controller
      */
     public function index()
     {
+
+        $this->authorize("Enter", Classe::class);
         $class=Classe::all();
 
-        
         return view('backclass.index',compact('class'));
     }
 
@@ -36,6 +37,8 @@ class ClasseController extends Controller
      */
     public function create()
     {   
+        
+        
         $tag = Tag::all();
         $classe=Classe::all();
         $classes= DB::table('classes')->where('order',true)->get();
@@ -50,6 +53,7 @@ class ClasseController extends Controller
      */
     public function store(Request $request)
     {
+        
         $request->validate([
             
             'image' => ['required' => 'min:1', 'max:255' ],
@@ -66,8 +70,8 @@ class ClasseController extends Controller
         $classe = new classe;
         $classe->image = $request->file('img')->hashName();
         $classe->titre = $request->titre;
-        $text = auth()->user();
-        $classe->nom = $text->name;
+        $text = auth()->user()->email;
+        $classe->nom = $text;
         $classe->quantiter = $request->quantiter;
         $classe->horraire_id = $request->horraire_id;
         $classe->genre_id = $request->genre_id;
@@ -112,6 +116,7 @@ class ClasseController extends Controller
      */
     public function show(Classe $classe)
     {
+        $this->authorize("Enter", $classe);
         return view('backclass.show',compact('classe'));
     }
 
@@ -124,6 +129,7 @@ class ClasseController extends Controller
      */
     public function edit(Classe $classe)
     {
+        $this->authorize("Enter", $classe);
         $tag = Tag::all();
         $classes = classe::all();
         $classes1 = DB::table('classes')->where('order',true)->get();
@@ -139,6 +145,7 @@ class ClasseController extends Controller
      */
     public function update(Request $request, Classe $classe)
     {
+        
         $request->validate([
             
             'image' => ['required' => 'min:1', 'max:255' ],
@@ -159,11 +166,48 @@ class ClasseController extends Controller
         $text = auth()->user();
         $classe->nom = $text->name;
         $classe->quantiter = $request->quantiter;
-        $classe->horraire_id = $request->horraire_id;
-        $classe->genre_id = $request->genre_id;
-        $classe->jour_id = $request->jour_id;
-        $classe->date_id = $request->jour_id;
-        $classe->order = $request->order;
+        if ($request->horraire_id != null) {
+            
+            $classe->horraire_id = $request->horraire_id;
+            
+            
+        };
+        
+        if ($request->genre_id  != null) {
+            
+            $classe->genre_id  = $request->genre_id ;
+            
+            
+        };
+
+        if ($request->jour_id  != null) {
+            
+            $classe->jour_id  = $request->jour_id ;
+            
+            
+        };
+
+
+            
+        $classe->date_id  = $request->jour_id ;
+            
+            
+        
+        if ($request->order  != null) {
+            
+            $classe->order  = $request->order ;
+            
+            
+        };
+        if ($request->filtre  != null) {
+            
+            $classe->filtre  = $request->filtre ;
+            
+            
+        };
+        
+        
+        
         $classe->tags()->sync($request->tag_id);
         $classe->save();
 
@@ -182,6 +226,7 @@ class ClasseController extends Controller
      */
     public function destroy(Classe $classe)
     {
+        
         Storage::disk("public")->delete("/img/class".$classe->image);
         $classe->delete();
         return redirect()->route('classe.index');

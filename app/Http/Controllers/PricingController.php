@@ -14,6 +14,8 @@ class PricingController extends Controller
      */
     public function index()
     {
+        $this->authorize("Enter1", Pricing::class);
+
         $pricing=Pricing::all();
 
         
@@ -27,6 +29,8 @@ class PricingController extends Controller
      */
     public function create()
     {
+        $this->authorize("Enter1", Pricing::class);
+
         $princing=Pricing::all();
 
         
@@ -75,6 +79,8 @@ class PricingController extends Controller
      */
     public function show(Pricing $pricing)
     {
+        $this->authorize("Enter1", $pricing);
+
         return view('backpricing.show',compact('pricing'));
     }
 
@@ -86,6 +92,8 @@ class PricingController extends Controller
      */
     public function edit(Pricing $pricing)
     {
+        $this->authorize("Enter1", $pricing);
+
         return view('backpricing.edit',compact('pricing'));
     }
 
@@ -132,6 +140,8 @@ class PricingController extends Controller
      */
     public function destroy(Pricing $pricing)
     {
+        $this->authorize("Enter1", $pricing);
+
         $pricing->delete();
         return redirect()->route('pricing.index');
     }

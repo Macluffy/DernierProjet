@@ -18,6 +18,7 @@ class CreateMessageriesTable extends Migration
             $table->string('name');
             $table->string('email');
             $table->string('msg');
+            $table->string('couleur')->nullable();
             $table->timestamps();
         });
     }

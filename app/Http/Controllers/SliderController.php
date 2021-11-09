@@ -15,7 +15,8 @@ class SliderController extends Controller
      */
     public function index()
     {
-        
+        $this->authorize("Enter1", Slider::class);
+
     $slider=Slider::all();
 
         
@@ -29,6 +30,8 @@ class SliderController extends Controller
      */
     public function create()
     {
+        $this->authorize("Enter1", Slider::class);
+
         $slider=Slider::all();
         return view('backslide.create',compact('slider'));
     }
@@ -88,7 +91,8 @@ class SliderController extends Controller
     
     {
     
-    
+        $this->authorize("Enter1", $slider);
+
         return view('backslide.show',compact('slider'));
     }
 
@@ -100,6 +104,8 @@ class SliderController extends Controller
      */
     public function edit(Slider $slider)
     {
+        $this->authorize("Enter1", $slider);
+
         return view('backslide.edit',compact('slider'));
     }
 
@@ -112,6 +118,7 @@ class SliderController extends Controller
      */
     public function update(Request $request, Slider $slider)
     {
+
         $request->validate([
             'imagefond' => ['required' => 'min:1', 'max:255' ],
             'titre' => ['required' => 'min:1', 'max:255' ],
@@ -162,6 +169,8 @@ class SliderController extends Controller
      */
     public function destroy(Slider $slider)
     {
+        $this->authorize("Enter1", $slider);
+
         Storage::disk("public")->delete("/img/slider".$slider->imagefond);
         $slider->delete();
         return redirect()->route('slider.index');

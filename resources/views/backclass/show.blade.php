@@ -34,8 +34,8 @@
         
         
 
-            
-                
+                @if ($classe->nom == Auth::User()->email || Auth::User()->role_id == 1 || Auth::User()->role_id == 2 )
+                    
                 <form action="{{route('classe.destroy',$classe->id)}} " method="post">
                     @csrf
                     @method('delete')
@@ -44,6 +44,10 @@
                         <a href="{{ route('classe.edit',$classe->id) }}" class="btn btn-warning"> Edit</a>
                     </div>
                 </form>
+
+                @endif
+
+                
 
         
         

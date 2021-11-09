@@ -11,6 +11,7 @@
 </head>
 <body>
   <div class="sidebar">
+    
     <div class="logo-details">
       
       <div class="logo_name">backoffice</div>
@@ -25,6 +26,7 @@
         </a>
         <span class="tooltip">Dashboard</span>
       </li>
+      @can('Enter1')
       <li>
         <a href="{{ route('navbar.index') }}">
           <i class='bx bx-sidebar' ></i>
@@ -46,6 +48,8 @@
         </a>
         <span class="tooltip">About</span>
       </li>
+      @endcan
+      @can('Enter')
       <li>
         <a href="{{ route('classe.index') }}">
           <i class='bx bxs-category'></i>
@@ -53,7 +57,8 @@
         </a>
         <span class="tooltip">Classe</span>
       </li>
-
+      @endcan
+      @can('Enter1')
       <li>
         <a href="{{ route('trainer.index') }}">
           <i class='bx bx-network-chart' ></i>
@@ -124,12 +129,20 @@
         </a>
         <span class="tooltip">Messagerie</span>
       </li>
+      @endcan
       <li>
         <a href="{{ route('/userindex') }}">
           <i class='bx bx-user'></i>
           <span class="links_name">user</span>
         </a>
         <span class="tooltip">user</span>
+      </li>
+      <li>
+        <a href="{{ route('/profileindex') }}">
+          <i class='bx bx-user-pin'></i>
+          <span class="links_name">Profile</span>
+        </a>
+        <span class="tooltip">Profile</span>
       </li>
       <li class="profile">
         <a href="/">

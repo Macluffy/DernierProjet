@@ -206,6 +206,7 @@ Route::resource('/adressemail', AdressemailController::class)->middleware(['auth
 
 Route::resource('/messagerie', MessagerieController::class)->middleware(['auth']);
 
+Route::get('/inscription/{id}/show', [InscriptionController::class, 'show1'])->name('/inscriptionshow');
 
 
 Route::post("/send-mail", [EmailController::class, "sendMail"])->name('sendMail');
@@ -214,6 +215,10 @@ Route::post("/send-mail", [EmailController::class, "sendMail"])->name('sendMail'
 Route::get('/userindex', [RegisteredUserController::class, 'index'])
                 ->middleware(['auth'])
                 ->name('/userindex');
+
+Route::get('/profileindex', [InscriptionController::class, 'show2'])
+                ->middleware(['auth'])
+                ->name('/profileindex');
 
 Route::get('/user/{id}/show', [RegisteredUserController::class, 'show'])
                 ->middleware(['auth'])

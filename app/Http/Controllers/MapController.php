@@ -14,6 +14,7 @@ class MapController extends Controller
      */
     public function index()
     {
+        $this->authorize("Enter1", Map::class);
         $map=Map::all();
 
         
@@ -60,6 +61,8 @@ class MapController extends Controller
      */
     public function edit(Map $map)
     {
+        $this->authorize("Enter1", $map);
+
         $map=Map::all();
 
         
@@ -103,6 +106,8 @@ class MapController extends Controller
      */
     public function destroy(Map $map)
     {
+        $this->authorize("Enter1", $map);
+
         $map->delete();
         return redirect()->route('map.index');
     }

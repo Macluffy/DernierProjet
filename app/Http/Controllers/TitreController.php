@@ -15,6 +15,8 @@ class TitreController extends Controller
      */
     public function index()
     {
+        $this->authorize("Enter1", Titre::class);
+
         $titre = Titre::all();
         return view('backtitre.index',compact('titre'));
     }
@@ -48,7 +50,8 @@ class TitreController extends Controller
      */
     public function show(Titre $titre)
     {
-        
+        $this->authorize("Enter1", $titre);
+
         return view('backtitre.show',compact('titre'));
     }
 
@@ -60,6 +63,8 @@ class TitreController extends Controller
      */
     public function edit(Titre $titre)
     {
+        $this->authorize("Enter1", $titre);
+
         return view('backtitre.edit',compact('titre'));
     }
 

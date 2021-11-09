@@ -17,7 +17,7 @@ class FooterController extends Controller
     {
         $footer = Footer::all();
 
-        
+        $this->authorize("Enter1", Footer::class);
         return view('backfooter.index',compact('footer'));
     }
 
@@ -61,6 +61,8 @@ class FooterController extends Controller
      */
     public function edit(Footer $footer)
     {
+        $this->authorize("Enter1", $footer);
+
         $footer= Footer::all();
 
         

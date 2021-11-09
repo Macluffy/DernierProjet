@@ -11,7 +11,7 @@
     @endif
 </div>
 
-@php
+{{-- @php
     $b=count($classes)+1;
 @endphp
 
@@ -20,12 +20,12 @@
 @if(Request::url() === 'http://127.0.0.1:8000/inscription/'.$e)
 @php
     $a = $e-1;
-@endphp
+@endphp --}}
 
 
 <div >
     <div>
-        <h1 class="text-center" style="margin-bottom:40px">Cour {{$classes[$a]->titre}} || Inscription</h1>
+        <h1 class="text-center" style="margin-bottom:40px">Cour {{$classes->titre}} || Inscription</h1>
     </div>
 
     
@@ -34,21 +34,21 @@
             <div class="col-md-4 col-sm-6 col-xs-12">     
             <div class="single-class">
                 <div class="single-img" style="display:flex; flex-direction:column; align-items:center; justify-content:center;" >
-                    <a href="class.html"><img src="{{ asset('img/class/'.$classes[$a]->image )}}" alt="class"></a>
+                    <a href="class.html"><img src="{{ asset('img/class/'.$classes->image )}}" alt="class"></a>
                     <div class="gallery-icon">
-                        <a class="image-popup" href="{{ asset('img/class/'.$classes[$a]->image ) }}">
+                        <a class="image-popup" href="{{ asset('img/class/'.$classes->image ) }}">
                             <i class="zmdi zmdi-zoom-in"></i>
                         </a>   
                     </div>
                 </div>
                 <div class="single-content" style="display:flex; flex-direction:column; align-items:center; justify-content:center;" >
-                    <h3><a href="class.html">{{$classes[$a]->titre}}</a></h3>
+                    <h3><a href="class.html">{{$classes->titre}}</a></h3>
                     <ul>
-                        <li><i class="zmdi zmdi-face"></i>{{$classes[$a]->nom}}</li>
-                        <li><i class="zmdi zmdi-alarm"></i>{{$classes[$a]->horraire->heure}}</li>
+                        <li><i class="zmdi zmdi-face"></i>{{$classes->nom}}</li>
+                        <li><i class="zmdi zmdi-alarm"></i>{{$classes->horraire->heure}}</li>
                     </ul>
-                    <p>{{$classes[$a]->jour->date_id}}</p>
-                    <h4>Nombre d'inscription :{{count($classes[$a]->inscriptions)}}/{{$classes[$a]->quantiter}}</h4>
+                    <p>{{$classes->jour->date_id}}</p>
+                    <h4>Nombre d'inscription :{{count($classes->inscriptions)}}/{{$classes->quantiter}}</h4>
                 </div>
             </div>
         </div>
@@ -56,7 +56,7 @@
 
 
 @php
-    $m = $classes[$a]->inscriptions;
+    $m = $classes->inscriptions;
     $d = 0;
     
 @endphp
@@ -72,7 +72,7 @@
 
 @if ($d != 6)
 
-    @if (count($classes[$a]->inscriptions) == $classes[$a]->quantiter)
+    @if (count($classes->inscriptions) == $classes->quantiter)
         <h5 style="display:flex; flex-direction:column; align-items:center; justify-content:center; width:100%; pading:30px;background-color:rgb(250, 65, 65); color:white;">Ce cour est complet</h5>
     @else
         <form action="{{ route('inscription.store') }}" style="margin-left:50px" method="post" >
@@ -81,7 +81,7 @@
         
             </div>
             <div class="mb-3 hidden">
-                <input type="text" class="form-control" style="width: 25%" name="classe_id" value="{{$e}}">
+                <input type="text" class="form-control" style="width: 25%" name="classe_id" value="{{$classes->id}}">
             
             </div>
             <div class="mb-3 hidden">
@@ -97,8 +97,8 @@
 
 
         
-    @endif
-@endfor
+    {{-- @endif
+@endfor --}}
 @endsection
 
 

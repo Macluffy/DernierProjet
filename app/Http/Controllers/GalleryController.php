@@ -15,6 +15,8 @@ class GalleryController extends Controller
      */
     public function index()
     {
+        $this->authorize("Enter1", Gallery::class);
+
         $gallery=Gallery::all();
 
         
@@ -28,6 +30,8 @@ class GalleryController extends Controller
      */
     public function create()
     {
+        $this->authorize("Enter1", Gallery::class);
+
         $gallery=Gallery::all();
 
         
@@ -70,6 +74,8 @@ class GalleryController extends Controller
      */
     public function show(Gallery $gallery)
     {
+        $this->authorize("Enter1",$gallery);
+
         return view('backgalleri.show',compact('gallery'));
     }
 
@@ -81,6 +87,8 @@ class GalleryController extends Controller
      */
     public function edit(Gallery $gallery)
     {
+        $this->authorize("Enter1",$gallery);
+
         return view('backgalleri.edit',compact('gallery'));
     }
 
@@ -130,6 +138,8 @@ class GalleryController extends Controller
      */
     public function destroy(Gallery $gallery)
     {
+        $this->authorize("Enter1",$gallery);
+
         Storage::disk("public")->delete("/img/portfolio/".$gallery->img1);
         Storage::disk("public")->delete("/img/portfolio/".$gallery->img2);
 

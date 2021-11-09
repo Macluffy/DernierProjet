@@ -15,6 +15,7 @@ class AboutController extends Controller
      */
     public function index()
     {
+        $this->authorize("Enter1", Classe::class);
         $about=About::all();
 
         
@@ -61,6 +62,7 @@ class AboutController extends Controller
      */
     public function edit(About $about)
     {
+        $this->authorize("Enter1", $about);
         return view('backabout.edit',compact('about'));
     }
 
@@ -109,6 +111,8 @@ class AboutController extends Controller
      */
     public function destroy(About $about)
     {
+        $this->authorize("Enter1", $about);
+
         Storage::disk("public")->delete("/img/slider".$about->image);
         $about->delete();
         return redirect()->route('about.index');

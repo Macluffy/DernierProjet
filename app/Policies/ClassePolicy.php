@@ -41,7 +41,8 @@ class ClassePolicy
      */
     public function create(User $user)
     {
-        //
+        
+        return in_array($user->role_id,[1,2]);
     }
 
     /**
@@ -53,7 +54,8 @@ class ClassePolicy
      */
     public function update(User $user, Classe $classe)
     {
-        //
+        
+        return in_array($user->role_id,[1,2]);
     }
 
     /**
@@ -65,7 +67,8 @@ class ClassePolicy
      */
     public function delete(User $user, Classe $classe)
     {
-        //
+        
+        return in_array($user->role_id,[1,2]);
     }
 
     /**
@@ -89,6 +92,6 @@ class ClassePolicy
      */
     public function forceDelete(User $user, Classe $classe)
     {
-        //
+        
     }
 }

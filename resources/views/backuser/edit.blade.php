@@ -39,7 +39,7 @@
             <option value="{{1}} ">Admin</option>
             <option value="{{2}} ">Manager</option>
             <option value="{{3}} ">Coach</option>
-            <option value="{{3}} ">Current user </option>
+            <option value="{{4}} ">Current user </option>
 
     </select>
 

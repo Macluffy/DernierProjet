@@ -20,8 +20,8 @@
         <div class="mb-3">
             <label  class="form-label">Image</label>
             <input type="file" class="form-control" style="width: 25%" name="img" value="{{ $classe->image  }}" >
-            
-        </div> 
+        </div>
+
         <div class="mb-3">
             <label  class="form-label">Titre</label>
             <input type="text" class="form-control" style="width: 25%" name="titre" value="{{ $classe->titre  }}">
@@ -32,17 +32,31 @@
             <input type="number" min="min" max="20" class="form-control" style="width: 25%" name="quantiter" value="{{ $classe->quantiter }}">
             
         </div>
+
+
+        <label  class="form-label">Filtre</label>
+        <select class="form-select mb-3 " style="width: 25%" aria-label="Default select example" name="filtre">
+            <option  selected value="{{ $classe->filtre }}" >{{ $classe->filtre }}</option>
+            
+            <option value="accepter ">Accepter</option>
+            <option value="refuser ">Refuser</option>
+            
+            
+        </select>
         
         <label class="my-3 fw-bold" for="tag">Tag: </label>
-        <select id="mon-select" class="selectpicker" name="[tag_id]" multiple data-live-search="true">
+        <select id="mon-select" class="selectpicker" name="tag_id[]" multiple data-live-search="true">
             @foreach ($tag as $tag)
             <option value={{$tag->id}}> {{$tag->name}}</option>
             @endforeach
         </select>
         <br>
-        
+
+        <label  class="form-label">Horraire</label>
         <select class="form-select mb-3 " style="width: 25%" aria-label="Default select example" name="horraire_id">
-            <option  selected>Horraire</option>
+
+            
+            <option  selected  value="{{ $classe->horraire_id }}" >{{ $classe->horraire->heure }}</option>
             
             <option value="{{1}} ">8.00</option>
             <option value="{{2}} ">12.00</option>
@@ -50,8 +64,9 @@
             <option value="{{3}} ">18.00</option>
         </select>
         
+        <label  class="form-label">Genre</label>
         <select class="form-select mb-3 " style="width: 25%" aria-label="Default select example" name="genre_id">
-            <option  selected>Choix du genre</option>
+            <option  selected  value="{{ $classe->genre_id }}" >{{ $classe->genre->genre }}</option>
             
             <option value="{{1}} ">Homme</option>
             <option value="{{2}} ">Femme</option>
@@ -59,8 +74,9 @@
             
         </select>
         
+        <label  class="form-label">Date</label>
         <select class="form-select mb-3 " name="jour_id" style="width: 25%" aria-label="Default select example">
-            <option  selected  >Choix du jour</option>
+            <option  selected  value="{{ $classe->jour_id}}"  >{{ $classe->jour->id}}</option>
             <option value="{{1}}">Saturday 23-10-21</option>
             <option value="{{2}}">Sunday 24-10-21</option>
             <option value="{{3}}">Monday 25-10-21</option>
