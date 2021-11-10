@@ -35,6 +35,11 @@
                                 <ul>
                                     <li><i class="zmdi zmdi-face"></i>{{$value->nom}}</li>
                                     <li><i class="zmdi zmdi-alarm"></i>{{$value->horraire->heure}}</li>
+
+                                </ul>
+                                <ul>
+                                    <li>{{$value->abo}}</li>
+                                    <li>{{$value->genre->genre}}</li>
                                 </ul>
                             </div>
                         </div>
@@ -58,6 +63,10 @@
                             <ul>
                                 <li><i class="zmdi zmdi-face"></i>{{$value->nom}}</li>
                                 <li><i class="zmdi zmdi-alarm"></i>{{$value->horraire->heure}}</li>
+                            </ul>
+                            <ul>
+                                <li>{{$value->abo}}</li>
+                                <li>{{$value->genre->genre}}</li>
                             </ul>
                         </div>
                     </div>

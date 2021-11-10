@@ -15,12 +15,12 @@
 		<!-- All css here -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }} ">
         <link rel="stylesheet" href="{{ asset('css/tailwind.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }} ">
         <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }} ">
-        <link rel="stylesheet" href="{{ asset('css/shortcode/shortcodes.css') }} ">
+        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }} ">
         <link rel="stylesheet" href="{{ asset('css/slick.css') }} ">
         <link rel="stylesheet" href="{{ asset('css/style.css') }} ">
         <link rel="stylesheet" href="{{ asset('css/responsive.css') }} ">
+        <link rel="stylesheet" href="{{ asset('css/shortcode/shortcodes.css') }} ">
         <script src="{{ asset('js/vendor/modernizr-2.8.3.min.js') }} "></script>
     </head>
     <body>
@@ -36,9 +36,9 @@
         <script src="{{ asset('js/app.js') }} "></script>
         <!-- All js here -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+        <script src="{{ asset('js/bootstrap.min.js') }} "></script>
         <script src="{{ asset('js/tailwind.js') }}"></script>
         <script src="{{ asset('js/vendor/jquery-1.12.4.min.js') }} "></script>
-        <script src="{{ asset('js/bootstrap.min.js') }} "></script>
         <script src="{{ asset('js/owl.carousel.min.js') }} "></script>
         <script src="{{ asset('js/jquery.meanmenu.js') }} "></script>
         <script src="{{ asset('js/ajax-mail.js') }} "></script>

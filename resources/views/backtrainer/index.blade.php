@@ -18,13 +18,10 @@
     </div>
     
     @foreach ($trainer as $value) 
-    
-    
-    
-    
+
     <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; width:100%; margin:30px;">
         <div class="col-md-4 col-sm-6 col-xs-12">
-            <div class="single-trainer text-center">
+            <div class="single-trainer text-center ">
                 <img src="{{ asset('img/trainer/'.$value->image) }}" alt="trainer">
                 <div class="trainer-hover">
                     <h3>{{$value->titre}} </h3>

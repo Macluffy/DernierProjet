@@ -27,6 +27,10 @@
                         <li><i class="zmdi zmdi-face"></i>{{$classe->nom}}</li>
                         <li><i class="zmdi zmdi-alarm"></i>{{$classe->horraire->heure}}</li>
                     </ul>
+                    <ul>
+                        <li>{{$classe->abo}}</li>
+                        <li>{{$classe->genre->genre}}</li>
+                    </ul>
                 </div>
             </div>
         </div>

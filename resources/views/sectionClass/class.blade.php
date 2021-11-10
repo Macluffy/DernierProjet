@@ -84,6 +84,10 @@
                             <li><i class="zmdi zmdi-face"></i>{{$value->nom}}</li>
                             <li><i class="zmdi zmdi-alarm"></i>{{$value->horraire->heure}}</li>
                         </ul>
+                        <ul>
+                            <li>{{$value->abo}}</li>
+                            <li>{{$value->genre->genre}}</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -107,6 +111,10 @@
                         <ul  >
                             <li><i class="zmdi zmdi-face"></i>{{$value->nom}}</li>
                             <li><i class="zmdi zmdi-alarm"></i>{{$value->horraire->heure}}</li>
+                        </ul>
+                        <ul>
+                            <li>{{$value->abo}}</li>
+                            <li>{{$value->genre->genre}}</li>
                         </ul>
                     </div>
                 </div>
@@ -132,6 +140,10 @@
                             <li><i class="zmdi zmdi-face"></i>{{$value->nom}}</li>
                             <li><i class="zmdi zmdi-alarm"></i>{{$value->horraire->heure}}</li>
                         </ul>
+                        <ul>
+                            <li>{{$value->abo}}</li>
+                            <li>{{$value->genre->genre}}</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -156,11 +168,15 @@
                             <li><i class="zmdi zmdi-face"></i>{{$value->nom}}</li>
                             <li><i class="zmdi zmdi-alarm"></i>{{$value->horraire->heure}}</li>
                         </ul>
+                        <ul>
+                            <li>{{$value->abo}}</li>
+                            <li>{{$value->genre->genre}}</li>
+                        </ul>
                     </div>
                 </div>
             </div>
 
-            @elseif ($value->filtre == "accepter" && $value->order == true )
+            @elseif ($value->filtre == "accepter" )
 
 
                 <div class="col-md-4 col-sm-6 col-xs-12 " >     
@@ -179,6 +195,10 @@
                         <ul  >
                             <li><i class="zmdi zmdi-face"></i>{{$value->nom}}</li>
                             <li><i class="zmdi zmdi-alarm"></i>{{$value->horraire->heure}}</li>
+                        </ul>
+                        <ul>
+                            <li>{{$value->abo}}</li>
+                            <li>{{$value->genre->genre}}</li>
                         </ul>
                     </div>
                 </div>

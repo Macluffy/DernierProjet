@@ -34,6 +34,17 @@
             
         </div>
 
+        
+        
+        <select class="form-select mb-3 " style="width: 25%" aria-label="Default select example" name="abo">
+            <option  selected value="" >Abonnement require</option>
+            
+            <option value="silver ">silver</option>
+            <option value="gold ">gold</option>
+            <option value="platinium ">platinium</option>
+            
+        </select>
+
         {{-- <select name="lestags[]" id="tags" multiple>
             @foreach ($tag as $data)
                 <option value="{{ $data->id }}">{{ $data->tag }}</option>

@@ -33,15 +33,25 @@
             
         </div>
 
+        <label  class="form-label">Abonnement require</label>
+        <select class="form-select mb-3 " style="width: 25%" aria-label="Default select example" name="abo">
+            <option  selected value="{{ $classe->abo }}" >{{ $classe->abo }}</option>
+            
+            <option value="silver ">silver</option>
+            <option value="gold ">gold</option>
+            <option value="platinium ">platinium</option>
+            
+        </select>
 
+        @can('Enter1')
         <label  class="form-label">Filtre</label>
         <select class="form-select mb-3 " style="width: 25%" aria-label="Default select example" name="filtre">
             <option  selected value="{{ $classe->filtre }}" >{{ $classe->filtre }}</option>
             
             <option value="accepter ">Accepter</option>
             <option value="refuser ">Refuser</option>
-            
-            
+        @endcan
+ 
         </select>
         
         <label class="my-3 fw-bold" for="tag">Tag: </label>
@@ -54,14 +64,11 @@
 
         <label  class="form-label">Horraire</label>
         <select class="form-select mb-3 " style="width: 25%" aria-label="Default select example" name="horraire_id">
-
-            
             <option  selected  value="{{ $classe->horraire_id }}" >{{ $classe->horraire->heure }}</option>
-            
             <option value="{{1}} ">8.00</option>
             <option value="{{2}} ">12.00</option>
             <option value="{{3}} ">15.00</option>
-            <option value="{{3}} ">18.00</option>
+            <option value="{{4}} ">18.00</option>
         </select>
         
         <label  class="form-label">Genre</label>

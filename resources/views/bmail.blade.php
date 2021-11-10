@@ -16,4 +16,4 @@
 
     <script href="{{asset('js/app.js')}}">
 </body>
-</html>
+</html> 

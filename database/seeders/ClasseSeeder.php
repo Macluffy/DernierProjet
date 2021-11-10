@@ -25,6 +25,7 @@ class ClasseSeeder extends Seeder
                 "jour_id"=>1,
                 "date_id"=>1,
                 "order"=>true,
+                "abo"=>"gold",
             ],
             [
                 "image"=>"2.jpg",
@@ -36,6 +37,8 @@ class ClasseSeeder extends Seeder
                 "jour_id"=>2,
                 "date_id"=>2,
                 "order"=>true,
+                "abo"=>"silver",
+
             ],
             [
                 "image"=>"3.jpg",
@@ -47,6 +50,7 @@ class ClasseSeeder extends Seeder
                 "jour_id"=>3,
                 "date_id"=>3,
                 "order"=>true,
+                "abo"=>"platinium",
             ],
             
         ]);

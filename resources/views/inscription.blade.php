@@ -69,11 +69,20 @@
 
     @endif
 @endforeach
-
+{{-- Auth::User()->abo != "platinium" || --}}
 @if ($d != 6)
 
-    @if (count($classes->inscriptions) == $classes->quantiter)
-        <h5 style="display:flex; flex-direction:column; align-items:center; justify-content:center; width:100%; pading:30px;background-color:rgb(250, 65, 65); color:white;">Ce cour est complet</h5>
+    @if ($classes->abo == "platinium" && Auth::User()->abo != "platinium")
+
+    <h5 style="display:flex; flex-direction:column; align-items:center; justify-content:center; width:100%; pading:30px;background-color:rgb(250, 222, 65); color:white;">Votre abonnement ne vous permet pas de participer à ce cours</h5>
+        
+    @elseif ($classes->abo == "gold" &&  Auth::User()->abo != "gold" && $classes->abo == "platinium" && Auth::User()->abo != "platinium")
+
+    <h5 style="display:flex; flex-direction:column; align-items:center; justify-content:center; width:100%; pading:30px;background-color:rgb(250, 222, 65); color:white;">Votre abonnement ne vous permet pas de participer à ce cours</h5>
+
+    @elseif (count($classes->inscriptions) == $classes->quantiter)
+
+    <h5 style="display:flex; flex-direction:column; align-items:center; justify-content:center; width:100%; pading:30px;background-color:rgb(250, 65, 65); color:white;">Ce cour est complet</h5>
     @else
         <form action="{{ route('inscription.store') }}" style="margin-left:50px" method="post" >
                 

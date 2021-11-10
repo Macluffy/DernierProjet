@@ -61,6 +61,7 @@ class ClasseController extends Controller
             'genre_id' => ['required' => 'min:1', 'max:255'],
             'horraire_id' => ['required' => 'min:1', 'max:255'],
             'quantiter' => ['required'],
+            'abo' => ['required'=> 'min:1', 'max:255'],
         ]);
         // $tab = [];
         // foreach ($$request->tag_id as $tag ) {
@@ -78,6 +79,7 @@ class ClasseController extends Controller
         $classe->jour_id = $request->jour_id;
         $classe->date_id = $request->jour_id;
         $classe->order = $request->order;
+        $classe->abo = $request->abo;
         $classe->save();
         $classe->tags()->attach($request->tag_id);
         $contenuMail = ["titre" =>$request->titre];
@@ -202,6 +204,12 @@ class ClasseController extends Controller
         if ($request->filtre  != null) {
             
             $classe->filtre  = $request->filtre ;
+            
+            
+        };
+        if ($request->abo  != null) {
+            
+            $classe->abo  = $request->abo ;
             
             
         };
